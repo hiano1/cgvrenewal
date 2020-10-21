@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="EventListMapper">
+
+   <select id="list" resultType="kr.co.cgvnew.event.EventBoardDTO">
+      select ev_num,ev_nm,ev_sdate,ev_edate,ev_p from event 
+   </select>
+
+</mapper>
