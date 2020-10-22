@@ -21,16 +21,37 @@ ts_num int primary key not null
 ,tm_num int
 ,FOREIGN KEY (tm_num) REFERENCES tmiddle(tm_num)
 );
-=========대분류 VALUE=====================================
 
-insert into tlarge values( 1,'서울');
-insert into tlarge values( 2,'경기');
-insert into tlarge values( 3,'인천');
-insert into tlarge values( 4,'강원');
-insert into tlarge values( 5,'대전/충청');
-insert into tlarge values( 6,'대구');
-insert into tlarge values( 7,'부산/울산');
-insert into tlarge values( 8,'경상');
-insert into tlarge values( 9,'광주/전라/제주');
 
-=======================================================
+================== 영화 테이블 =====================================
+
+create table  movie(
+mv_num	int primary key
+,mv_nm  varchar(200)
+,mv_cont	varchar(1000)
+,mv_tr	varchar(200)
+,mv_genre varchar(50)
+,mv_rt		varchar(20)
+,mv_age	varchar(50)
+,mv_dt	varchar(50)
+,mv_rdate varchar(50)
+,mv_ac		varchar(200)
+,mv_sc varchar(20)
+,mv_rate	varchar(20)
+,mv_att	varchar(20)
+,mv_p	varchar(200)
+,mv_m	varchar(50)
+
+);
+>>>>>>>>>매퍼할때 입력해야지
+create table  movie
+mv_num ,mv_nm ,mv_cont ,mv_tr ,mv_genre ,mv_rt ,mv_age ,mv_dt ,mv_rdate ,mv_ac ,mv_sc ,mv_rate ,mv_att ,mv_p ,mv_m	
+===============이벤트 테이블================================================
+create table event(
+ev_num int primary key not null,
+ev_nm varchar(50),
+ev_sdate varchar(20),
+ev_edate varchar(20),
+ev_p varchar(100));
+insert into event(ev_nm,ev_sdate,ev_edate,ev_p) values('테스트이벤트','시작일은~~','종료일은~~','포스터url');
+
