@@ -27,7 +27,7 @@ public class MovieController {
 //		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		
-	List<MDTO> list = service.list();
+ 	List<MDTO> list = service.list();
 
 		
 	
