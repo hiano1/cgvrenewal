@@ -8,7 +8,7 @@
 		<property name="driverClassName"
 		value="com.mysql.cj.jdbc.Driver" />
 		<property name="url"
-		value="jdbc:mysql://127.0.0.1:3306/ict3?autoReconnect=true&amp;serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8" />
+		value="jdbc:mysql://127.0.0.1:3306/cgv?autoReconnect=true&amp;serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8" />
 		<property name="username" value="root" />
 		<property name="password" value="1111" />
 		<property name="initialSize" value="10" />

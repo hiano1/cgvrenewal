@@ -8,6 +8,7 @@
 	<mappers>
 		<mapper resource="META-INF/EventListMapper.xml" />
 		<mapper resource="META-INF/MovieMapper.xml" />
+		<mapper resource="META-INF/TheaterMapper.xml" />
 		
 	</mappers>
 
