@@ -22,19 +22,16 @@ public class MovieController {
 @Autowired
 	private  MService  service ; 
 
-@RequestMapping(value = "/mlist", method = RequestMethod.GET)
-	public String movielist(Model model) {
+@RequestMapping(value = "/mdetail", method = RequestMethod.GET)
+	public String moviedetail(Model model ,String mv_num) {
 //		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		
- 	List<MDTO> list = service.list();
-
-		
-	
-		model.addAttribute("movie_list",list);
+ MDTO dto = service.detail(mv_num);
+model.addAttribute("movie_detail",dto);
 	
 		
-		return "/movie/mv_main";
+		return "/movie/detail";
 	}
 	
 }
