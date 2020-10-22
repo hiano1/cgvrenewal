@@ -13,7 +13,7 @@ public class MDAOImpl implements MDAO {
 	@Override
 	public List<MDTO> list() {
 
-		List<MDTO> list = sqlSession.selectList("moviemapper.list");
+		List<MDTO> list = sqlSession.selectList("MovieMapper.list");
 		
 		return list;
 	}
