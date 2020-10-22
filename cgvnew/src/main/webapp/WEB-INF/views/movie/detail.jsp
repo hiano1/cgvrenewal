@@ -36,25 +36,24 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="dto" items="${movie_detail}" varStatus="status">
 					<tr>
-						<td>${dto.mv_num}</td>
-						<td>${dto.mv_nm}</td>
-						<td>${dto.mv_cont}</td>
-						<td>${dto.mv_tr}</td>
-						<td>${dto.mv_genre}</td>
-						<td>${dto.mv_rt}</td>
-						<td>${dto.mv_age}</td>
-						<td>${dto.mv_dt}</td>
-						<td>${dto.mv_rdate}</td>
-						<td>${dto.mv_ac}</td>
-						<td>${dto.mv_sc}</td>
-						<td>${dto.mv_rate}</td>
-						<td>${dto.mv_att}</td>
-						<td>${dto.mv_p}</td>
-						<td>${dto.mv_m}</td>
+						<td>${movie_detail.mv_num}</td>
+						<td>${movie_detail.mv_nm}</td>
+						<td>${movie_detail.mv_cont}</td>
+						<td>${movie_detail.mv_tr}</td>
+						<td>${movie_detail.mv_genre}</td>
+						<td>${movie_detail.mv_rt}</td>
+						<td>${movie_detail.mv_age}</td>
+						<td>${movie_detail.mv_dt}</td>
+						<td>${movie_detail.mv_rdate}</td>
+						<td>${movie_detail.mv_ac}</td>
+						<td>${movie_detail.mv_sc}</td>
+						<td>${movie_detail.mv_rate}</td>
+						<td>${movie_detail.mv_att}</td>
+						<td>${movie_detail.mv_p}</td>
+						<td>${movie_detail.mv_m}</td>
 					</tr>
-				</c:forEach>
+				
 			</tbody>
 		</table>
 </body>
