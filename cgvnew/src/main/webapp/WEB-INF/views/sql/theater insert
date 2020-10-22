@@ -1,0 +1,96 @@
+
+=========대분류 VALUE=====================================
+
+insert into tlarge values( 1,'서울');
+insert into tlarge values( 2,'경기');
+insert into tlarge values( 3,'인천');
+insert into tlarge values( 4,'강원');
+insert into tlarge values( 5,'대전/충청');
+insert into tlarge values( 6,'대구');
+insert into tlarge values( 7,'부산/울산');
+insert into tlarge values( 8,'경상');
+insert into tlarge values( 9,'광주/전라/제주');
+
+=========중분류 VALUE=====================================
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('car cinema', '', '', '', '', 1);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values(
+ 'cgv강남'
+, '37.501668, 127.026241'
+, '서울특별시 강남구 강남대로 438 스타플렉스 스마텔고객플라자 2층'
+, '- 분당지역
+   좌석버스: 1005-1, 1005-2, 6800, 5500-2
+   간선버스: 408, 462
+   광역버스: 9404, 9408
+- 강북지역
+   간선버스: 140, 144, 145, 471
+- 강서지역
+   좌석버스: 1500
+   간선버스: 360
+- 강동지역
+   간선버스: 402, 420, 470, 407
+- 인근경기지역
+   좌석버스: 3030, 2002, 2002-1
+   광역버스: 9409, 9500, 9501, 9503, 9700, 9711'
+   , '2호선 -  강남역 11번 출구
+9호선 -  신논현역 5번출구', 1);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv강변', '37.535107, 127.095752'
+, '서울특별시 광진구 구의동 광나루로56길 85 강변테크노마트 프라임센터 28층'
+, '마을: 강동01,광진01,광진03,광진04,광진05
+일반: 1,1-1,1-2,9,9-1,13,13-2,15,91,92,93,95,96,96-1,97,112,112-1,2000-1,2000-3,2000-4
+지선: 2224,3212,3214
+광역: 11,100,1112,1113,1113-1,1113-2,1117,1650,1660,5600,5700
+공항: 6705'
+, '2호선: 강변역 하차 1번 출구 테크노마트 10층'
+, 1);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv홍대', '37.556619, 126.922632'
+, '서울특별시 마포구 동교동 159-16'
+, '[홍대입구역 정류장(2번 출구), 합정역 가는 방향]
+- 간선버스(파랑): N26, N62, 271, 273, 602, 603, 604
+- 지선버스(초록): 7016, 7711, 7737, 5712, 5714, 6712, 6716, 7612, 7739
+- 광역버스(주황): 1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, M6117, M6118, M6724
+- 공항버스(하늘): 6002
+[홍대입구역 정류장(8번 출구), 신촌역 가는 방향]
+- 간선버스(파랑): N26, N62, 271, 273, 602, 603, 604
+- 지선버스(초록): 7711, 5712, 5714, 6712, 6716, 7016, 7612, 7737, 7739
+- 광역버스(주황): 1300, 1400, 1500, 1601, 1000, 1100, 1101, 1200, 1301, M6117, M6118, M6724
+- 공항버스(하늘): 6002'
+, '﻿2호선 - 홍대입구역 1번 출구 연결'
+, 1);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv경기광주', '', '', '', '', 2);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv고양행신', '', '', '', '', 2);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv계양', '', '', '', '', 3);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv남주안', '', '', '', '', 3);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv강릉', '', '', '', '', 4);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv원주', '', '', '', '', 4);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv당진', '', '', '', '', 5);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv대전', '', '', '', '', 5);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv대구', '', '', '', '', 6);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv대구수성', '', '', '', '', 6);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv남포', '', '', '', '', 7);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv대연', '', '', '', '', 7);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv거제', '', '', '', '', 8);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv고성', '', '', '', '', 8);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv광양', '', '', '', '', 9);
+insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
+values('cgv광양 엘에프스퀘어', '', '', '', '', 9);
+
+=========소분류 VALUE=====================================
