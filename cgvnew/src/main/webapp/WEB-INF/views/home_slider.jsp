@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="root" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,27 +20,28 @@
 				margin : 0 auto;
 			}
 			.slide{
-				width:100%;
+			height : 800px;
+				width:1080px;
 			}
 	</style>
 </head>
 <body>
 	<div id="slider-wrap">
 		<div class="slide">
-			<img
-				src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-2.jpg" />
+			<img 
+				src="${root}/resources/image/3.JPG"/>
 		</div>
 		<div class="slide">
 			<img
-				src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-3.jpg" />
+				src="${root}/resources/image/1.jpg" />
 		</div>
 		<div class="slide">
 			<img
-				src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-4.jpg" />
+				src="${root}/resources/image/2.JPG" />
 		</div>
 		<div class="slide">
 			<img
-				src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-1.jpg" />
+				src="${root}/resources/image/4.jpg"  />
 		</div>
 	</div>
 
@@ -61,9 +63,11 @@
 								vertical : false, // 세로 방향 슬라이드 옵션
 								draggable : true, //드래그 가능 여부 
 								accessibility : true, //탭이나 방향키로 오브젝트 선택 가능여부
-								adaptiveHeight : true, //슬라이드 높이에 맞게 높이 자동조정 여부
+								adaptiveHeight : false, //슬라이드 높이에 맞게 높이 자동조정 여부
 
 							});
+		
+			
 		});
 	</script>
 </body>
