@@ -2,6 +2,8 @@ package kr.co.cgvnew.movie;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,12 @@ public class MServiceImpl implements MService {
 		MDTO dto = dao.detail(mv_num);
 	
 		return dto;
+	}
+
+	@Override
+	public List<MDTO> list() {
+		List<MDTO> list = dao.list();
+		return list;
 	}
 
 }

@@ -34,6 +34,14 @@ model.addAttribute("movie_detail",dto);
 		return "/movie/detail";
 	}
 	
+@RequestMapping(value = "/list",method = RequestMethod.GET)
+public String list(Model model) {
+	
+	List<MDTO> list = service.list();
+	model.addAttribute("movie_list", list);
+	return "/movie/list";
+}
+
 }
 /*
  * 혜찐이 
