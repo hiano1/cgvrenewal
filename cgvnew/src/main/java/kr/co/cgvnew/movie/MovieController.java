@@ -13,38 +13,43 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
-
 @Controller
 public class MovieController {
-	
-	//private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
-@Autowired
-	private  MService  service ; 
 
-@RequestMapping(value = "/mdetail", method = RequestMethod.GET)
-	public String moviedetail(Model model ,String mv_num) {
+	private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
+	@Autowired
+	private MService service;
+
+	@RequestMapping(value = "/mdetail", method = RequestMethod.GET)
+	public String moviedetail(Model model, String mv_num) {
 //		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		
- MDTO dto = service.detail(mv_num);
-model.addAttribute("movie_detail",dto);
-	
-		
+
+		MDTO dto = service.detail(mv_num);
+		model.addAttribute("movie_detail", dto);
+
 		return "/movie/detail";
 	}
-	
-@RequestMapping(value = "/list",method = RequestMethod.GET)
-public String list(Model model) {
-	
-	List<MDTO> list = service.list();
-	model.addAttribute("movie_list", list);
-	return "/movie/list";
-}
+
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String list(Model model) {
+
+		List<MDTO> list = service.list();
+		model.addAttribute("search_list", list);
+		return "/search/list";
+	} // list
+
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public String listSearch(Model model, String mv_nm) {
+		logger.info(mv_nm);
+		List<MDTO> list = service.listSearch(mv_nm);
+		logger.info(""+list);
+		
+		model.addAttribute("search_list", list);
+
+		return "/search/search";
+	}// listSearch
 
 }
 /*
- * 혜찐이 
- * rudgusfjdjkdjlfa
- * hgbkjjkkjnj
+ * 혜찐이 rudgusfjdjkdjlfa hgbkjjkkjnj
  */

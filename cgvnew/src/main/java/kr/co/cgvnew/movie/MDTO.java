@@ -16,6 +16,14 @@ private String mv_rate;
 private String mv_att;
 private String mv_p;
 private String mv_m;
+private String id_search;
+
+public String getId_search() {
+	return id_search;
+}
+public void setId_search(String id_search) {
+	this.id_search = id_search;
+}
 public String getMv_num() {
 	return mv_num;
 }
@@ -106,5 +114,8 @@ public String getMv_m() {
 public void setMv_m(String mv_m) {
 	this.mv_m = mv_m;
 }
-
-}
+	@Override
+		public String toString() {
+			return mv_nm;
+		}
+}//class

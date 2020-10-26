@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="kr.co.cgvnew">
+	<logger name="kr.co.ict3">
 		<level value="info" />
 	</logger>
 	
@@ -37,5 +37,15 @@
 		<priority value="warn" />
 		<appender-ref ref="console" />
 	</root>
-	
+
+	<!-- Query Loggers -->
+	<logger name="jdbc.sqlonly" additivity="false">  
+		<level value="INFO"/>  
+		<appender-ref ref="console"/>  
+	</logger>
+	<logger name="jdbc.resultsettable" additivity="false">  
+		<level value="INFO"/>  
+		<appender-ref ref="console"/>  
+	</logger>  
+
 </log4j:configuration>

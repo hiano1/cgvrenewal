@@ -27,40 +27,18 @@
 
 			</thead>
 			<tr>
-				<th>영화번호</th>
+				
 				<th>영화이름</th>
-				<th>줄거리</th>
-				<th>트레일러</th>
-				<th>장르</th>
-				<th>런타임</th>
-				<th>관람가</th>
-				<th>감독</th>
-				<th>개봉일</th>
-				<th>출연진</th>
-				<th>평점</th>
-				<th>예매율</th>
-				<th>누적관객수</th>
 				<th>포스터사진</th>
-				<th>제작사</th>
+			
 			</tr>
 			<tbody>
-				<c:forEach items="${movie_list}" var="dto">
+				<c:forEach items="${search_list}" var="dto">
 					<tr>
-						<td>${dto.mv_num}</td>
-						<td><a href="${root}/detail?mv_num=${dto.mv_num}">${dto.mv_nm}</a></td>
-						<td>${dto.mv_cont}</td>
-						<td>${dto.mv_tr}</td>
-						<td>${dto.mv_genre}</td>
-						<td>${dto.mv_rt}</td>
-						<td>${dto.mv_age}</td>
-						<td>${dto.mv_dt}</td>
-						<td>${dto.mv_rdate}</td>
-						<td>${dto.mv_ac}</td>
-						<td>${dto.mv_sc}</td>
-						<td>${dto.mv_rate}</td>
-						<td>${dto.mv_att}</td>
+						
+						<td><a href="${root}/mdetail?mv_num=${dto.mv_num}">${dto.mv_nm}</a></td>
 						<td>${dto.mv_p}</td>
-						<td>${dto.mv_m}</td>
+					
 					</tr>
 				</c:forEach>
 			</tbody>

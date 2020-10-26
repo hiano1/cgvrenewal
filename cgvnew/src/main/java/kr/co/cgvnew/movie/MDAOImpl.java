@@ -25,6 +25,12 @@ public class MDAOImpl implements MDAO {
 		List<MDTO> list = sqlSession.selectList("MovieMapper.list");
 		return list;
 	}
+
+	@Override
+	public List<MDTO> listSearch(String mv_nm) {
+		List<MDTO> listSearch = sqlSession.selectList("MovieMapper.search",mv_nm);
+		return listSearch;
+	}
 	
 
 	

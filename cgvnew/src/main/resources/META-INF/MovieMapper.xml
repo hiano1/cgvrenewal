@@ -7,11 +7,39 @@
 
    <select id="detail" parameterType="java.lang.String" resultType="kr.co.cgvnew.movie.MDTO">
       select mv_num ,mv_nm ,mv_cont ,mv_tr ,mv_genre ,mv_rt ,mv_age ,mv_dt ,mv_rdate ,mv_ac ,mv_sc ,mv_rate ,mv_att ,mv_p ,mv_m from movie 
-where mv_num = #{mv_num}
+where mv_nm = #{mv_nm}
    </select>
    
    <select id="list" resultType="kr.co.cgvnew.movie.MDTO">
-   select mv_num ,mv_nm ,mv_cont ,mv_tr ,mv_genre ,mv_rt ,mv_age ,mv_dt ,mv_rdate ,mv_ac ,mv_sc ,mv_rate ,mv_att ,mv_p ,mv_m from movie 
+   select mv_nm , mv_p  from movie 
    </select>
+
+
+
+ <select id="search"
+         parameterType="java.lang.String"
+         resultType="kr.co.cgvnew.movie.MDTO">
+       select mv_nm , mv_p  from movie
+       <if test="mv_nm != null and mv_nm != ''">
+          WHERE mv_nm  like concat('%',#{mv_nm},'%')
+       </if>      
+   </select>
+
+ <select id="search22222"
+         parameterType="kr.co.cgvnew.movie.MDTO"
+         resultType="kr.co.cgvnew.movie.MDTO">
+       select mv_nm , mv_p  from movie
+      <if test="id_search != null">
+         <choose>
+            <when test="id_search == 'mv_nm'">
+               WHERE mv_nm  = #{mv_nm}
+            </when>      
+                
+         </choose>
+      </if>
+     
+   </select>
+   
+
 
 </mapper>
