@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TicketMapper">
+
+	<select resultType="kr.co.cgvnew.ticket.TicketDTO"
+		id="selectLarge">
+		select tl_num,tl_nmfrom tlarge
+	</select>
+
+	<select resultType="kr.co.cgvnew.ticket.TicketDTO"
+		id="selectMiddle" parameterType="java.lang.String">
+		select tl_num,tl_nmfrom tMiddle =
+		#{lcode}
+	</select>
+
+
+
+</mapper>
