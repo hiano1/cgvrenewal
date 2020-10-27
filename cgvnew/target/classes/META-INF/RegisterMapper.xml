@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="RegisterMapper">
+
+   <select id="register" parameterType="kr.co.cgvnew.register.RegisterDTO">
+   insert into member (mb_id, mb_pwd, mb_nm, mb_gen, mb_birth, mb_tel, mb_email) 
+   values (#{mb_id}, #{mb_pwd}, #{mb_nm}, #{mb_gen}
+   			, concat(#{mb_birth1},'년',#{mb_birth2},'월',#{mb_birth3},'일')
+   			, concat(#{mb_tel1},'-',#{mb_tel2},'-',#{mb_tel3})
+			, concat(#{mb_email1},'@',#{mb_email2}))
+   </select>
+   
+   <select id="login" parameterType="kr.co.cgvnew.register.RegisterDTO"
+		   resultType="int">
+	select count(mb_id) cnt from member
+	where mb_id = #{mb_login_id} and mb_pwd = #{mb_login_pwd}
+	</select>
+	
+	<select id="idCheck" parameterType="kr.co.cgvnew.register.RegisterDTO"
+			resultType="int">
+	select count(mb_id) cnt from member where mb_id = #{mb_login_id}
+	</select>
+
+</mapper>
