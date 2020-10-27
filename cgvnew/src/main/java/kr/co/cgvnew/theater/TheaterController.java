@@ -18,7 +18,7 @@ public class TheaterController {
 	@RequestMapping(value = "/theater1", method = RequestMethod.GET)
 	public String mTheaterlist(Model model) {
 		List<mTheaterDTO> list = service.list();
-		model.addAttribute("mtheaterdetail", list);
+		model.addAttribute("largeList", list);
 		return "theater/theater";
 	}
 	

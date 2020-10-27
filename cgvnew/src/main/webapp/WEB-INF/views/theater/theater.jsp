@@ -1,46 +1,88 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="root" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>list</title>
+<title>ticket</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+
+	
+	$("a[id^=lcode]").click(function(){
+		var a;
+		switch ($(this).text()){
+		case '서울': a = 1; break;
+		case '경기': a = 2; break;
+		case '인천': a = 3; break;
+		case '강원': a = 4; break;
+		case '대전/충청': a = 5; break;
+		case '대구': a = 6; break;
+		case '부산/울산': a = 7; break;
+		case '경상': a = 8; break;
+		case '광주/전라/제주': a = 9; break;
+		};
+		
+		
+		$.get(
+			"${root}/ticketrest/middle"
+			,{ lcode : a}
+			,function(data,status){
+				$("#mid_table").empty();
+				$.each(data, function(index, dto) {
+					$("#mid_table").append(
+							"<tr>"+
+							"<td>"+ 
+							dto.tm_nm+
+							"</td>"+
+							"</tr>"
+						//추가
+					);
+				});//each
+			},"json");
+	});
+});
+</script>
+
+
 	<div class="container">
-		<h1>중분류</h1>
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>번호</th>
-					<th>이름</th>
-					<th>좌표</th>
-					<th>주소</th>
-					<th>버스</th>
-					<th>지하철</th>
-					<th>대분류번호</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="mtd" items="${mtheaterdetail}" varStatus="status">
+		
+		<div class="form-inline">
+			<table class="table table-hover">
+				<thead>
 					<tr>
-						<td>${mtd.tm_num}</td>
-						<td>${mtd.tm_nm}</td>
-						<td>${mtd.th_add}</td>
-						<td>${mtd.th_addn}</td>
-						<td>${mtd.th_bus}</td>
-						<td>${mtd.th_sub}</td>
-						<td>${mtd.tl_num}</td>
+					<th>지역이름</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach var="llist" items="${largeList}" varStatus="status">
+						<tr id="sel_l">
+							
+							<td><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			
+			<table id="mid_table">
+			
+			</table>
+		</div>
 	</div>
 </body>
 </html>
