@@ -5,9 +5,18 @@
 
 <mapper namespace="TheaterMapper">
 
-   <select id="mtheaterlist" resultType="kr.co.cgvnew.theater.mTheaterDTO">
-      select tm_num, tm_nm, tl_num, th_add, th_addn, th_bus, th_sub
-      from tmiddle
-   </select>
+   <select resultType="kr.co.cgvnew.theater.TheaterDTO"
+		id="largeList">
+		select tl_num, tl_nm from tlarge
+	</select>
+
+	<select resultType="kr.co.cgvnew.theater.TheaterDTO"
+		id="middleList" parameterType="java.lang.String">
+		select tm_num,tm_nm from tmiddle where tl_num = #{lcode}
+	</select>
+	<select resultType="kr.co.cgvnew.theater.TheaterDTO"
+		id="middledetail" parameterType="java.lang.String">
+		select tm_num,tm_nm, th_add, th_addn, th_bus, th_sub from tmiddle where tm_num = #{mcode}
+	</select>
 
 </mapper>

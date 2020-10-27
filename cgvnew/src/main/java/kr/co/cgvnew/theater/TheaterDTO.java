@@ -1,15 +1,22 @@
 package kr.co.cgvnew.theater;
 
-public class mTheaterDTO {
+public class TheaterDTO {
 	private String tm_num; 
 	private String tm_nm; 
 	private String tl_num;  
+	private String tl_nm;  
 	private String th_add; 
 	private String th_addn;  
 	private String th_bus;  
 	private String th_sub;
 	
 	
+	public String getTl_nm() {
+		return tl_nm;
+	}
+	public void setTl_nm(String tl_nm) {
+		this.tl_nm = tl_nm;
+	}
 	public String getTm_num() {
 		return tm_num;
 	}

@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TheaterController {
 	
 	@Autowired
-	private theaService service;
+	private TheaterService service;
 	
-	@RequestMapping(value = "/theater1", method = RequestMethod.GET)
+	@RequestMapping(value = "/theater", method = RequestMethod.GET)
 	public String mTheaterlist(Model model) {
-		List<mTheaterDTO> list = service.list();
+		List<TheaterDTO> list = service.list();
 		model.addAttribute("largeList", list);
 		return "theater/theater";
 	}
