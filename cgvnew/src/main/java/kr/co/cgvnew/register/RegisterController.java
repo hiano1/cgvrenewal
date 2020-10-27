@@ -56,6 +56,14 @@ public class RegisterController {
 	}//login
 	
 	
+	
+	@RequestMapping(value="loginForm", method=RequestMethod.GET)
+	public String loginForm() {
+		return "register/login_form";
+	}//loginForm
+	
+	
+	
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public String logout(HttpSession session) {
 		session.invalidate();
