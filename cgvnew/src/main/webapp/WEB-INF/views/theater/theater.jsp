@@ -6,7 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ticket</title>
+<title>theater</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -102,12 +103,36 @@ $(document).ready(function() {
 				</tbody>
 			</table>
 			
-			<table id="mid_table"> 
-				
-			</table>
+			<table id="mid_table"></table>
+			
+			<div class="container mt-3">
+			  <h2>Toggleable Tabs</h2>
+			  <br>
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs">
+				    <li class="nav-item">
+				      <a class="nav-link active" data-toggle="tab" href="#home">극장정보</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" data-toggle="tab" href="#menu1">상영시간표</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" data-toggle="tab" href="#menu2">관 람 료</a>
+				    </li>
+			  </ul>
+				<div class="tab-content">
+					<div id="home" class="container tab-pane active"></div>
+				</div>
 			
 			
-			<!--  -->
+			
+			
+			
+			
+			<!-- detail table -->
+			
+			
+			
 			<table >
 			<thead>
 				<td>nm</td>
@@ -117,9 +142,9 @@ $(document).ready(function() {
 				<td>nm</td>
 				<td>nm</td>
 			</thead>
-<tbody id="mid_detail">
-	
-</tbody>			
+			<tbody id="mid_detail">
+				
+			</tbody>			
 			</table>
 		</div>
 	</div>
