@@ -106,7 +106,6 @@ $(document).ready(function() {
 			<table id="mid_table"></table>
 			
 			<div class="container mt-3">
-			  <h2>Toggleable Tabs</h2>
 			  <br>
 			  <!-- Nav tabs -->
 			  <ul class="nav nav-tabs">
@@ -121,32 +120,31 @@ $(document).ready(function() {
 				    </li>
 			  </ul>
 				<div class="tab-content">
-					<div id="home" class="container tab-pane active"></div>
+					<div id="home" class="container tab-pane active">
+						<table>
+						<thead>
+							<td>번호</td>
+							<td>극장명</td>
+							<td>좌표</td>
+							<td>주소</td>
+							<td>버스</td>
+							<td>지하철</td>
+						</thead>
+						<tbody id="mid_detail">
+							
+						</tbody>			
+						</table>
+					</div><!-- contents1 -->
+					<div id="menu1" class="container tab-pane fade">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div><!-- contents2 -->
+					<div id="menu2" class="container tab-pane fade">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div><!-- contents3 -->
 				</div>
-			
-			
-			
-			
-			
-			
-			<!-- detail table -->
-			
-			
-			
-			<table >
-			<thead>
-				<td>nm</td>
-				<td>nm</td>
-				<td>nm</td>
-				<td>nm</td>
-				<td>nm</td>
-				<td>nm</td>
-			</thead>
-			<tbody id="mid_detail">
-				
-			</tbody>			
-			</table>
 		</div>
 	</div>
+</div>
+
 </body>
 </html>
