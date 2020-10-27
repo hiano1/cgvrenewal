@@ -19,15 +19,38 @@
 </head>
 <body>
 <script type="text/javascript">
+
+
 $(document).ready(function() {
-	$("#sel_l").click(function(){
+
+	
+	$("a[id^=lcode]").click(function(){
+		var a;
+		switch ($(this).text()){
+		case '서울': a = 1; break;
+		case '경기': a = 2; break;
+		case '인천': a = 3; break;
+		case '강원': a = 4; break;
+		case '대전/충청': a = 5; break;
+		case '대구': a = 6; break;
+		case '부산/울산': a = 7; break;
+		case '경상': a = 8; break;
+		case '광주/전라/제주': a = 9; break;
+		};
+		
+		
 		$.get(
 			"${root}/ticketrest/middle"
-			,{ mcode : $("#sel_m").val() }
+			,{ lcode : a}
 			,function(data,status){
-				$("#sel_m").empty();
+				$("#mid_table").empty();
 				$.each(data, function(index, dto) {
-					$("#sel_m").append(
+					$("#mid_table").append(
+							"<tr>"+
+							"<td>"+ 
+							dto.tm_nm+
+							"</td>"+
+							"</tr>"
 						//추가
 					);
 				});//each
@@ -43,18 +66,21 @@ $(document).ready(function() {
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th>번호</th>
-						<th>지역이름</th>
+					<th>지역이름</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="llist" items="${largeList}" varStatus="status">
 						<tr id="sel_l">
-							<td class="imsi"><a href="#">${llist.tl_num}</a></td>
-							<td><a href="#">${llist.tl_nm}</a></td>
+							
+							<td><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
+			</table>
+			
+			<table id="mid_table">
+			
 			</table>
 		</div>
 	</div>

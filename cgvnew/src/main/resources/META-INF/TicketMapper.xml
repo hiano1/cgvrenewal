@@ -7,13 +7,12 @@
 
 	<select resultType="kr.co.cgvnew.ticket.TicketDTO"
 		id="selectLarge">
-		select tl_num,tl_nmfrom tlarge
+		select tl_num,tl_nm from tlarge
 	</select>
 
 	<select resultType="kr.co.cgvnew.ticket.TicketDTO"
 		id="selectMiddle" parameterType="java.lang.String">
-		select tl_num,tl_nmfrom tMiddle =
-		#{lcode}
+		select tm_num,tm_nm from tmiddle where tl_num = #{lcode}
 	</select>
 
 
