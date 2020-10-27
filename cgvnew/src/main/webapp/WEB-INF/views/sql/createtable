@@ -4,7 +4,7 @@ tl_num int primary key not null
 ,tl_nm varchar(20)
 );
 create table tmiddle(
-tm_num int primary key not null
+tm_num int primary key not null auto_increment
 ,tm_nm varchar(20)
 ,tl_num int
 ,th_add varchar(200)
