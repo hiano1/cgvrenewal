@@ -15,8 +15,8 @@ public class MDAOImpl implements MDAO {
 	private SqlSession sqlSession;
 
 	@Override
-	public MDTO detail(String mv_num) {
-		MDTO dto = sqlSession.selectOne("MovieMapper.detail", mv_num);
+	public MDTO detail(String mv_nm) {
+		MDTO dto = sqlSession.selectOne("MovieMapper.detail", mv_nm);
 		return dto;
 	}
 

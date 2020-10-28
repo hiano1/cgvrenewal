@@ -6,7 +6,7 @@ public interface MService {
 
 	
 
-	public MDTO detail(String mv_num);
+	public MDTO detail(String mv_nm);
 
 	public List<MDTO> list();
 

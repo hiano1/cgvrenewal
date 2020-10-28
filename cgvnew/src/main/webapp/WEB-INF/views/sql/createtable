@@ -43,6 +43,13 @@ mv_num	int primary key
 ,mv_m	varchar(50)
 
 );
+
+
+insert into movie values(
+4,'살인의추억','1986년 경기도. 젊은 여인이 무참히 강간, 살해당한 시체로 발견된다. 2개월 후 비슷한 수법의 강간살인사건이 연이어 발생하면서 사건은 세간의 주목을 받기 시작하고, 일대는 연쇄살인이라는 생소한 범죄의 공포에 휩싸인다. 사건 발생 지역에 특별수사본부가 설치되고, 수사본부는 구희봉 반장을 필두로 지역토박이 형사 박두만과 조용구, 그리고 서울 시경에서 자원해 온 서태윤이 배치된다. 육감과 폭력으로 수사를 진행하는 박형사와 증거와 과학수사를 추구하는 서형사는 수사 내내 마찰을 일으키는데...','https://www.youtube.com/watch?v=lEqIv23MJLI&feature=youtu.be',
+'범죄,드라마,스릴러','127분','15','봉준호','2003-05-02','송강호,김상경,송재호','8.1','2.4','98','asd.png','ggg'
+
+);
 >>>>>>>>>매퍼할때 입력해야지
 create table  movie
 mv_num ,mv_nm ,mv_cont ,mv_tr ,mv_genre ,mv_rt ,mv_age ,mv_dt ,mv_rdate ,mv_ac ,mv_sc ,mv_rate ,mv_att ,mv_p ,mv_m	

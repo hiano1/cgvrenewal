@@ -14,8 +14,8 @@ public class MServiceImpl implements MService {
 	private MDAO dao;
 	
 	@Override
-	public MDTO detail(String mv_num) {
-		MDTO dto = dao.detail(mv_num);
+	public MDTO detail(String mv_nm) {
+		MDTO dto = dao.detail(mv_nm);
 	
 		return dto;
 	}

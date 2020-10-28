@@ -15,10 +15,10 @@ public class MovieController {
 	private MService service;
 
 	@RequestMapping(value = "/mdetail", method = RequestMethod.GET)
-	public String moviedetail(Model model, String mv_num) {
+	public String moviedetail(Model model, String mv_nm) {
 //		logger.info("Welcome home! The client locale is {}.", locale);
 
-		MDTO dto = service.detail(mv_num);
+		MDTO dto = service.detail(mv_nm);
 		model.addAttribute("movie_detail", dto);
 
 		return "/movie/detail";
