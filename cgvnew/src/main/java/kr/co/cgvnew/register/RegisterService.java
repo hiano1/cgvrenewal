@@ -37,4 +37,13 @@ public class RegisterService {
 
 	}//login
 
+
+	public int idChk(String mb_id) {
+		int idCount = dao.idChk(mb_id);
+		return idCount;
+	}//idChk
+	
+	
+	
+	
 }//class

@@ -17,10 +17,43 @@
 	
 	<div class="container">
 	
-	
 	<script type="text/javascript">
 	
 	$(document).ready(function() {
+		
+		var ck = 0;
+		
+		$("#btn_idChk").click(function() {
+			
+			if( $("#mb_id").val().trim() == "" ) {
+				alert("아이디를 입력 해 주세요.");
+				return false;
+			}
+			
+			$.get(
+				"./idChk"
+				,{mb_id:$("#mb_id").val()}
+				,function(data, status){
+					if(status == "success"){
+						if(data == 0){
+							$("#id_desc").text("사용 가능한 아이디 입니다.");
+							$("#id_desc").css("color","blue");
+							$("#mb_id").focus();
+							ck = 1;
+						} else {
+							$("#id_desc").text("이미 사용 중인 아이디 입니다.");
+							$("#id_desc").css("color","red");
+							$("#mb_id").focus();
+							$("#id_chk_yn").val("0");
+						}
+					} else {
+						alert("잠시 후 다시 시도해 주세요.");
+					}
+				}//function
+			);//get
+		});//click
+		
+		
 		$("#btn_register").click(function() {
 			
 			if( $.trim( $("#mb_id").val() ) == "" ){
@@ -44,9 +77,7 @@
 				alert("이름을 입력 해 주세요.");
 				return;
 			}
-			
 			//gender
-			
 			if( $.trim( $("#mb_birth1").val() ) == ""
 				|| $.trim( $("#mb_birth2").val() ) == ""
 				|| $.trim( $("#mb_birth3").val() ) == "" ){
@@ -66,88 +97,107 @@
 				return;
 			}
 			
+			if(ck == 0) {
+				alert('아이디 중복 여부를 확인 해 주세요.');
+				return false;
+			}else {
+				
 			$("#register_form").submit();
+				
+			}
 			
 		});//click
+		
+		
 	});//ready
 	
 	</script>
 	
-	
-	
-	
-	<h2>회원 가입</h2>
+	<h2 class="text-center text-muted">회원 가입</h2>
 	
 	<form id="register_form" method="post"
 		  action="${root}/register">
 	
-	<table class="table">
-	<tr>
-		<td>ID</td>
-		<td>
-		<input type="text" maxlength="20" id="mb_id" name="mb_id">
-		</td>
-	</tr>
-	<tr>
-		<td>PassWord</td>
-		<td>
-		<input type="password" maxlength="20" id="mb_pwd" name="mb_pwd">
-		</td>
-	</tr>
-	<tr>
-		<td>PassWord 확인</td>
-		<td>
-		<input type="password" maxlength="20" id="mb_pwdre" name="mb_pwdre">
-		</td>
-	</tr>
+	<div class="form-group">
+		<label for="mb_id">ID<span id="id_desc"></span></label>
+ 		<div class="form-inline">
+			<input type="text" class="form-control inputEng mr-1"
+				id="mb_id" name="mb_id" maxlength="20">
+ 			<button type="button" id="btn_idChk"
+ 				class="btn btn-primary">중복 확인</button>
+ 		</div>
+	</div>
+	<div class="form-group">
+		<label for="mb_pwd">PassWord</label>
+		<input type="password" class="form-control"
+			id="mb_pwd" name="mb_pwd" maxlength="20">
+	</div>
+	<div class="form-group">
+		<label for="mb_pwdre">PassWord 확인</label>
+		<input type="password" class="form-control"
+			id="mb_pwdre" name="mb_pwdre" maxlength="20">
+	</div>
+	<div class="form-group">
+		<label for="mb_nm">Name</label>
+		<input type="text" class="form-control inputEng mr-1"
+				id="mb_nm" name="mb_nm" maxlength="20">
+	</div>
 	
-	<tr>
-		<td>Name</td>
-		<td>
-		<input type="text" maxlength="20" id="mb_nm" name="mb_nm">
-		</td>
-	</tr>
+	<div class="form-group">
+		<label for="mb_gen">Gender</label>
+		<div class="form-inline">
+		<input type="checkbox" name="mb_gen1" value="Male"> Male 
+   		<input type="checkbox" name="mb_gen2" value="Female"> Female 
+		</div>
+	</div>
 	
-	<tr>
-		<td>Gender</td>
-		<td>
-		<input type="radio" name="mb_gen1" value="Male"> Male
-   		<input type="radio" name="mb_gen2" value="Female"> Female
-		</td>
-	</tr>
+	<div class="form-group">
+		<label for="mb_birth1">Birth</label>
+		<div class="form-inline">
+			<input type="text" class="form-control mr-1 inputNum"
+				id="mb_birth1" name="mb_birth1"
+				size="4" maxlength="4"> 년
+			<input type="text" class="form-control ml-1 mr-1 inputNum"
+				id="mb_birth2" name="mb_birth2"
+				size="2" maxlength="2"> 월
+			<input type="text" class="form-control ml-1 inputNum"
+				id="mb_birth3" name="mb_birth3"
+				size="2" maxlength="2"> 일
+		</div>
+	</div>
 	
-	<tr>
-		<td>Birth</td>
-		<td>
-		<input type="text" maxlength="4" size="4" id="mb_birth1" name="mb_birth1">
-		년 <input type="text" maxlength="2" size="2" id="mb_birth2" name="mb_birth2">
-		월 <input type="text" maxlength="2" size="2" id="mb_birth3" name="mb_birth3">일
-		</td>
-	</tr>
-	
-	
-	<tr>
-		<td>Telephone</td>
-		<td>
-		<input type="text" maxlength="3" size="3" id="mb_tel1" name="mb_tel1">
-		 - <input type="text" maxlength="4" size="4" id="mb_tel2" name="mb_tel2">
-		 - <input type="text" maxlength="4" size="4" id="mb_tel3" name="mb_tel3">
-		</td>
-	</tr>
-	
-	<tr>
-		<td>Email</td>
-		<td>
-		<input type="text" maxlength="25" id="mb_email1" name="mb_email1">
-		 @ <input type="text" maxlength="25" id="mb_email2" name="mb_email2">
-		</td>
-	</tr>
-	
-	</table>
+	<div class="form-group">
+		<label for="mb_tel1">Telephone</label>
+		<div class="form-inline">
+			<input type="text" class="form-control mr-1 inputNum"
+				id="mb_tel1" name="mb_tel1"
+				size="3" maxlength="3">
+			- <input type="text" class="form-control ml-1 mr-1 inputNum"
+				id="mb_tel2" name="mb_tel2"
+				size="4" maxlength="4">
+			- <input type="text" class="form-control ml-1 inputNum"
+				id="mb_tel3" name="mb_tel3"
+				size="4" maxlength="4">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="mb_email1">Email</label>
+		<div class="form-inline">
+			<input type="text" class="form-control mr-1 inputEmail"
+				id="mb_email1" name="mb_email1"
+				maxlength="25">
+			@ <input type="text" class="form-control ml-1 inputEmail"
+				id="mb_email2" name="mb_email2"
+				maxlength="25">
+		</div>
+	</div>
 	
 	</form>
 	
-	<button type="button" id="btn_register"> 회 원 가 입 </button>
+	<div class="text-right mb-5">
+	<button type="button" id="btn_register"
+			class="btn btn-primary"> 회 원 가 입 </button>
+	</div>
 	
 	</div>
 	

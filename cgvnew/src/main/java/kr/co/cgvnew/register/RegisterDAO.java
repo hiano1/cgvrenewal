@@ -31,6 +31,13 @@ public class RegisterDAO {
 	return successCnt;
 	}//idCheck
 
+
+	public int idChk(String mb_id) {
+		int idCount
+		= sqlSession.selectOne("RegisterMapper.idChk", mb_id);
+		return idCount;
+	}//idChk
+
 	
 	
 }//class

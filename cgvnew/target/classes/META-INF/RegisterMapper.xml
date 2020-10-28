@@ -23,5 +23,15 @@
 			resultType="int">
 	select count(mb_id) cnt from member where mb_id = #{mb_login_id}
 	</select>
+	
+	
+	<select id="idChk"
+			parameterType="java.lang.String"
+			resultType="int">
+		select count(mb_id) cnt
+		from member
+		where mb_id = #{mb_id}
+	</select>
+	
 
 </mapper>
