@@ -26,9 +26,10 @@ public class MServiceImpl implements MService {
 		return list;
 	}
 
+
 	@Override
 	public List<MDTO> listSearch(String mv_nm) {
-		List<MDTO> listSearch = dao.listSearch(mv_nm);
+		 List<MDTO> listSearch = dao.listSearch(mv_nm);
 		return listSearch;
 	}
 

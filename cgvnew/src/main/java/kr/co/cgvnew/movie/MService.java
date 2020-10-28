@@ -10,7 +10,10 @@ public interface MService {
 
 	public List<MDTO> list();
 
+
 	public List<MDTO> listSearch(String mv_nm);
+
+
 
 
 

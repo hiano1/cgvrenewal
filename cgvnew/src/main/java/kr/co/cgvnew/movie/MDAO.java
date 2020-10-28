@@ -8,7 +8,12 @@ public interface MDAO {
 
 	public List<MDTO> list();
 
+
+
+
 	public List<MDTO> listSearch(String mv_nm);
+
+
 
 
 

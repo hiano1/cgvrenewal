@@ -31,23 +31,22 @@ public class MovieController {
 	}
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String list(Model model) {
+	public String list( ) {
 
-		List<MDTO> list = service.list();
-		model.addAttribute("search_list", list);
+	
 		return "/search/list";
 	} // list
 
-	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public String listSearch(Model model, String mv_nm) {
-		logger.info(mv_nm);
-		List<MDTO> list = service.listSearch(mv_nm);
-		logger.info(""+list);
-		
-		model.addAttribute("search_list", list);
-
-		return "/search/search";
-	}// listSearch
+//	@RequestMapping(value = "/search", method = RequestMethod.GET)
+//	public String listSearch(Model model, String mv_nm) {
+//		logger.info(mv_nm);
+//		List<MDTO> list = service.listSearch(mv_nm);
+//		logger.info(""+list);
+//		
+//		model.addAttribute("search_list", list);
+//
+//		return "/search/search";
+//	}// listSearch
 
 }
 /*

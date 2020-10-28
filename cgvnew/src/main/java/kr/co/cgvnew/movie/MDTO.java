@@ -114,8 +114,8 @@ public String getMv_m() {
 public void setMv_m(String mv_m) {
 	this.mv_m = mv_m;
 }
-	@Override
-		public String toString() {
-			return mv_nm;
-		}
+//	@Override
+//		public String toString() {
+//			return mv_nm;
+//		}
 }//class
