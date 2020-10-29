@@ -14,7 +14,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-
 <style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Audiowide);
 
@@ -250,38 +249,6 @@ label:hover ~ input[type=password] {
   background: #27292c;
 }
 
-input[type="checkbox"] {
-  opacity: 0;
-  background: red;
-  position: absolute;
-  cursor: pointer;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-.checkbox {
-  position: absolute;
-  border-bottom: 2px solid #333;
-  border-right: 2px solid #333;
-  background-color: transparent;
-  height: 10px;
-  width: 5px;
-  margin: auto;
-  left: 50%;
-  transform: rotate(45deg);
-  transform-origin: -35% 30%;
-  transition: all 0.2s;
-}
-
-input[type="checkbox"]:checked ~ .checkbox {
-  transition: all 0.3s;
-  border-bottom: 2px solid #ffcc00;
-  border-right: 2px solid #ffcc00;
-}
-
 @keyframes neon {
   from {
     text-shadow: 
@@ -416,12 +383,9 @@ input[type="checkbox"]:checked ~ .checkbox {
 </head>
 <body>
 
-	
 	<script>
 	$(document).ready(function() {
-		
-		
-
+	
 		    var state = false;
 		    //$("input:text:visible:first").focus();
 		    $('#accesspanel').on('submit', function(e) {
@@ -439,8 +403,6 @@ input[type="checkbox"]:checked ~ .checkbox {
 
 		    });
 		
-		    
-		    
 		
 		//비밀번호 입력하고 엔터 누르면 로그인
 		$("#mb_login_pwd").keyup(function() {
@@ -448,6 +410,7 @@ input[type="checkbox"]:checked ~ .checkbox {
 				$("#btn_login").click();
 			}
 		});//keyup
+		
 		
 		$("#btn_login").click(function() {
 			if( $.trim( $("#mb_login_id").val() ) == "" ) {
@@ -465,49 +428,28 @@ input[type="checkbox"]:checked ~ .checkbox {
 	
 	
 	
-	
-	<!--  
+	<div class="background-wrap">
+ 	<div class="background"></div>
+	</div>
+
 	<form id="loginForm" method="post" action="${root}/login">
 	
-		<table class="table table-hover">
-			<tr>
-				<td>ID</td>
-				<td><input type="text" maxlength="20" id="mb_login_id" name="mb_login_id">
-				</td>
-			</tr>
-			<tr>
-				<td>PassWord</td>
-				<td><input type="password" maxlength="20" id="mb_login_pwd" name="mb_login_pwd"></td>
-			</tr>
-		</table>
-		
-		<button type="button" 
-				id="btn_login">Login</button>
-				
+  		<h1 id="litheader">CGV</h1>
+  	
+  		<div class="inset">
+    	<p>
+    		<input type="text" id="mb_login_id" name="mb_login_id" placeholder="ID">
+    	</p>
+    	<p>
+      		<input type="password" id="mb_login_pwd" name="mb_login_pwd" placeholder="Access code">
+    	</p>
+  		</div>
+  	
+  		<p class="p-container">
+    		<input type="submit" id="btn_login" name="Login" value="Login">
+  		</p>
+  	
 	</form>
-	-->
-	
-	
-<div class="background-wrap">
- <div class="background"></div>
-</div>
-
-<form id="loginForm" method="post" action="${root}/login">
-  <h1 id="litheader">CGV</h1>
-  <div class="inset">
-    <p>
-      <input type="text" id="mb_login_id" name="mb_login_id" placeholder="ID">
-    </p>
-    <p>
-      <input type="password" id="mb_login_pwd" name="mb_login_pwd" placeholder="Access code">
-    </p>
-
-  <input class="loginLoginValue" type="hidden" name="service" value="login" />
-  </div>
-  <p class="p-container">
-    <input type="submit" name="Login" id="go" value="Login">
-  </p>
-</form>
 	
 	
 	
