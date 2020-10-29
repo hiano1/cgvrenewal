@@ -12,25 +12,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+
+</style>
 </head>
 <body>
 	
 	<div class="container">
 	
-	<script type="text/javascript">
 	
+	<script type="text/javascript">
 	$(document).ready(function() {
 		
-		var ck = 0;
+		var ck = 0; //아이디 중복 체크 변수
 		
 		//아이디를 적지 않고 중복 체크 버튼 눌렀을 때
 		$("#btn_idChk").click(function() {
 			
-			if( $("#mb_id").val().trim() == "" ) {
-				alert("아이디를 입력 해 주세요.");
-				return false;
-			}
-			
+		if( $("#mb_id").val().trim() == "" ) {
+			alert("아이디를 입력 해 주세요.");
+			return false;
+		}
 		//아이디 중복 체크
 		$.get(
 			"./idChk"
@@ -52,7 +54,6 @@
 				}//function
 			);//get
 		});//click
-		
 		//중복 체크 후 다시 아이디 변경 할 때
 		$("#mb_id").keydown(function() {
 			ck = 0;
@@ -110,11 +111,10 @@
 			$("#register_form").submit();
 			}
 		});//click
-		
-		
 	});//ready
-	
 	</script>
+	
+	
 	
 	<h2 class="text-center text-muted">회원 가입</h2>
 	

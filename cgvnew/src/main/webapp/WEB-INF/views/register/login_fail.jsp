@@ -18,7 +18,7 @@
 		</a>
 	</h2>
 	<h2>
-		<a href="${root}/home">
+		<a href="${root}/">
 			홈 바로가기
 		</a>
 	</h2>
