@@ -34,7 +34,7 @@
 				"./idChk"
 				,{mb_id:$("#mb_id").val()}
 				,function(data, status){
-					if(status == "success"){
+					if(status == "success")
 						if(data == 0){
 							$("#id_desc").text("사용 가능한 아이디 입니다.");
 							$("#id_desc").css("color","blue");
@@ -44,15 +44,12 @@
 							$("#id_desc").text("이미 사용 중인 아이디 입니다.");
 							$("#id_desc").css("color","red");
 							$("#mb_id").focus();
-							$("#id_chk_yn").val("0");
-						}
 					} else {
 						alert("잠시 후 다시 시도해 주세요.");
 					}
 				}//function
 			);//get
 		});//click
-		
 		
 		$("#btn_register").click(function() {
 			
@@ -77,14 +74,16 @@
 				alert("이름을 입력 해 주세요.");
 				return;
 			}
-			//gender
+			if( $('input:radio[name=mb_gen]').is(':checked') != true ) {
+				alert("성별을 선택 해 주세요.");
+				return;
+			}
 			if( $.trim( $("#mb_birth1").val() ) == ""
 				|| $.trim( $("#mb_birth2").val() ) == ""
 				|| $.trim( $("#mb_birth3").val() ) == "" ){
 				alert("생년월일을 확인 해 주세요.");
 				return;
 			}
-			
 			if( $.trim( $("#mb_tel1").val() ) == ""
 				|| $.trim( $("#mb_tel2").val() ) == ""
 				|| $.trim( $("#mb_tel3").val() ) == "" ){
@@ -96,16 +95,13 @@
 				alert("이메일을 확인 해 주세요.");
 				return;
 			}
-			
 			if(ck == 0) {
 				alert('아이디 중복 여부를 확인 해 주세요.');
 				return false;
 			}else {
 				
 			$("#register_form").submit();
-				
 			}
-			
 		});//click
 		
 		
@@ -146,8 +142,8 @@
 	<div class="form-group">
 		<label for="mb_gen">Gender</label>
 		<div class="form-inline">
-		<input type="checkbox" name="mb_gen1" value="Male"> Male 
-   		<input type="checkbox" name="mb_gen2" value="Female"> Female 
+		<input type="radio" name="mb_gen" value="Male"> Male 
+   		<input type="radio" name="mb_gen" value="Female"> Female 
 		</div>
 	</div>
 	
@@ -167,7 +163,7 @@
 	</div>
 	
 	<div class="form-group">
-		<label for="mb_tel1">Telephone</label>
+		<label for="mb_tel">Telephone</label>
 		<div class="form-inline">
 			<input type="text" class="form-control mr-1 inputNum"
 				id="mb_tel1" name="mb_tel1"
@@ -181,7 +177,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="mb_email1">Email</label>
+		<label for="mb_email">Email</label>
 		<div class="form-inline">
 			<input type="text" class="form-control mr-1 inputEmail"
 				id="mb_email1" name="mb_email1"
