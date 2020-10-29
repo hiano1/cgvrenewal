@@ -122,7 +122,7 @@ img{
 					<button type="button" id="btn_search" class="btn btn-dark">
 						<i class="fas fa-search"></i></button>
 
-					<input type="text" id="id_search" class="form-control form-dark">
+					<input type="text" id="id_search" class="form-control">
 
 				</div>
 			</form>
