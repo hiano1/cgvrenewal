@@ -89,69 +89,64 @@ $(document).ready(function() {
 		<div class="header_container">
 			<%@ include file="../home_header2.jsp"%>
 		</div>
+		<div class="form-inline mt-5 mb-5">
+	 			<h4  class="mr-5" >전체극장</h4>
+				<h6><a href="${root}/thea/spT" >특별관</a></h6>
+		</div>
 		<div class="form-inline">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-					<th>지역이름</th>
-					</tr>
-				</thead>
-				<tbody>
+			<ul class="nav nav-tabs">
 					<c:forEach var="llist" items="${largeList}" varStatus="status">
-						<tr id="sel_l">
-							<td><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></td>
-						</tr>
+						<li class="mr-5" id="sel_l">
+							<a href="#" id="lcode${status.count}">${llist.tl_nm}</a>
+						</li>
 					</c:forEach>
-				</tbody>
-			</table>
-			
-			<table id="mid_table"></table>
-			
-			<div class="container mt-3">
-			  <br>
-			  <!-- Nav tabs -->
-			  <ul class="nav nav-tabs">
-				    <li class="nav-item">
-				      <a class="nav-link active" data-toggle="tab" href="#home">극장정보</a>
-				    </li>
-				    <li class="nav-item">
-				      <a class="nav-link" data-toggle="tab" href="#menu1">상영시간표</a>
-				    </li>
-				    <li class="nav-item">
-				      <a class="nav-link" data-toggle="tab" href="#menu2">관 람 료</a>
-				    </li>
-			  </ul>
-				<div class="tab-content">
-					<div id="home" class="container tab-pane active">
-						<table>
-						<thead>
-							<td>번호</td>
-							<td>극장명</td>
-							<td>좌표</td>
-							<td>주소</td>
-							<td>버스</td>
-							<td>지하철</td>
-						</thead>
-						<tbody id="mid_detail">
-							
-						</tbody>			
-						</table>
-					</div><!-- contents1 -->
-					<div id="menu1" class="container tab-pane fade">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div><!-- contents2 -->
-					<div id="menu2" class="container tab-pane fade">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div><!-- contents3 -->
+				</ul>
+		</div>
+			<div class="tab-content">
+				<div id="mid_table" class="container tab-pane active">
+					
 				</div>
+			</div>
+
+				<div class="container">
+					<br>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs mt-5">
+						<li class="nav-item"><a class="nav-link active"
+							data-toggle="tab" href="#mid_detail">극장 정보</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab"
+							href="#menu2">상영 시간표</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab"
+							href="#menu3">관 람 료</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div id="mid_detail" class="container tab-pane active">
+							<h5 class="mt-5 text-center">극장을 선택해주세요.</h5>
+						</div>
+						<div id="menu2" class="container tab-pane fade">
+							<br>
+							<!-- 상영 시간표 -->
+							<h3>Menu 1</h3>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+						<div id="menu3" class="container tab-pane fade">
+							<br>
+							<!-- 교통 정보 -->
+							<h3>Menu 2</h3>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit
+								voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						</div>
+					</div>
+
+				</div>
+
+
+		<div class="footer-container">
+			<%@ include file="../home_footer.jsp"%>
 		</div>
 	</div>
-		<div class="footer-container">
-		<%@ include file="../home_footer.jsp"%>
-		
-		</div>
-		
-</div>
-
 </body>
 </html>

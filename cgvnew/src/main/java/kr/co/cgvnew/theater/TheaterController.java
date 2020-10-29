@@ -20,7 +20,13 @@ public class TheaterController {
 		List<TheaterDTO> list = service.list();
 		model.addAttribute("largeList", list);
 		return "theater/theater";
-	}
+	}//mTheater
+	
+	@RequestMapping(value = "/thea/spT", method = RequestMethod.GET)
+	public String spTheater() {
+		return "theater/special";
+	}//spTheater
+	
 	
 	
 }//class
