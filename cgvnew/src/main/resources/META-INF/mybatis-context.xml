@@ -11,6 +11,7 @@
 		<mapper resource="META-INF/TheaterMapper.xml" />
 		<mapper resource="META-INF/TicketMapper.xml" />
 		<mapper resource="META-INF/RegisterMapper.xml" />
+		<mapper resource="META-INF/HomeListMapper.xml" />
 	</mappers>
 
 </configuration>
