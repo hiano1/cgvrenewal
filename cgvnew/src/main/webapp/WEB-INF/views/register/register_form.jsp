@@ -23,6 +23,7 @@
 		
 		var ck = 0;
 		
+		//아이디를 적지 않고 중복 체크 버튼 눌렀을 때
 		$("#btn_idChk").click(function() {
 			
 			if( $("#mb_id").val().trim() == "" ) {
@@ -30,26 +31,32 @@
 				return false;
 			}
 			
-			$.get(
-				"./idChk"
-				,{mb_id:$("#mb_id").val()}
-				,function(data, status){
-					if(status == "success")
-						if(data == 0){
-							$("#id_desc").text("사용 가능한 아이디 입니다.");
-							$("#id_desc").css("color","blue");
-							$("#mb_id").focus();
-							ck = 1;
-						} else {
-							$("#id_desc").text("이미 사용 중인 아이디 입니다.");
-							$("#id_desc").css("color","red");
-							$("#mb_id").focus();
+		//아이디 중복 체크
+		$.get(
+			"./idChk"
+			,{mb_id:$("#mb_id").val()}
+			,function(data, status){
+				if(status == "success")
+					if(data == 0){
+						$("#id_desc").text("사용 가능한 아이디 입니다.");
+						$("#id_desc").css("color","blue");
+						$("#mb_id").focus();
+						ck = 1;
+					} else {
+						$("#id_desc").text("이미 사용 중인 아이디 입니다.");
+						$("#id_desc").css("color","red");
+						$("#mb_id").focus();
 					} else {
 						alert("잠시 후 다시 시도해 주세요.");
 					}
 				}//function
 			);//get
 		});//click
+		
+		//중복 체크 후 다시 아이디 변경 할 때
+		$("#mb_id").keydown(function() {
+			ck = 0;
+		});//keydown
 		
 		$("#btn_register").click(function() {
 			
