@@ -18,8 +18,31 @@
 .wrap {
 	width: 1200px;
 	margin: 0 auto;
-	background-color: gray;
+	background-color: black;
+
 }
+
+.consearchlist {
+
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid black;
+	width: 250px;
+	height: 350px;
+}
+
+.p {
+	width: 100%;
+	height: 80%;
+}
+img{
+	width: 100%;
+}
+.alignaaa{
+text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -51,20 +74,19 @@
 			</ul>
 		</nav>
 
-<div class="container">
-			
+
+			<div class="alignaaa">
 			<c:forEach var="dto" items="${home_list}">
-				<ul>
-						<li>${dto.mv_p}</li>
-					<li><a href="${root}/mdetail?mv_nm=${dto.mv_nm}">${dto.mv_nm}</a></li>
-				</ul>
+			<div class="consearchlist">
+					<div class="p"><a href="${root}/mdetail?mv_nm=${dto.mv_nm}"><img src=" ${dto.mv_p}"></a></div>
+			</div>
+			
 			</c:forEach>
 		</div>
 
-
-	</div>
 	<div class="footer-container">
 		<%@ include file="./home_footer.jsp"%>
+	</div>
 </div>
 </body>
 </html>

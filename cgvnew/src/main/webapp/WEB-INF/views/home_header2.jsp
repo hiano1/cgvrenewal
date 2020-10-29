@@ -21,5 +21,6 @@ height: 200px;
 </head>
 
 <div class="head2">
+<h1>헤더2</h1>
 
 </div>
