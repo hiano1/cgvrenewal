@@ -17,7 +17,37 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.header_container{
+    background: black;
+    color: white;
+    
+} 
+.chz{/*  관람료 박스  */
+	min-height: 250px;
+	margin-top:100px;
+	margin-bottom:250px;
+	auto:0;'
+}
+ul{
+	list-style: none;
+	display: inline-flex;
+	
+}
+.llist{
+	display:flex;
+	min-width:50px;
+	justify-content: space-between;
+}
+
+</style>
 </head>
+
 <body>
 
 <script type="text/javascript">
@@ -86,62 +116,184 @@ $(document).ready(function() {
 
 
 	<div class="wrap">
+	
+		<!-- 헤더 -->
 		<div class="header_container">
 			<%@ include file="../home_header2.jsp"%>
 		</div>
-		<div class="form-inline mt-5 mb-5">
-	 			<h4  class="mr-5" >전체극장</h4>
-				<h6><a href="${root}/thea/spT" >특별관</a></h6>
-		</div>
-		<div class="form-inline">
-			<ul class="nav nav-tabs">
+		<!-- 헤더 -->
+	
+		<div class="container">
+			<div class="form-inline mt-5 mb-5">
+				<h4 class="mr-5">전체극장</h4>
+				<h6>
+					<a href="${root}/thea/spT">특별관</a>
+				</h6>
+			</div>
+			
+			<div class="form-inline">
+				<ul>
 					<c:forEach var="llist" items="${largeList}" varStatus="status">
-						<li class="mr-5" id="sel_l">
-							<a href="#" id="lcode${status.count}">${llist.tl_nm}</a>
-						</li>
+						<li class="llist" id="sel_l"><a href="#"
+							id="lcode${status.count}">${llist.tl_nm}</a></li>
 					</c:forEach>
 				</ul>
-		</div>
+			</div>
 			<div class="tab-content">
-				<div id="mid_table" class="container tab-pane active">
-					
+				<div id="mid_table" class="container tab-pane active"></div>
+			</div>
+
+
+			<br>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs mt-5">
+				<li class="nav-item"><a class="nav-link active"
+					data-toggle="tab" href="#mid_detail">극장 정보</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab"
+					href="#menu2">상영 시간표</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab"
+					href="#menu3">관 람 료</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div id="mid_detail" class="container tab-pane active">
+					<div class="chz">
+						<h5 class="text-center">극장을 선택해주세요.</h5>
+					</div>
+				</div>
+				<div id="menu2" class="container tab-pane fade">
+					<br>
+					<!-- 상영 시간표 -->
+					<div class="chz">
+						<h3>Menu 1</h3>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+				<div id="menu3" class="container tab-pane fade">
+					<br>
+					<div class="chz">
+						<!-- 관람료 -->
+						<h3>영화관람료</h3>
+						<div class="fee-table-box">
+							<div class="fee-table">
+								<p class="fee-table-tit">2D</p>
+								<table class="table">
+									<colgroup>
+										<col>
+										<col style="width: 25%;">
+										<col style="width: 25%;">
+										<col style="width: 25%;">
+
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">요일</th>
+											<th scope="col">상영시간</th>
+											<th scope="col">일반</th>
+											<th scope="col">청소년</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="rowgroup" rowspan="3">월~ 목</th>
+											<td>조조 (06:00~)</td>
+											<td>7,000</td>
+											<td>6,000</td>
+										</tr>
+										<tr>
+											<td>일반 (10:00~)</td>
+											<td>11,000</td>
+											<td>9,000</td>
+										</tr>
+										<tr>
+											<td>심야 (24:00~)</td>
+											<td>9,000</td>
+											<td>7,000</td>
+										</tr>
+										<tr>
+											<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
+											</th>
+											<td>조조 (06:00~)</td>
+											<td>8,000</td>
+											<td>7,000</td>
+										</tr>
+										<tr>
+											<td>일반 (10:00~)</td>
+											<td>12,000</td>
+											<td>10,000</td>
+										</tr>
+										<tr>
+											<td>심야 (24:00~)</td>
+											<td>10,000</td>
+											<td>8,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="fee-table">
+								<p class="fee-table-tit">3D</p>
+								<table class="table">
+									<colgroup>
+										<col>
+										<col style="width: 25%;">
+										<col style="width: 25%;">
+										<col style="width: 25%;">
+
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">요일</th>
+											<th scope="col">상영시간</th>
+											<th scope="col">일반</th>
+											<th scope="col">청소년</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="rowgroup" rowspan="3">월~ 목</th>
+											<td>조조 (06:00~)</td>
+											<td>7,000</td>
+											<td>6,000</td>
+										</tr>
+										<tr>
+											<td>일반 (10:00~)</td>
+											<td>11,000</td>
+											<td>9,000</td>
+										</tr>
+										<tr>
+											<td>심야 (24:00~)</td>
+											<td>9,000</td>
+											<td>7,000</td>
+										</tr>
+										<tr>
+											<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
+											</th>
+											<td>조조 (06:00~)</td>
+											<td>8,000</td>
+											<td>7,000</td>
+										</tr>
+										<tr>
+											<td>일반 (10:00~)</td>
+											<td>12,000</td>
+											<td>10,000</td>
+										</tr>
+										<tr>
+											<td>심야 (24:00~)</td>
+											<td>10,000</td>
+											<td>8,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--영화관람료 표 -->
+					</div>
 				</div>
 			</div>
 
-				<div class="container">
-					<br>
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs mt-5">
-						<li class="nav-item"><a class="nav-link active"
-							data-toggle="tab" href="#mid_detail">극장 정보</a></li>
-						<li class="nav-item"><a class="nav-link" data-toggle="tab"
-							href="#menu2">상영 시간표</a></li>
-						<li class="nav-item"><a class="nav-link" data-toggle="tab"
-							href="#menu3">관 람 료</a></li>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div id="mid_detail" class="container tab-pane active">
-							<h5 class="mt-5 text-center">극장을 선택해주세요.</h5>
-						</div>
-						<div id="menu2" class="container tab-pane fade">
-							<br>
-							<!-- 상영 시간표 -->
-							<h3>Menu 1</h3>
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
-								laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-						<div id="menu3" class="container tab-pane fade">
-							<br>
-							<!-- 교통 정보 -->
-							<h3>Menu 2</h3>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit
-								voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-						</div>
-					</div>
-
-				</div>
+		</div>
 
 
 		<div class="footer-container">
