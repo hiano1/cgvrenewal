@@ -85,8 +85,10 @@ $(document).ready(function() {
 </script>
 
 
-	<div class="container">
-		
+	<div class="wrap">
+		<div class="header_container">
+			<%@ include file="../home_header2.jsp"%>
+		</div>
 		<div class="form-inline">
 			<table class="table table-hover">
 				<thead>
@@ -144,6 +146,11 @@ $(document).ready(function() {
 				</div>
 		</div>
 	</div>
+		<div class="footer-container">
+		<%@ include file="../home_footer.jsp"%>
+		
+		</div>
+		
 </div>
 
 </body>
