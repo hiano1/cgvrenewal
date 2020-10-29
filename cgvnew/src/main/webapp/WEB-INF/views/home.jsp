@@ -51,24 +51,20 @@
 			</ul>
 		</nav>
 
-<table class="table table-hover">
-			<thead>
-				<tr>
-				
-					<th>영화이름</th>
-				<th>포스터사진</th>
-				</tr>
-			</thead>
+<div class="container">
+			
 			<c:forEach var="dto" items="${home_list}">
-				<tr>
-					<td><a href="${root}/mdetail?mv_nm=${dto.mv_nm}">${dto.mv_nm}</a></td>
-						<td>${dto.mv_p}</td>
-				</tr>
+				<ul>
+						<li>${dto.mv_p}</li>
+					<li><a href="${root}/mdetail?mv_nm=${dto.mv_nm}">${dto.mv_nm}</a></li>
+				</ul>
 			</c:forEach>
-		</table>
+		</div>
 
 
-		<%@ include file="./home_footer.jsp"%>
 	</div>
+	<div class="footer-container">
+		<%@ include file="./home_footer.jsp"%>
+</div>
 </body>
 </html>

@@ -15,6 +15,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div class="header_container">
+			<%@ include file="../home_header.jsp"%>
+		</div>
+
 	<table class="table">
 			<thead>
 				<tr>
@@ -56,5 +60,8 @@
 				
 			</tbody>
 		</table>
+		<div class="footer-container">
+		<%@ include file="../home_footer.jsp"%>
+</div>
 </body>
 </html>

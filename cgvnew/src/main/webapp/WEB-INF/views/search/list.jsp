@@ -35,17 +35,17 @@
 			if (status == "success") {
 				if (data.length > 0) {
 					
-					$("#list_b").empty();
+					$(".list_b").empty();
 					$.each(data, function(index, dto) {
 
-						$("#list_b").append(
-								"<tr>"
+						$(".list_b").append(
+								"<ul>"
 
-								+ "<td>" + "<a href='${root}/mdetail?mv_nm="
+								+ "<li>" + "<a href='${root}/mdetail?mv_nm="
 										+ dto.mv_nm + "'>" + dto.mv_nm + "</a>"
-										+ "</td>" + "<td>" + dto.mv_p + "</td>"
+										+ "</li>" + "<li>" + dto.mv_p + "</li>"
 
-										+ "</tr>"
+										+ "</ul>"
 										);//append
 					});//each
 				} else {
@@ -72,7 +72,11 @@
 </script>
 </head>
 <body>
-	<div class="container">
+	<div class="header_container">
+			<%@ include file="../home_header2.jsp"%>
+		</div>
+
+	<div class="container ">
 		
 
 		<form class="pagination justify-content-center mt-5 mb-5">
@@ -86,18 +90,12 @@
 
 			</div>
 		</form>
-		<table class="table table-hover">
-			<thead >
-				<tr>
-
-					<th>영화이름</th>
-					<th>포스터사진</th>
-				</tr>
-
-			</thead>
-			<tbody id="list_b">
-			</tbody>
-		</table>
+		<div class="container ">
+			
+			<ul class= "list_b">
+			</ul>
+		</div>
 	</div>
+
 </body>
 </html>
