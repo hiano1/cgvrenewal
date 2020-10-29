@@ -19,6 +19,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 	
 </script>
+
 <style type="text/css">
 .divsearch {
 	display: inline-grid;
@@ -38,16 +39,12 @@
 	height: 80%;
 }
 
-.nm {
-	width: 100%;
-	height: 10%;
-	border: 1px solid red;
-}
+
 
 .wraplist {
 	width: 1200px;
 	margin: 0 auto;
-	background-color: pink;
+	background-color: black;
 }
 
 .list_b {
@@ -106,6 +103,8 @@ img{
 
 	});//click
 </script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 	<div class="wraplist">
@@ -120,10 +119,10 @@ img{
 				<div class="divsearch">
 
 
-					<button type="button" id="btn_search" class="btn btn-primary">
-						s e a r c h</button>
+					<button type="button" id="btn_search" class="btn btn-dark">
+						<i class="fas fa-search"></i></button>
 
-					<input type="text" id="id_search" class="form-control">
+					<input type="text" id="id_search" class="form-control form-dark">
 
 				</div>
 			</form>
