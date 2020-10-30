@@ -44,6 +44,16 @@ ul{
 	min-width:50px;
 	justify-content: space-between;
 }
+.fee-table-box{
+width : 100%;
+overflow: hidden;
+margin-bottom: 30px;;
+
+}
+table{
+width:100%;
+margin
+}
 
 </style>
 </head>
@@ -110,7 +120,7 @@ $(document).ready(function() {
 				});//each
 			},"json");
 	});//click lcode
-	
+	$("#lcode1").trigger('click');
 });//ready
 </script>
 
@@ -140,7 +150,7 @@ $(document).ready(function() {
 				</ul>
 			</div>
 			<div class="tab-content">
-				<div id="mid_table" class="container tab-pane active"></div>
+				<div id="mid_table" class="tab-pane active"></div>
 			</div>
 
 
@@ -157,12 +167,12 @@ $(document).ready(function() {
 
 			<!-- Tab panes -->
 			<div class="tab-content">
-				<div id="mid_detail" class="container tab-pane active">
+				<div id="mid_detail" class="tab-pane active">
 					<div class="chz">
 						<h5 class="text-center">극장을 선택해주세요.</h5>
 					</div>
 				</div>
-				<div id="menu2" class="container tab-pane fade">
+				<div id="menu2" class="tab-pane fade">
 					<br>
 					<!-- 상영 시간표 -->
 					<div class="chz">
@@ -171,7 +181,7 @@ $(document).ready(function() {
 							laboris nisi ut aliquip ex ea commodo consequat.</p>
 					</div>
 				</div>
-				<div id="menu3" class="container tab-pane fade">
+				<div id="menu3" class="tab-pane fade">
 					<br>
 					<div class="chz">
 						<!-- 관람료 -->

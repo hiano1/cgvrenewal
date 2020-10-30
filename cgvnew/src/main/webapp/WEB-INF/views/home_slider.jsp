@@ -21,15 +21,15 @@
 }
 
 .slide {
-	margin: 0 auto;
-	width: 100% x;
+	
+	
 }
 </style>
 </head>
 <body>
 	<div id="slider-wrap">
 		<div class="slide">
-			<img src="${root}/resources/image/3.JPG" />
+			<img src="${root}/resources/image/samjin.PNG" />
 		</div>
 		<div class="slide">
 			<img src="${root}/resources/image/1.jpg" />
@@ -60,7 +60,7 @@
 				accessibility : true, //탭이나 방향키로 오브젝트 선택 가능여부
 				adaptiveHeight : true, //슬라이드 높이에 맞게 높이 자동조정 여부
 				centerMode : false,
-				variableWidth : true
+				variableWidth : false
 			});
 
 		});
