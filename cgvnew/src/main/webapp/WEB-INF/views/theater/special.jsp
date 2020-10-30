@@ -91,11 +91,11 @@
 	 cursor: default;
 }
  .tab:checked + label:hover {
-	 box-shadow: 0 -1px 0 #fff inset;
+	 box-shadow: 0 -2px 0 #fff inset;
 	 background-color: #fff;
 }
  .tab + label {
-	 box-shadow: 0 -1px 0 #eee inset;
+	 box-shadow: 0 -1px 0 #e41a12 inset;
 	 border-radius: 6px 6px 0 0;
 	 cursor: pointer;
 	 display: block;
@@ -126,9 +126,44 @@
 	 transform: translateY(-3px);
 	 border-radius: 6px;
 }
+.chz{/*  관람료 박스  */
+
+	margin-top:50px;
+	margin-bottom:70px;
+	text-align: center; 
+	
+}
+.fee-table-box{
+width : 100%;
+overflow: hidden;
+margin-bottom: 30px;;
+
+}
+
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+.data-table thead th{
+	background-color: #f2f2f2; 
+	
+}
+.data-table tbody th{
+
+}
+
 /* boring stuff */
  body {
-	 font-family: 'Helvetica', sans-serif;
+	 font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
 	 background-color: #e7e7e7;
 	 color: #777;
 	 padding: 30px 0;
@@ -137,7 +172,7 @@
  .container {
 	 margin: 0 auto;
 	 display: block;
-	 max-width: 800px;
+	 /* max-width: 800px; */
 }
  .container > *:not(.tab-wrap) {
 	 padding: 0 80px;
@@ -145,8 +180,9 @@
  h1, h2 {
 	 margin: 0;
 	 color: #444;
-	 text-align: center;
+	 /* text-align: center; */
 	 font-weight: 400;
+	 padding: 0 160px;
 }
  h2 {
 	 font-size: 1em;
@@ -154,6 +190,9 @@
 }
  h3 {
 	 font-weight: 400;
+}
+ h5 {
+	 font-weight: bold;
 }
  p {
 	 line-height: 1.6;
@@ -163,51 +202,157 @@
 </style>
 </head>
 <body>
-<h1>special</h1>
 
+<!-- <h1>전체극장</h1> -->
 
-<h1>CSS Tabs</h1>
-<h2>Transitioning Between Variable Heights</h2>
 
 <div class="container">
+	<h5>전체극장</h5>
 
-  <div class="demo-section">
-    <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-  </div>
-
-  <div class="tab-wrap">
+   <div class="tab-wrap">
 
     <!-- active tab on page load gets checked attribute -->
     <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-    <label for="tab1">Short</label>
+    <label for="tab1">극장정보</label>
 
-    <input type="radio" id="tab2" name="tabGroup1" class="tab" checked>
-    <label for="tab2">Medium</label>
+    <input type="radio" id="tab2" name="tabGroup1" class="tab" >
+    <label for="tab2">상영시간표</label>
 
-    <input type="radio" id="tab3" name="tabGroup1" class="tab" checked>
-    <label for="tab3">Long</label>
+    <input type="radio" id="tab3" name="tabGroup1" class="tab" >
+    <label for="tab3">관람료</label>
 
     <div class="tab__content">
-      <h3>Short Section</h3>
-      <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+    <div class="chz">
+      <h3>극장을 선택해주세요</h3>
+      </div>
     </div>
 
     <div class="tab__content">
-      <h3>Medium Section</h3>
+      <h3>상영시간표</h3>
       <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
 
       <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
     </div>
 
     <div class="tab__content">
-      <h3>Long Section</h3>
-      <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+      <h6>관람료</h6>
+			<div class="fee-table-box">
+      <div class="chz">
+			<!-- 관람료 -->
+			<h3>영화관람료</h3>
+				<div class="fee-table">
+					<p class="fee-table-tit">2D</p>
+					<table class="data-table a-c">
+						<colgroup>
+							<col>
+							<col style="width: 25%;">
+							<col style="width: 25%;">
+							<col style="width: 25%;">
 
-      <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">요일</th>
+								<th scope="col">상영시간</th>
+								<th scope="col">일반</th>
+								<th scope="col">청소년</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="rowgroup" rowspan="3">월~ 목</th>
+								<td>조조 (06:00~)</td>
+								<td>7,000</td>
+								<td>6,000</td>
+							</tr>
+							<tr>
+								<td>일반 (10:00~)</td>
+								<td>11,000</td>
+								<td>9,000</td>
+							</tr>
+							<tr>
+								<td>심야 (24:00~)</td>
+								<td>9,000</td>
+								<td>7,000</td>
+							</tr>
+							<tr>
+								<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
+								</th>
+								<td>조조 (06:00~)</td>
+								<td>8,000</td>
+								<td>7,000</td>
+							</tr>
+							<tr>
+								<td>일반 (10:00~)</td>
+								<td>12,000</td>
+								<td>10,000</td>
+							</tr>
+							<tr>
+								<td>심야 (24:00~)</td>
+								<td>10,000</td>
+								<td>8,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="fee-table">
+					<p class="fee-table-tit">3D</p>
+					<table class="data-table a-c">
+						<colgroup>
+							<col>
+							<col style="width: 25%;">
+							<col style="width: 25%;">
+							<col style="width: 25%;">
 
-      <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-
-      <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">요일</th>
+								<th scope="col">상영시간</th>
+								<th scope="col">일반</th>
+								<th scope="col">청소년</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="rowgroup" rowspan="3">월~ 목</th>
+								<td>조조 (06:00~)</td>
+								<td>7,000</td>
+								<td>6,000</td>
+							</tr>
+							<tr>
+								<td>일반 (10:00~)</td>
+								<td>11,000</td>
+								<td>9,000</td>
+							</tr>
+							<tr>
+								<td>심야 (24:00~)</td>
+								<td>9,000</td>
+								<td>7,000</td>
+							</tr>
+							<tr>
+								<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
+								</th>
+								<td>조조 (06:00~)</td>
+								<td>8,000</td>
+								<td>7,000</td>
+							</tr>
+							<tr>
+								<td>일반 (10:00~)</td>
+								<td>12,000</td>
+								<td>10,000</td>
+							</tr>
+							<tr>
+								<td>심야 (24:00~)</td>
+								<td>10,000</td>
+								<td>8,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--영화관람료 표 -->
+		</div>
     </div>
 
   </div>
