@@ -12,9 +12,15 @@
 
 	<select resultType="kr.co.cgvnew.ticket.TicketDTO"
 		id="selectMiddle" parameterType="java.lang.String">
-		select tm_num,tm_nm from tmiddle where tl_num = #{lcode}
+		select tm_num,tm_nm from tmiddle where
+		tl_num = #{lcode}
 	</select>
 
+	<select resultType="kr.co.cgvnew.movie.MDTO" id="selectedmovie"
+		parameterType="java.lang.String">
+		select mv_nm, mv_p from movie 
+		WHERE mv_num = #{mnum}
+	</select>
 
 
 </mapper>

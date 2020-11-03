@@ -18,69 +18,120 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<script type="text/javascript">
+	<script type="text/javascript">
+		$(document)
+				.ready(
+						function() {
+							$("a[id^=lcode]")
+									.click(
+											function() {
+												$("#selL").text($(this).text());
+												var a;
+												switch ($(this).text()) {
+												case '서울':
+													a = 1;
+													break;
+												case '경기':
+													a = 2;
+													break;
+												case '인천':
+													a = 3;
+													break;
+												case '강원':
+													a = 4;
+													break;
+												case '대전/충청':
+													a = 5;
+													break;
+												case '대구':
+													a = 6;
+													break;
+												case '부산/울산':
+													a = 7;
+													break;
+												case '경상':
+													a = 8;
+													break;
+												case '광주/전라/제주':
+													a = 9;
+													break;
+												}
+												;
 
+												$
+														.get(
+																"${root}/ticketrest/middle",
+																{
+																	lcode : a
+																},
+																function(data,
+																		status) {
+																	$(
+																			"#mid_table")
+																			.empty();
+																	$
+																			.each(
+																					data,
+																					function(
+																							index,
+																							dto) {
+																						$(
+																								"#mid_table")
+																								.append(
+																										"<tr>"
+																												+ "<td>"
+																												+ "<a href='#' id='mcode" + index + "'>"
+																												+ dto.tm_nm
+																												+ "</a>"
+																												+ "</td>"
+																												+ "</tr>"
+																								//추가
+																								);
+																					}); //each
 
-$(document).ready(function() {
-
-	
-	$("a[id^=lcode]").click(function(){
-		var a;
-		switch ($(this).text()){
-		case '서울': a = 1; break;
-		case '경기': a = 2; break;
-		case '인천': a = 3; break;
-		case '강원': a = 4; break;
-		case '대전/충청': a = 5; break;
-		case '대구': a = 6; break;
-		case '부산/울산': a = 7; break;
-		case '경상': a = 8; break;
-		case '광주/전라/제주': a = 9; break;
-		};
-		
-		
-		$.get(
-			"${root}/ticketrest/middle"
-			,{ lcode : a}
-			,function(data,status){
-				$("#mid_table").empty();
-				$.each(data, function(index, dto) {
-					$("#mid_table").append(
-							"<tr>"+
-							"<td>"+ 
-							dto.tm_nm+
-							"</td>"+
-							"</tr>"
-						//추가
-					);
-				});//each
-			},"json");
-	});
-});
-</script>
+																}, "json");
+											}); //click
+											$(document).on("click","a[id^=mcode]",function(){
+												$("#selM").text($(this).text());
+											});
+						});//ready
+	</script>
 
 
 	<div class="container">
-		
+		<div class="side_nav1">
+			<!-- 선택된 영화 -->
+			<c:forEach var="smv" items="${smv}" varStatus="status">
+				<h3>선택된 영화 : ${smv.mv_nm}</h3>
+				<img src="${smv.mv_p}">
+			</c:forEach>
+		</div>
+		<div class="side_nav2">
+			<!-- 선택된 지역 / 영화관 -->
+			선택된 지역 :
+			<h3 id="selL"></h3>
+			선택된 영화관 :
+			<h3 id="selM"></h3>
+		</div>
 		<div class="form-inline">
 			<table class="table table-hover">
 				<thead>
 					<tr>
-					<th>지역이름</th>
+						<th>지역이름</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="llist" items="${largeList}" varStatus="status">
 						<tr id="sel_l">
-							
+
 							<td><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-			
+
 			<table id="mid_table">
-			
+
 			</table>
 		</div>
 	</div>
