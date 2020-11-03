@@ -216,7 +216,7 @@ label[for=remember] {
   padding-top: 8px;
 }
 
-input[type=submit] {
+#btn_login {
   background: #fb0;
   border: 1px solid rgba(0,0,0,0.4);
   border-radius: .3em;
@@ -236,7 +236,7 @@ input[type=submit] {
   background: #EE0000 !important;
 }
 
-input[type=submit]:hover, input[type=submit]:focus {
+#btn_login button:hover, button:focus {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -10px 10px rgba(255,255,255,0.1);
 }
 
@@ -468,7 +468,6 @@ label:hover ~ input[type=password] {
   		</div>
   	
   		<p class="p-container">
-<!--     		<input type="submit" id="btn_login" name="Login" value="Login"> -->
 			<button type="button" id="btn_login">Login</button>
   		</p>
   		
