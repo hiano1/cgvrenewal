@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="root" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,6 +141,9 @@ overflow: hidden;
 margin-bottom: 30px;;
 
 }
+.fee-table th {
+    padding: 10px 0;
+}
 
 table, td, th {  
   border: 1px solid #ddd;
@@ -146,13 +151,33 @@ table, td, th {
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
+	width : 100%;
+	margin :0;
+	border:0;
+	table-layout : fixed;
+	border-collapse: collapse;
+ 	
 }
 
+
 th, td {
-  padding: 15px;
+  padding: 10px;
 }
+.fee-table-box{
+	width : 100%;
+	overflow : hidden;
+	margin-bottom : 70px;
+    margin-right: 20px;
+    
+}
+.fee-table-box .fee-table{
+	width : 500px;
+	float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}
+ 
 .data-table thead th{
 	background-color: #f2f2f2; 
 	
@@ -168,6 +193,7 @@ th, td {
 	 color: #777;
 	 padding: 30px 0;
 	 font-weight: 300;
+	 font-size: 15px;
 }
  .container {
 	 margin: 0 auto;
@@ -369,17 +395,7 @@ th, td {
     <input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
     <label for="tab4">Apples</label>
 
-    <input type="radio" id="tab5" name="tabGroup2" class="tab">
-    <label for="tab5">Oranges</label>
-
-    <input type="radio" id="tab6" name="tabGroup2" class="tab">
-    <label for="tab6">Bananas</label>
-
-    <input type="radio" id="tab7" name="tabGroup2" class="tab">
-    <label for="tab7">Kiwis</label>
-
-    <input type="radio" id="tab8" name="tabGroup2" class="tab">
-    <label for="tab8">Tomatos</label>
+    
 
     <div class="tab__content">
       <h3>Apples</h3>
