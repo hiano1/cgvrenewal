@@ -5,27 +5,32 @@
 <!-- home_header start -->
 <!-- header nav start -->
 
-<nav class="navbar navbar-expand-sm float-right">
-	<ul class="navbar-nav">
-		<c:choose>
-			<c:when test="${login_id_session !=null && login_id_session.length() > 0 }">
-				<li>
-				<a class="nav-link text-muted font-weight-bold" href="#">MyCGV</a>
-				</li>
-				<li>
-				<a class="nav-link text-muted font-weight-bold"
-				href="${root}/logout">Logout</a></li>
-			</c:when>
-			<c:otherwise>
-				<li><a class="nav-link text-muted font-weight-bold"
-					href="${root}/registerForm">SignUp</a></li>
-				<li class="nav-item"><a
-					class="nav-link text-muted font-weight-bold" 
-					href="${root}/loginForm">Login</a></li>
-			</c:otherwise>
-		</c:choose>
-	</ul>
-</nav>
+<div class="onehead">
+	<c:choose>
+		<c:when
+			test="${login_id_session !=null && login_id_session.length() > 0 }">
+			<div><a href="${root}/"><img class="logo" src="${root}/resources/image/cgv_logo.png" /></a></div>
+			<div></div>
+			<div>
+				<a class="" href="#">MyCGV</a>
+			</div>
+			<div>
+				<a class="" href="${root}/logout">Logout</a>
+			</div>
+		</c:when>
+		<c:otherwise>
+			<div><a href="${root}/"><img class="logo" src="${root}/resources/image/cgv_logo.png" /></a></div>
+			<div></div>
+			<div>
+				<a class="" href="${root}/registerForm">SignUp</a>
+			</div>
+			<div class="">
+				<a class="" href="${root}/loginForm">Login</a>
+			</div>
+		</c:otherwise>
+	</c:choose>
+</div>
+
 
 <!-- header nav end -->
 <!-- home_header end -->

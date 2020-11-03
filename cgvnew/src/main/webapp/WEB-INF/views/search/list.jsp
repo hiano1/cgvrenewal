@@ -109,13 +109,13 @@ img{
 <body>
 	<div class="wraplist">
 		<div class="header_container">
-			<%@ include file="../home_header2.jsp"%>
+			<%@ include file="../home_header.jsp"%>
 		</div>
 
 		<div class="container ">
 
 
-			<form class="pagination justify-content-center mt-5 mb-5">
+			<form class="pagination justify-content-center  mb-5">
 				<div class="divsearch">
 
 
