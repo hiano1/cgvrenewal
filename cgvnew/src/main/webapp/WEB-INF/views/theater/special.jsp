@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="root" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -141,9 +139,6 @@ overflow: hidden;
 margin-bottom: 30px;;
 
 }
-.fee-table th {
-    padding: 10px 0;
-}
 
 table, td, th {  
   border: 1px solid #ddd;
@@ -158,7 +153,6 @@ table {
 	border-collapse: collapse;
  	
 }
-
 
 th, td {
   padding: 10px;
@@ -395,7 +389,17 @@ th, td {
     <input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
     <label for="tab4">Apples</label>
 
-    
+    <input type="radio" id="tab5" name="tabGroup2" class="tab">
+    <label for="tab5">Oranges</label>
+
+    <input type="radio" id="tab6" name="tabGroup2" class="tab">
+    <label for="tab6">Bananas</label>
+
+    <input type="radio" id="tab7" name="tabGroup2" class="tab">
+    <label for="tab7">Kiwis</label>
+
+    <input type="radio" id="tab8" name="tabGroup2" class="tab">
+    <label for="tab8">Tomatos</label>
 
     <div class="tab__content">
       <h3>Apples</h3>
