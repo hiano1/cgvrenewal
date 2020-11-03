@@ -26,9 +26,9 @@
 		
 		var ck = 0; //아이디 중복 체크 변수
 		
-		//아이디를 적지 않고 중복 체크 버튼 눌렀을 때
+		
 		$("#btn_idChk").click(function() {
-			
+		//아이디를 적지 않고 중복 체크 버튼 눌렀을 때
 		if( $("#mb_id").val().trim() == "" ) {
 			alert("아이디를 입력 해 주세요.");
 			return false;
@@ -54,6 +54,7 @@
 				}//function
 			);//get
 		});//click
+		
 		//중복 체크 후 다시 아이디 변경 할 때
 		$("#mb_id").keydown(function() {
 			ck = 0;
@@ -112,6 +113,7 @@
 			}
 		});//click
 	});//ready
+	
 	</script>
 	
 	

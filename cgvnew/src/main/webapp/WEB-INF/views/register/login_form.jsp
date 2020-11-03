@@ -382,7 +382,10 @@ label:hover ~ input[type=password] {
 
 </head>
 <body>
-
+	
+	
+	
+	
 	<script>
 	$(document).ready(function() {
 	
@@ -414,17 +417,36 @@ label:hover ~ input[type=password] {
 		
 		$("#btn_login").click(function() {
 			if( $.trim( $("#mb_login_id").val() ) == "" ) {
-				alert("Check Your Id.");
+				$("#notice").text("아이디를 입력 해 주세요.");
 				return;
-			}
+			} 
 			if( $.trim( $("#mb_login_pwd").val() ) == "" ) {
-				alert("Check Your PassWord.");
+				$("#notice").text("비밀번호를 입력 해 주세요.");
 				return;
 			}
-			$("#loginForm").submit();
+			$.ajax({
+				type:"POST"
+				, url:"./login"
+				, dataType:"JSON"
+				, data : {mb_login_id : $("#mb_login_id").val(), mb_login_pwd : $("#mb_login_pwd").val()}
+				, success : function(data) {
+					if(data == "1") {
+						location.href = "${root}/";
+					} else if (data == "-1") {
+						alert("아이디가 없습니다.");
+					} else if(data == "0") {
+						alert("비밀번호를 확인해 주세요.");
+					}
+				}//success
+				, error : function(xhr, status, error) {
+				}
+			});
 		});//click
+		
 	});//ready
 	</script>
+	
+	
 	
 	
 	
@@ -435,7 +457,7 @@ label:hover ~ input[type=password] {
 	<form id="loginForm" method="post" action="${root}/login">
 	
   		<h1 id="litheader">CGV</h1>
-  	
+  		
   		<div class="inset">
     	<p>
     		<input type="text" id="mb_login_id" name="mb_login_id" placeholder="ID">
@@ -446,9 +468,12 @@ label:hover ~ input[type=password] {
   		</div>
   	
   		<p class="p-container">
-    		<input type="submit" id="btn_login" name="Login" value="Login">
+<!--     		<input type="submit" id="btn_login" name="Login" value="Login"> -->
+			<button type="button" id="btn_login">Login</button>
   		</p>
-  	
+  		
+		<span id="notice"></span>
+		
 	</form>
 	
 	
