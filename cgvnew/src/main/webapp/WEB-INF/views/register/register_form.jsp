@@ -85,6 +85,21 @@ button {
 			ck = 0;
 		});//keydown
 		
+		
+		$(".inputEng").keyup(function() {
+			let tmpElement = event.target;
+			let tmpValue = tmpElement.value;
+			tmpElement.value
+				= tmpValue.replace(/[^ A-Z a-z 0-9 \.]/g, '');
+		});//keyup
+		$(".inputNum").keyup(function() {
+			let tmpElement = event.target;
+			let tmpValue = tmpElement.value;
+			tmpElement.value
+				= tmpValue.replace(/[^ 0-9 \.]/g, '');
+		});//keyup
+		
+		
 		$("#btn_register").click(function() {
 			
 			if( $.trim( $("#mb_id").val() ) == "" ){
@@ -136,7 +151,6 @@ button {
 				
 			//$("#register_form").submit();
 			}
-			
 			
 			$.ajax({
 				type:"POST"
@@ -328,10 +342,10 @@ button {
 	<div class="form-group">
 		<label for="mb_email">Email</label>
 		<div class="form-inline">
-			<input type="text" class="form-control mr-1 inputEmail"
+			<input type="text" class="form-control mr-1 inputEng"
 				id="mb_email1" name="mb_email1"
 				maxlength="25" style="width:150px;">
-			@ <input type="text" class="form-control ml-1 inputEmail"
+			@ <input type="text" class="form-control ml-1 inputEng"
 				id="mb_email2" name="mb_email2"
 				maxlength="25" style="width:150px;">
 		</div>
