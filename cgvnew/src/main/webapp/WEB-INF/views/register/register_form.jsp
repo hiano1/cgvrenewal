@@ -109,8 +109,32 @@
 				return false;
 			}else {
 				
-			$("#register_form").submit();
+			//$("#register_form").submit();
 			}
+			
+			
+			$.ajax({
+				type:"POST"
+				, url:"./register"
+				, dataType:"JSON"
+				, data : {mb_id : $("#mb_id").val(), mb_pwd : $("#mb_pwd").val()
+						, mb_nm : $("#mb_nm").val(), mb_gen : $('input:radio[name=mb_gen]').val()
+						, mb_birth1 : $("#mb_birth1").val(), mb_birth2 : $("#mb_birth2").val(), mb_birth3 : $("#mb_birth3").val()
+						, mb_tel1 : $("#mb_tel1").val(), mb_tel2 : $("#mb_tel2").val(), mb_tel3 : $("#mb_tel3").val()
+						, mb_email1 : $("#mb_email1").val(), mb_email2 : $("#mb_email2").val()}
+				, success : function(data) {
+					if(data == "1") {
+						alert("회원 가입을 축하드립니다.")
+						location.href = "${root}/";
+					} else if(data == "-1") {
+						alert("회원 가입을 다시 시도 해 주세요.");
+					}
+				}//success
+				, error : function(xhr, status, error) {
+				}
+			});
+			
+			
 		});//click
 	});//ready
 	

@@ -22,16 +22,19 @@ public class RegisterController {
 	private RegisterService service;
 	
 	
+	@ResponseBody
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String register(RegisterDTO inDto) {
 
 		int successCnt = service.register(inDto);
-
+		logger.info(""+successCnt); 
+		
 		if(successCnt == 1) {//회원 가입 성공
-			return "home";
+			return ""+successCnt;
 		} else {//회원 가입 실패
-			return "register/register_fail";
+			return "-1";
 		}
+		
 	}//register
 	
 	
