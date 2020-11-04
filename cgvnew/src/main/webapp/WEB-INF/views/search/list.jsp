@@ -19,7 +19,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 	
 </script>
-
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
 <style type="text/css">
 .divsearch {
 	display: inline-grid;

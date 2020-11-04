@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="root" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +18,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
 <style type="text/css">
 /* *{
     margin: 0;
@@ -125,7 +127,10 @@ $(document).ready(function() {
 </script>
 
 
-	<div class="wrap">
+	<div class="wraplist">
+	<div class="header_container">
+			<%@ include file="../home_header.jsp"%>
+		</div>
 	
 		<!-- 헤더 -->
 		<div class="header_container">
