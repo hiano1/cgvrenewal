@@ -25,15 +25,44 @@
 
 
 body {
-  background: #454545;
-  font-family: Roboto;
+  background: black;
   color: white;
 }
 
 .mov_box {
-  text-align: center;
+  text-align: left;
 }
 
+.mov_meta {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: -50px;
+}
+
+.mov_meta li {
+  display: inline-block;
+  margin: 0px 10px;
+  color: #fff;
+  font-size: 13px;
+}
+.mov_container {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: -50px;
+}
+
+.mov_container li {
+  display: inline-block;
+  margin: 0px 10px;
+  color: #fff;
+  font-size: 13px;
+}
+  .break {
+    margin: 0 auto;
+    width: 95%;
+  }
 
 /*
 btn 
@@ -80,6 +109,15 @@ btn
   margin-right: 5px;
 }
 
+.mov_p {
+
+
+
+  right: 0;
+  float: right;
+
+}
+
 </style>
 
 </head>
@@ -89,15 +127,16 @@ btn
 	<div class="header_container">
 		<%@ include file="../home_header.jsp"%>
 	</div>
+<div class="wrap">
 
-
-	<section class="mov_box">
-
-  <main class="mov_card">
-    <div class="billboard-layer"></div>
-    <div class="hero" style="${movie_detail.mv_p}"></div>
-    <div class="breaking-bad">
+	<section class="mov_box" >
+   <div class="mov_p"> <img src="${movie_detail.mv_p}"></div> 
+    <div class="mov_container">
       <h1 class="mov_nm">${movie_detail.mv_nm}</h1>
+      <ul class="mov_man">
+      <li class="mov_dt">${movie_detail.mv_dt}</li>
+      <li class="mov_ac">${movie_detail.mv_ac}</li>
+      </ul>
       <ul class="mov_meta">
         <li class="mov_genre">${movie_detail.mv_genre}</li>
         <li class="mov_rdate">${movie_detail.mv_rdate}</li>
@@ -107,27 +146,27 @@ btn
         <li class="mov_att">${movie_detail.mv_att}</li>
       </ul>
       <p class="mov_cont">${movie_detail.mv_cont}</p>
+      
+  
+      
+      
+      
+      
+      
+      
       <hr class="break" />
-      
-      
-      
-      
-      
-      
-      
-      
 		 <div class="bottom-info">
         <a class="btn btn-min-w btn-web btn-s" href="${root}/ticket/main?mnum=${movie_detail.mv_num}" role="button">영 화 예 매 </a>
-        <a class="btn btn-min-w btn-grey" href="#" role="button">트 레 일 러</a>
+        <a class="btn btn-min-w btn-grey " href="#" role="button">트 레 일 러</a>
       </div>
 		</div>
-		</main>
+
 	</section>
 
+</div>
 
 		<div class="footer_container">
 		<%@ include file="../home_footer.jsp"%>
 	</div>
-
 </body>
 </html>
