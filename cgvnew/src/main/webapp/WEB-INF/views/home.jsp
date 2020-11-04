@@ -14,49 +14,8 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<style type="text/css">
-.wrap {
-	width: 1200px;
-	margin: 0 auto;
-	background-color: black;
+<link rel="stylesheet" href="resources/css/header.css">
 
-}
-
-.consearchlist {
-
-	display: inline-block;
-	padding: 5px;
-	text-align: center;
-	border: 1px solid black;
-	width: 250px;
-	height: 350px;
-}
-
-.p {
-	width: 100%;
-	height: 80%;
-}
-img{
-	width: 100%;
-}
-.alignaaa{
-text-align: center;
-}
-.onehead{
- width: 100%;
-  height: 80px;
-  border: 1px solid #c3c3c3;
-  display: flex;
-}
-.logo {
-width: 150px; !important
-
-}
-.onehead div:nth-of-type(1) {flex-grow: 2 ;text-align: center;}
-.onehead div:nth-of-type(2) {flex-grow: 30;}
-.onehead div:nth-of-type(3) {flex-grow: 1;text-align: center;}
-.onehead div:nth-of-type(4) {flex-grow: 1;text-align: center;}
-</style>
 </head>
 <body>
 	<div class="wrap">
