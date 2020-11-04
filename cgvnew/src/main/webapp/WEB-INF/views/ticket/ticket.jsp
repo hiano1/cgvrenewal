@@ -8,94 +8,17 @@
 <meta charset="UTF-8">
 <title>ticket</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.form-inline{
+			
+		}
+	</style>
+	
 </head>
 <body>
-	<script type="text/javascript">
-		$(document)
-				.ready(
-						function() {
-							$("a[id^=lcode]")
-									.click(
-											function() {
-												$("#selL").text($(this).text());
-												var a;
-												switch ($(this).text()) {
-												case '서울':
-													a = 1;
-													break;
-												case '경기':
-													a = 2;
-													break;
-												case '인천':
-													a = 3;
-													break;
-												case '강원':
-													a = 4;
-													break;
-												case '대전/충청':
-													a = 5;
-													break;
-												case '대구':
-													a = 6;
-													break;
-												case '부산/울산':
-													a = 7;
-													break;
-												case '경상':
-													a = 8;
-													break;
-												case '광주/전라/제주':
-													a = 9;
-													break;
-												}
-												;
-
-												$
-														.get(
-																"${root}/ticketrest/middle",
-																{
-																	lcode : a
-																},
-																function(data,
-																		status) {
-																	$(
-																			"#mid_table")
-																			.empty();
-																	$
-																			.each(
-																					data,
-																					function(
-																							index,
-																							dto) {
-																						$(
-																								"#mid_table")
-																								.append(
-																										"<tr>"
-																												+ "<td>"
-																												+ "<a href='#' id='mcode" + index + "'>"
-																												+ dto.tm_nm
-																												+ "</a>"
-																												+ "</td>"
-																												+ "</tr>"
-																								//추가
-																								);
-																					}); //each
-
-																}, "json");
-											}); //click
-											$(document).on("click","a[id^=mcode]",function(){
-												$("#selM").text($(this).text());
-											});
-						});//ready
-	</script>
+	
 
 
 	<div class="container">
@@ -133,7 +56,10 @@
 			<table id="mid_table">
 
 			</table>
-		</div>
-	</div>
+		</div><!-- form-inline -->
+		
+		<button id="nextBtn">next</button>
+	</div><!-- container -->
+	<script type="text/javascript" src="${root}/resources/js/ticket.js"></script>
 </body>
 </html>
