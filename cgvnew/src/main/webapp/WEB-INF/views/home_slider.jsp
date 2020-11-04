@@ -20,10 +20,13 @@
 	height: 300px;
 }
 
-.slide {
-	
+.slide img{
+
+width: 100%
+
 	
 }
+
 </style>
 </head>
 <body>

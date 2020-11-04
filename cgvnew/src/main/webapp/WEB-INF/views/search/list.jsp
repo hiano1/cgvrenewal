@@ -20,40 +20,7 @@
 	
 </script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
-<style type="text/css">
-.divsearch {
-	display: inline-grid;
-}
 
-.consearchlist {
-	display: inline-block;
-	padding: 5px;
-	text-align: center;
-	border: 1px solid black;
-	width: 250px;
-	height: 350px;
-}
-
-.p {
-	width: 100%;
-	height: 80%;
-}
-
-
-
-.wraplist {
-	width: 1200px;
-	margin: 0 auto;
-	background-color: black;
-}
-
-.list_b {
-	text-align: center;
-}
-img{
-	width: 100%;
-}
-</style>
 <script type="text/javascript">
 	function getList() {
 		$.get(

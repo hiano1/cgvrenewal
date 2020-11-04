@@ -16,7 +16,10 @@ background: black;
 
 <body>
 <div class="foot">
-
+<p class="copyright">&copy;2020 CGV. All Rights Reserved.</p>
+		<div class="links">
+			<a href="#">Terms of Service</a> <a href="#">Privacy Policy</a>
+		</div>
 </div>
 
 </body>

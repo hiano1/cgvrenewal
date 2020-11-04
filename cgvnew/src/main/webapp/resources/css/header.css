@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,600,800,300);
 
 .wrap {
 	width: 1200px;
@@ -8,23 +8,6 @@
 
 }
 
-.consearchlist {
-
-	display: inline-block;
-	padding: 5px;
-	text-align: center;
-	border: 1px solid black;
-	width: 250px;
-	height: 350px;
-}
-
-.p {
-	width: 100%;
-	height: 80%;
-}
-img{
-width: 100%
-}
 .alignaaa{
 text-align: center;
 }
@@ -36,7 +19,7 @@ text-align: center;
   display: flex;
 }
 .logo {
-width: 150px; !important
+width: 150px; 
 
 }
 .onehead div:nth-of-type(1) {flex-grow: 2 ;text-align: center;}
