@@ -43,6 +43,7 @@ public class RegisterController {
 		return "register/register_form";
 	}//registerForm
 	
+	
 	@ResponseBody
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(RegisterDTO inDto, Model model, HttpSession session) {

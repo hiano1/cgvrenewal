@@ -12,9 +12,34 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 <style type="text/css">
 
+body {
+	background: #1a1a1a;
+	color: white;
+}
+
+.container { 
+	
+}
+
+h2 { color: #b30000; }
+
+button {
+    width: 10%;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: 20px 0px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+
 </style>
+
+
 </head>
 <body>
 	
@@ -142,7 +167,7 @@
 	
 	
 	
-	<h2 class="text-center text-muted">회원 가입</h2>
+	<h2 class="text-center">Create Account</h2>
 	
 	<form id="register_form" method="post"
 		  action="${root}/register">
@@ -152,23 +177,22 @@
  		<div class="form-inline">
 			<input type="text" class="form-control inputEng mr-1"
 				id="mb_id" name="mb_id" maxlength="20">
- 			<button type="button" id="btn_idChk"
- 				class="btn btn-primary">중복 확인</button>
+ 			<button type="button" id="btn_idChk">중복 확인</button>
  		</div>
 	</div>
 	<div class="form-group">
 		<label for="mb_pwd">PassWord</label>
-		<input type="password" class="form-control"
+		<input type="password" class="form-control" style="width:250px;"
 			id="mb_pwd" name="mb_pwd" maxlength="20">
 	</div>
 	<div class="form-group">
 		<label for="mb_pwdre">PassWord 확인</label>
-		<input type="password" class="form-control"
+		<input type="password" class="form-control" style="width:250px;"
 			id="mb_pwdre" name="mb_pwdre" maxlength="20">
 	</div>
 	<div class="form-group">
 		<label for="mb_nm">Name</label>
-		<input type="text" class="form-control inputEng mr-1"
+		<input type="text" class="form-control inputEng mr-1" style="width:250px;"
 				id="mb_nm" name="mb_nm" maxlength="20">
 	</div>
 	
@@ -214,18 +238,17 @@
 		<div class="form-inline">
 			<input type="text" class="form-control mr-1 inputEmail"
 				id="mb_email1" name="mb_email1"
-				maxlength="25">
+				maxlength="25" style="width:150px;">
 			@ <input type="text" class="form-control ml-1 inputEmail"
 				id="mb_email2" name="mb_email2"
-				maxlength="25">
+				maxlength="25" style="width:150px;">
 		</div>
 	</div>
 	
 	</form>
 	
 	<div class="text-right mb-5">
-	<button type="button" id="btn_register"
-			class="btn btn-primary"> 회 원 가 입 </button>
+	<button type="button" id="btn_register"> 회 원 가 입 </button>
 	</div>
 	
 	</div>
