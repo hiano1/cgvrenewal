@@ -2,13 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="root" value="${pageContext.request.contextPath}" />
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>theater</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,47 +18,248 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
 <style type="text/css">
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-.header_container{
-    background: black;
-    color: white;
-    
-} 
-.chz{/*  관람료 박스  */
-	min-height: 250px;
-	margin-top:100px;
-	margin-bottom:250px;
-	auto:0;'
-}
-ul{
+.tab-wrap {
+	transition: 0.3s box-shadow ease;
+	border-radius: 6px;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
 	list-style: none;
-	display: inline-flex;
-	
+	background-color: #fff;
+	margin: 40px 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.tab-wrap:hover {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18), 0 5px 5px
+		rgba(0, 0, 0, 0.19);
+}
+
+.tab {
+	display: none;
+}
+
+.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.8s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.8s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.8s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.8s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.8s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab:first-of-type:not (:last-of-type ) +label {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.tab:not (:first-of-type ):not (:last-of-type ) +label {
+	border-radius: 0;
+}
+
+.tab:last-of-type:not (:first-of-type ) +label {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.tab:checked+label {
+	background-color: #fff;
+	box-shadow: 0 -1px 0 #fff inset;
+	cursor: default;
+}
+
+.tab:checked+label:hover {
+	box-shadow: 0 -2px 0 #fff inset;
+	background-color: #fff;
+}
+
+.tab+label {
+	box-shadow: 0 -1.5px 0 #e41a12 inset;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: #333;
+	flex-grow: 3;
+	text-align: center;
+	background-color: #f2f2f2;
+	user-select: none;
+	text-align: center;
+	transition: 0.3s background-color ease, 0.3s box-shadow ease;
+	height: 50px;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+.tab+label:hover {
+	background-color: #f9f9f9;
+	box-shadow: 0 1px 0 #f4f4f4 inset;
+}
+
+.tab__content {
+	padding: 10px 25px;
+	background-color: transparent;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	left: 0;
+	transform: translateY(-3px);
+	border-radius: 6px;
+}
+
+.chz { /*  관람료 박스  */
+	margin-top: 50px;
+	margin-bottom: 70px;
+	text-align: center;
+	auto:0;
 }
 .llist{
 	display:flex;
 	min-width:50px;
 	justify-content: space-between;
 }
-.fee-table-box{
-width : 100%;
-overflow: hidden;
-margin-bottom: 30px;;
 
-}
-table{
-width:100%;
-margin
+.fee-table-box {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 30px;;
 }
 
+table, td, th {
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 10px;
+}
+
+.fee-table-box {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 70px;
+	margin-right: 20px;
+}
+
+.fee-table-box .fee-table {
+	width: 500px;
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.data-table thead th {
+	background-color: #f2f2f2;
+}
+
+.data-table tbody th {
+	
+}
+
+/* boring stuff */
+body {
+	font-family: NanumBarunGothic, Dotum, '돋움', sans-serif;
+	/* background-color: #e7e7e7; */
+	color: #777;
+	padding: 30px 0;
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.container {
+	margin: 0 auto;
+	display: block;
+	/* max-width: 800px; */
+}
+
+.container>*:not (.tab-wrap ) {
+	padding: 0 80px;
+}
+
+h1, h2 {
+	margin: 0;
+	color: #444;
+	/* text-align: center; */
+	font-weight: 400;
+	padding: 0 160px;
+}
+
+h2 {
+	font-size: 1em;
+	margin-bottom: 30px;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+h5 {
+	font-weight: bold;
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 20px;
+	color: white;
+}
+ul{
+	list-style-type: none;
+}
 </style>
 </head>
-
 <body>
+
 
 <script type="text/javascript">
 
@@ -68,7 +267,7 @@ margin
 $(document).ready(function() {
 
 	
-	$("a[id^=lcode]").click(function(){
+	$("label[id^=lcode]").click(function(){
 		var mNum;
 		switch ($(this).text()){
 		case '서울': mNum = 1; break;
@@ -86,14 +285,14 @@ $(document).ready(function() {
 			"${root}/Threst/middle"
 			,{ lcode : mNum}
 			,function(data,status){
-				$("#mid_table").empty();
+				$("#mid_table").empty();//mid_detail
 				$.each(data, function(index, dto) {
 					$("#mid_table").append(
-							"<tr>"+
-							"<td>"+ 
+							"<ul>"+
+							"<li>"+ 
 							"<a href='#' id='middle_"+index+"' value='"+dto.tm_num+"'>"+ dto.tm_nm+"</a>"+
-							"</td>"+
-							"</tr>"
+							"</li>"+
+							"</ul>"
 						//추가
 					);
 					$("#middle_"+index).on("click", function() {
@@ -104,6 +303,7 @@ $(document).ready(function() {
 									$("#mid_detail").empty();
 									$.each(data, function(index, dto) {
 										$("#mid_detail").append(
+												"<table>"+
 												"<tr>"+
 												"<td>"+ dto.tm_num+"</td>"+
 												"<td>"+ dto.tm_nm+"</td>"+
@@ -111,7 +311,7 @@ $(document).ready(function() {
 												"<td>"+ dto.th_addn+"</td>"+
 												"<td>"+ dto.th_bus+"</td>"+
 												"<td>"+ dto.th_sub+"</td>"+
-												"</tr>"
+												"</tr></table>"
 											//추가
 										);
 									});//each
@@ -126,194 +326,193 @@ $(document).ready(function() {
 });//ready
 </script>
 
+	<!-- <h1>전체극장</h1> -->
 
-	<div class="wraplist">
-	<div class="header_container">
+	<div class="container">
+	
+		<div class="header_container">
 			<%@ include file="../home_header.jsp"%>
 		</div>
 	
-		<!-- 헤더 -->
-		<div class="header_container">
-			<%@ include file="../home_header2.jsp"%>
+		<div class="form-inline mt-5 mb-5">
+			<h5 class="mr-5">전체극장</h5>
+			<h6>
+				<a href="${root}/thea/spT">특별관</a>
+			</h6>
 		</div>
-		<!-- 헤더 -->
-	
-		<div class="container">
-			<div class="form-inline mt-5 mb-5">
-				<h4 class="mr-5">전체극장</h4>
-				<h6>
-					<a href="${root}/thea/spT">특별관</a>
-				</h6>
-			</div>
+
+		<div class="tab-wrap">
+			<c:forEach var="llist" items="${largeList}" varStatus="status">
+				<input type="radio" id="tab" name="tabGroup2" class="tab">
+				<label for="tab" class="llist" id="lcode${status.count}">${llist.tl_nm}</label>
+			</c:forEach>
 			
-			<div class="form-inline">
-				<ul>
-					<c:forEach var="llist" items="${largeList}" varStatus="status">
-						<li class="llist" id="sel_l"><a href="#"
-							id="lcode${status.count}">${llist.tl_nm}</a></li>
-					</c:forEach>
-				</ul>
+			<div class="tab__content">
+				<div id="mid_table" ></div>
 			</div>
-			<div class="tab-content">
-				<div id="mid_table" class="tab-pane active"></div>
+		</div>
+		
+		<div class="tab-wrap"><!-- 극장상세  -->
+
+			<!-- active tab on page load gets checked attribute -->
+			<input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+			<label for="tab1">극장정보</label> 
+			
+			<input type="radio" id="tab2" name="tabGroup1" class="tab"> 
+			<label for="tab2">상영시간표</label>
+
+			<input type="radio" id="tab3" name="tabGroup1" class="tab">
+			<label for="tab3">관람료</label>
+
+			<div class="tab__content">
+				<div id="mid_detail">
+				<div class="chz">
+					<h3>극장을 선택해주세요</h3>
+				</div>
 			</div>
 
+			<div class="tab__content">
+				<h3>상영시간표</h3>
 
-			<br>
-			<!-- Nav tabs -->
-			<ul class="nav nav-tabs mt-5">
-				<li class="nav-item"><a class="nav-link active"
-					data-toggle="tab" href="#mid_detail">극장 정보</a></li>
-				<li class="nav-item"><a class="nav-link" data-toggle="tab"
-					href="#menu2">상영 시간표</a></li>
-				<li class="nav-item"><a class="nav-link" data-toggle="tab"
-					href="#menu3">관 람 료</a></li>
-			</ul>
+			</div>
 
-			<!-- Tab panes -->
-			<div class="tab-content">
-				<div id="mid_detail" class="tab-pane active">
-					<div class="chz">
-						<h5 class="text-center">극장을 선택해주세요.</h5>
-					</div>
-				</div>
-				<div id="menu2" class="tab-pane fade">
-					<br>
-					<!-- 상영 시간표 -->
-					<div class="chz">
-						<h3>Menu 1</h3>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-				<div id="menu3" class="tab-pane fade">
-					<br>
+			<div class="tab__content">
+				<h6>관람료</h6>
+				<div class="fee-table-box">
 					<div class="chz">
 						<!-- 관람료 -->
 						<h3>영화관람료</h3>
-						<div class="fee-table-box">
-							<div class="fee-table">
-								<p class="fee-table-tit">2D</p>
-								<table class="table">
-									<colgroup>
-										<col>
-										<col style="width: 25%;">
-										<col style="width: 25%;">
-										<col style="width: 25%;">
+						<div class="fee-table">
+							<p class="fee-table-tit">2D</p>
+							<table class="data-table a-c">
+								<colgroup>
+									<col>
+									<col style="width: 25%;">
+									<col style="width: 25%;">
+									<col style="width: 25%;">
 
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">요일</th>
-											<th scope="col">상영시간</th>
-											<th scope="col">일반</th>
-											<th scope="col">청소년</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="rowgroup" rowspan="3">월~ 목</th>
-											<td>조조 (06:00~)</td>
-											<td>7,000</td>
-											<td>6,000</td>
-										</tr>
-										<tr>
-											<td>일반 (10:00~)</td>
-											<td>11,000</td>
-											<td>9,000</td>
-										</tr>
-										<tr>
-											<td>심야 (24:00~)</td>
-											<td>9,000</td>
-											<td>7,000</td>
-										</tr>
-										<tr>
-											<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
-											</th>
-											<td>조조 (06:00~)</td>
-											<td>8,000</td>
-											<td>7,000</td>
-										</tr>
-										<tr>
-											<td>일반 (10:00~)</td>
-											<td>12,000</td>
-											<td>10,000</td>
-										</tr>
-										<tr>
-											<td>심야 (24:00~)</td>
-											<td>10,000</td>
-											<td>8,000</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="fee-table">
-								<p class="fee-table-tit">3D</p>
-								<table class="table">
-									<colgroup>
-										<col>
-										<col style="width: 25%;">
-										<col style="width: 25%;">
-										<col style="width: 25%;">
-
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">요일</th>
-											<th scope="col">상영시간</th>
-											<th scope="col">일반</th>
-											<th scope="col">청소년</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="rowgroup" rowspan="3">월~ 목</th>
-											<td>조조 (06:00~)</td>
-											<td>7,000</td>
-											<td>6,000</td>
-										</tr>
-										<tr>
-											<td>일반 (10:00~)</td>
-											<td>11,000</td>
-											<td>9,000</td>
-										</tr>
-										<tr>
-											<td>심야 (24:00~)</td>
-											<td>9,000</td>
-											<td>7,000</td>
-										</tr>
-										<tr>
-											<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
-											</th>
-											<td>조조 (06:00~)</td>
-											<td>8,000</td>
-											<td>7,000</td>
-										</tr>
-										<tr>
-											<td>일반 (10:00~)</td>
-											<td>12,000</td>
-											<td>10,000</td>
-										</tr>
-										<tr>
-											<td>심야 (24:00~)</td>
-											<td>10,000</td>
-											<td>8,000</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">요일</th>
+										<th scope="col">상영시간</th>
+										<th scope="col">일반</th>
+										<th scope="col">청소년</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="rowgroup" rowspan="3">월~ 목</th>
+										<td>조조 (06:00~)</td>
+										<td>7,000</td>
+										<td>6,000</td>
+									</tr>
+									<tr>
+										<td>일반 (10:00~)</td>
+										<td>11,000</td>
+										<td>9,000</td>
+									</tr>
+									<tr>
+										<td>심야 (24:00~)</td>
+										<td>9,000</td>
+										<td>7,000</td>
+									</tr>
+									<tr>
+										<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
+										</th>
+										<td>조조 (06:00~)</td>
+										<td>8,000</td>
+										<td>7,000</td>
+									</tr>
+									<tr>
+										<td>일반 (10:00~)</td>
+										<td>12,000</td>
+										<td>10,000</td>
+									</tr>
+									<tr>
+										<td>심야 (24:00~)</td>
+										<td>10,000</td>
+										<td>8,000</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-						<!--영화관람료 표 -->
+						<div class="fee-table">
+							<p class="fee-table-tit">3D</p>
+							<table class="data-table a-c">
+								<colgroup>
+									<col>
+									<col style="width: 25%;">
+									<col style="width: 25%;">
+									<col style="width: 25%;">
+
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">요일</th>
+										<th scope="col">상영시간</th>
+										<th scope="col">일반</th>
+										<th scope="col">청소년</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="rowgroup" rowspan="3">월~ 목</th>
+										<td>조조 (06:00~)</td>
+										<td>7,000</td>
+										<td>6,000</td>
+									</tr>
+									<tr>
+										<td>일반 (10:00~)</td>
+										<td>11,000</td>
+										<td>9,000</td>
+									</tr>
+									<tr>
+										<td>심야 (24:00~)</td>
+										<td>9,000</td>
+										<td>7,000</td>
+									</tr>
+									<tr>
+										<th scope="rowgroup" rowspan="3">금~일 <br> 공휴일
+										</th>
+										<td>조조 (06:00~)</td>
+										<td>8,000</td>
+										<td>7,000</td>
+									</tr>
+									<tr>
+										<td>일반 (10:00~)</td>
+										<td>12,000</td>
+										<td>10,000</td>
+									</tr>
+									<tr>
+										<td>심야 (24:00~)</td>
+										<td>10,000</td>
+										<td>8,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
+					<!--영화관람료 표 -->
 				</div>
 			</div>
 
 		</div>
 
+			<div class="demo-section">
+			<p>Etiam ut purus enim justo, rhoncus ut, imperdiet a, venenatis
+				vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere.
+				Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a
+				purus blandit viverra.</p>
 
-		<div class="footer-container">
-			<%@ include file="../home_footer.jsp"%>
+			<p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+				Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum
+				eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla
+				vel, aliquet nec, vulputate eget, arcu.</p>
 		</div>
+
+
+
 	</div>
 </body>
 </html>
