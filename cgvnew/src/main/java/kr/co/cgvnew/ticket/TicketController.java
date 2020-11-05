@@ -31,6 +31,9 @@ public class TicketController {
 		model.addAttribute("smv", selectedmovie);
 		
 		return "ticket/ticket";
-	}
+	}//home
+	
+	
+	
 
-}
+}//class
