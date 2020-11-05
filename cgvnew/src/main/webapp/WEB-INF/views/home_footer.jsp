@@ -12,6 +12,10 @@ color : white;
  width: 100%;
  height: 200px;
  text-align: center;
+ display: inline-flex;
+ }
+ .copyright{
+align-content: center;
  }
 </style>
 </head>

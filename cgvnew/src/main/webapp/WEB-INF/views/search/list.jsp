@@ -38,7 +38,7 @@
 						$(".list_b").append(
 								"<div class='consearchlist'>"
 
-								+ "<div class = 'p'>"
+								+ "<div class = 'poster'>"
 										+ "<a href='${root}/mdetail?mv_nm="
 										+ dto.mv_nm + "'>"
 										+ "<img src ='"

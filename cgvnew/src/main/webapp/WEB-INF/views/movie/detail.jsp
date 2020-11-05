@@ -31,6 +31,8 @@ body {
 
 .mov_box {
   text-align: left;
+  display: inline-block;
+      margin-top: 100px;
 }
 
 .mov_meta {
@@ -47,7 +49,7 @@ body {
   font-size: 13px;
 }
 .mov_container {
-  display: inline-block;
+
   position: relative;
   top: 0px;
   left: -50px;
@@ -63,6 +65,7 @@ body {
     margin: 0 auto;
     width: 95%;
   }
+
 
 /*
 btn 
@@ -128,7 +131,6 @@ btn
 		<%@ include file="../home_header.jsp"%>
 	</div>
 <div class="wrap">
-
 	<section class="mov_box" >
    <div class="mov_p"> <img src="${movie_detail.mv_p}"></div> 
     <div class="mov_container">
