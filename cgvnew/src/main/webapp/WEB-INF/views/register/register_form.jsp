@@ -12,24 +12,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="resources/css/header.css">
 
 <style type="text/css">
 
 body {
-	background: #1a1a1a;
+	background: black;
 	color: white;
 }
 
-.container { 
-	
-}
-.form-group {
-	padding-right: 50px;
-  	padding-left: 400px;
-}
-
-h2 { color: #b30000; }
 
 button {
     font-size: 1.1rem;
@@ -40,19 +31,15 @@ button {
     border: none;
     border-radius: 8px;
  }
-    
-	
-
+.cssres{
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+align-items: center;
+}
 </style>
 
-
-</head>
-<body>
-	
-	<div class="container">
-	
-	
-	<script type="text/javascript">
+<script type="text/javascript">
 	$(document).ready(function() {
 		
 		var ck = 0; //아이디 중복 체크 변수
@@ -178,15 +165,21 @@ button {
 				}
 			});
 			
-			
 		});//click
 	});//ready
 	
-	</script>
+</script>
+
+</head>
+<body>
 	
+	<div class="wrap">
 	
-	
+	<div class="header_container">
+			<%@ include file="../home_header.jsp"%>
+	</div>
 	<h2 class="text-center">Create Account</h2>
+	<div class="cssres">
 	
 	<form id="register_form" method="post"
 		  action="${root}/register">
@@ -361,7 +354,10 @@ button {
 	<div class="text-center mb-5">
 	<button type="button" id="btn_register"> 회 원 가 입 </button>
 	</div>
-	
+	</div>
+	<div class="footer-container">
+		<%@ include file="../home_footer.jsp"%>
+	</div>
 	</div>
 	
 </body>
