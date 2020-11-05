@@ -9,22 +9,22 @@
 	<c:choose>
 		<c:when
 			test="${login_id_session !=null && login_id_session.length() > 0 }">
-			<div><a href="${root}/"><img class="logo" src="${root}/resources/image/cgv_logo.png" /></a></div>
+			<div ><a href="${root}/"><img class="logo" src="${root}/resources/image/cgv_logo.png" /></a></div>
 			<div></div>
-			<div>
+			<div class="urlcolor">
 				<a class="" href="#">MyCGV</a>
 			</div>
-			<div>
+			<div class="urlcolor">
 				<a class="" href="${root}/logout">Logout</a>
 			</div>
 		</c:when>
 		<c:otherwise>
 			<div><a href="${root}/"><img class="logo" src="${root}/resources/image/cgv_logo.png" /></a></div>
 			<div></div>
-			<div>
+			<div class="urlcolor">
 				<a class="" href="${root}/registerForm">SignUp</a>
-			</div>
-			<div class="">
+			</div >
+			<div class="urlcolor">
 				<a class="" href="${root}/loginForm">Login</a>
 			</div>
 		</c:otherwise>

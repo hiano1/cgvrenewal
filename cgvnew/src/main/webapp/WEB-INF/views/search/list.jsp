@@ -19,6 +19,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 	
 </script>
+<link rel="stylesheet" type="text/css"
+	href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript"
+	src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
 
 <script type="text/javascript">
@@ -70,10 +74,11 @@
 				if(event.keyCode == 13){
 					$("#btn_search").click();
 					return false;
-				
-				}
+
+				}				
 			});//keyup
 
+	
 	});//ready
 
 	</script>
@@ -99,6 +104,11 @@
 					<input type="text" id="id_search" class="form-control">
 
 				</div>
+			
+				
+		
+			
+				
 			</form>
 			<div class="list_b"></div>
 		</div>
