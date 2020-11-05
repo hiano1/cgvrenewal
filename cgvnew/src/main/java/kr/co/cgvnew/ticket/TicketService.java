@@ -28,4 +28,10 @@ public class TicketService {
 		return selectedmovie;
 	}
 
+	public List<SeatDTO> selectSeat(String mcode) {
+		List<SeatDTO> list =  dao.selectSeat(mcode);
+		return list;
+	}
+
+
 }

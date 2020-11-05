@@ -107,7 +107,12 @@
 			</table>
 			<button id="nextBtn">next</button>
 		</div>
-		<!-- form-inline -->
+		<div class="seatsdiv">
+		
+		
+		</div>
+		
+		<!-- ticketcon -->
 
 	</div>
 	<script type="text/javascript" src="${root}/resources/js/ticket.js"></script>

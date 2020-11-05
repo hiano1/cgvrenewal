@@ -13,11 +13,17 @@ tm_num int primary key not null auto_increment
 ,th_sub varchar(200)
 ,FOREIGN KEY (tl_num) REFERENCES tlarge(tl_num)
 );
+
+for(i = 1 ,i<ts_tcount, i++)
+	if(i == ticet_seatsnum){
+	빈 네모
+	}else{
+	클릭되는 네모}
+	
 create table tsmall(
-ts_num int primary key not null
-,ts_nm varchar(20)
-,ts_snum int
-,ts_snm varchar(20)
+ts_num int primary key not null auto_increment//상영관 번호
+,ts_nm varchar(50)
+,ts_tcount int
 ,tm_num int
 ,FOREIGN KEY (tm_num) REFERENCES tmiddle(tm_num)
 );

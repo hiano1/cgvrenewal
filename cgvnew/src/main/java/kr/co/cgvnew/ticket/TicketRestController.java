@@ -20,6 +20,10 @@ public class TicketRestController {
 		return list;
 	}
 	
-	
-
+	@RequestMapping(value = "seat", method = RequestMethod.GET)
+	public List<SeatDTO> selectSeat(String mcode){
+		List<SeatDTO> list = service.selectSeat(mcode);
+		
+		return list;
+	}
 }

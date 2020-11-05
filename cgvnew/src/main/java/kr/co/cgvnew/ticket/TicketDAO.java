@@ -29,4 +29,9 @@ public class TicketDAO {
 		return selectedmovie;
 	}
 
+	public List<SeatDTO> selectSeat(String mcode) {
+		List<SeatDTO> list = sqlSession.selectList("TicketMapper.selectList", mcode);
+		return list;
+	}
+
 }

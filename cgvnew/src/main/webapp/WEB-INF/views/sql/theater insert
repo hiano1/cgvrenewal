@@ -94,3 +94,12 @@ insert into tmiddle(tm_nm, th_add, th_addn, th_bus, th_sub, tl_num)
 values('cgv광양 엘에프스퀘어', '', '', '', '', 9);
 
 =========소분류 VALUE=====================================
+
+insert into tsmall(ts_nm,ts_tcount,tm_num)
+values('2관',165,2);
+insert into tsmall(ts_nm,ts_tcount,tm_num)
+values('5관',225,2);
+insert into tsmall(ts_nm,ts_tcount,tm_num)
+values('1관',195,3);
+insert into tsmall(ts_nm,ts_tcount,tm_num)
+values('7관',180,3);

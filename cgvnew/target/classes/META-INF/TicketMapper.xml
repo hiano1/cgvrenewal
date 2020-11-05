@@ -22,5 +22,9 @@
 		WHERE mv_num = #{mnum}
 	</select>
 
-
+	<select resultType="kr.co.cgvnew.ticket.SeatDTO" id="selectList"
+		parameterType="java.lang.String">
+		select ts_num, ts_nm,ts_tcount,tm_num from tsmall 
+		WHERE tm_num = #{tm_num}
+	</select>
 </mapper>
