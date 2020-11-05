@@ -65,13 +65,20 @@
 		getList();
 		$("#btn_search").click(function() {
 			getList();
+		});//click
+		 $("#id_search").keydown(function(event) {
+				if(event.keyCode == 13){
+					$("#btn_search").click();
+					return false;
+				
+				}
+			});//keyup
 
-		});//
+	});//ready
 
-	});//click
-</script>
+	</script>
 
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </head>
 <body>
 	<div class="wraplist">
@@ -87,7 +94,7 @@
 
 
 					<button type="button" id="btn_search" class="btn btn-dark">
-						<i class="fas fa-search"></i></button>
+					영 화 검 색</button>
 
 					<input type="text" id="id_search" class="form-control">
 

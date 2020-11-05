@@ -10,12 +10,12 @@
 background: black;
 color : white;
  width: 100%;
- height: 200px;
+ height: 100px;
  text-align: center;
- display: inline-flex;
+
  }
- .copyright{
-align-content: center;
+.copyright{
+ margin-top: 70px;
  }
 </style>
 </head>
@@ -23,7 +23,7 @@ align-content: center;
 <body>
 <div class="foot">
 
-<p class="copyright">&copy;2020 CGV. All Rights Reserved.</p>
+<h5 class="copyright">&copy;2020 CGV. All Rights Reserved</h5>
 		<div class="links">
 			<a href="#">Terms of Service</a> <a href="#">Privacy Policy</a>
 		</div>
