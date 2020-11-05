@@ -15,7 +15,7 @@ $(document).ready(function() {
 		case '경상': a = 8; break;
 		case '광주/전라/제주': a = 9; break;
 		}; //switch
-
+		
 		$.get(
 			"/cgvnew/ticketrest/middle"
 			,{lcode : a}
