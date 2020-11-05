@@ -24,11 +24,14 @@ body {
 .container { 
 	
 }
+.form-group {
+	padding-right: 50px;
+  	padding-left: 400px;
+}
 
 h2 { color: #b30000; }
 
 button {
-    width: 10%;
     font-size: 1.1rem;
     padding: 10px;
     margin: 20px 0px;
@@ -36,6 +39,9 @@ button {
     color: white;
     border: none;
     border-radius: 8px;
+ }
+    
+	
 
 </style>
 
@@ -50,7 +56,6 @@ button {
 	$(document).ready(function() {
 		
 		var ck = 0; //아이디 중복 체크 변수
-		
 		
 		$("#btn_idChk").click(function() {
 		//아이디를 적지 않고 중복 체크 버튼 눌렀을 때
@@ -353,7 +358,7 @@ button {
 	
 	</form>
 	
-	<div class="text-right mb-5">
+	<div class="text-center mb-5">
 	<button type="button" id="btn_register"> 회 원 가 입 </button>
 	</div>
 	
