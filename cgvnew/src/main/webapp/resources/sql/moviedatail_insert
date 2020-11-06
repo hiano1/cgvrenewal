@@ -172,3 +172,104 @@ insert into movie values(
 32, '1917', '', '', '', '', '', '', '', '', '', '', ''
 , 'https://image.tmdb.org/t/p/w220_and_h330_face/u2oRQqUashBBIj5UNeOd5TN0bmB.jpg', ''
 );
+insert into movie values(
+33, '위 베어 베어스: 더 무비', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/kPzcvxBwt7kEISB9O4jJEuBn72t.jpg', ''
+);
+
+insert into movie values(
+34, '아르테미스 파울', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/mhDdx7o7hhrxrikq8aqPLLnS9w8.jpg', ''
+);
+
+
+insert into movie values(
+35, '아메리칸 파이: 여자의 규칙', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/xqvX5A24dbIWaeYsMTxxKX5qOfz.jpg', ''
+);
+
+insert into movie values(
+36, '피니와 퍼브: 캔디스 대 우주', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/n6hptKS7Y0ZjkYwbqKOK3jz9XAC.jpg', ''
+);
+
+insert into movie values(
+37, '트롤: 월드 투어', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/vP1OEMUPngG8MDtfA2dGvjJCWtC.jpg', ''
+);
+
+insert into movie values(
+38, '인베이젼 2020', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/nksAuJpMqA3ZtPe3MrlCi8BIg5e.jpg', ''
+);
+
+insert into movie values(
+39, '수퍼 소닉', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/pMXOlasWr1IzHGH8HWw1ZTXs6rQ.jpg', ''
+);
+
+insert into movie values(
+40, 'The Scientist', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/hIkKM1nlzk8DThFT4vxgW1KoofL.jpg', ''
+);
+
+insert into movie values(
+41, '청춘 돼지는 꿈꾸는 소녀의 꿈을 꾸지 않는다', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/hqNkm15rQI6049Pg3XPSE8PMW98.jpg', ''
+);
+
+insert into movie values(
+42, '나이트메어 서커스', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/d9ToEwvMnXzJL2O2rd8R4a5Vxd0.jpg', ''
+);
+
+insert into movie values(
+43, '드래곤하트: 벤지언스', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/qs6gz6atyQcAvqC6qZaslOjliUG.jpg', ''
+);
+
+insert into movie values(
+44, '테리파이어', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/4lwh4MX2yCogHflyAYMRbfdnpnm.jpg', ''
+);
+
+insert into movie values(
+45, '그린치', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/clJYtRBUhDtvKhPk2HNfXouviKF.jpg', ''
+);
+
+
+
+insert into movie values(
+46, '라바 아일랜드 무비', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/uHdxICUIRGoJjK67aOp3ykvL8ZW.jpg', ''
+);
+
+insert into movie values(
+47, '앵그리 버드 2: 독수리 왕국의 침공', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/8RyxjzIaxQFTjJ58rhOc98h4Tu6.jpg', ''
+);
+
+insert into movie values(
+48, '명탐정 피카츄', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/8Vb7PJ2aUzel5iQ6R2Jxe4MTWac.jpg', ''
+);
+
+insert into movie values(
+49, '닥터 두리틀', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/j1EKEu4RzIep2IJMETMrjWDC0Wi.jpg', ''
+);
+
+insert into movie values(
+50, '주먹왕 랄프 2: 인터넷 속으로', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/54HHWP4Sqz22yKGM68kRQXCXXxS.jpg', ''
+);
+insert into movie values(
+51, '너의 이름은.', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg', ''
+);
+insert into movie values(
+52, '엘 엔칸토', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/pZMFUQ3iw9ST9e1v0F8qxLwWg0D.jpg', ''
+);
+
