@@ -18,6 +18,14 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
 <style type="text/css">
+
+ .contentBox {
+	 max-width: 948px;
+	 margin: 4em auto;
+	 padding: 4em;
+	 background: #fff;
+	 border-radius: 7px;
+}
 .tab-wrap {
 	transition: 0.3s box-shadow ease;
 	border-radius: 6px;
@@ -209,17 +217,15 @@ th, td {
 
 /* boring stuff */
 body {
-	font-family: NanumBarunGothic, Dotum, '돋움', sans-serif;
-	/* background-color: #e7e7e7; */
-	color: #777;
+	
 	padding: 30px 0;
 	font-weight: 300;
 	font-size: 15px;
+	background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
 }
 
 .container {
 	margin: 0 auto;
-	display: block;
 	/* max-width: 800px; */
 }
 
@@ -329,10 +335,12 @@ $(document).ready(function() {
 	<!-- <h1>전체극장</h1> -->
 
 	<div class="container">
-	
 		<div class="header_container">
 			<%@ include file="../home_header.jsp"%>
 		</div>
+	
+	<div class="contentBox">
+	
 	
 		<div class="form-inline mt-5 mb-5">
 			<h5 class="mr-5">전체극장</h5>
@@ -365,23 +373,23 @@ $(document).ready(function() {
 			<label for="tab3">관람료</label>
 
 			<div class="tab__content">
-				<div id="mid_detail">
 				<div class="chz">
 					<h3>극장을 선택해주세요</h3>
 				</div>
+				<div id="mid_detail"></div>
 			</div>
 
 			<div class="tab__content">
-				<h3>상영시간표</h3>
-
+				<div class="chz">
+					<h3>상영시간표</h3>
+				</div>
 			</div>
 
 			<div class="tab__content">
 				<h6>관람료</h6>
 				<div class="fee-table-box">
-					<div class="chz">
+					
 						<!-- 관람료 -->
-						<h3>영화관람료</h3>
 						<div class="fee-table">
 							<p class="fee-table-tit">2D</p>
 							<table class="data-table a-c">
@@ -484,6 +492,7 @@ $(document).ready(function() {
 										<td>12,000</td>
 										<td>10,000</td>
 									</tr>
+
 									<tr>
 										<td>심야 (24:00~)</td>
 										<td>10,000</td>
@@ -495,7 +504,6 @@ $(document).ready(function() {
 					</div>
 					<!--영화관람료 표 -->
 				</div>
-			</div>
 
 		</div>
 
@@ -514,5 +522,7 @@ $(document).ready(function() {
 
 
 	</div>
+	</div>
+	
 </body>
 </html>
