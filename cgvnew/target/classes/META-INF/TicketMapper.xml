@@ -29,7 +29,7 @@
 	</select>
 	
 	<select resultType="kr.co.cgvnew.ticket.TTDTO"
-		id="selectTimeTable" parameterType="java.lang.String">
+		id="selectTimeTable" parameterType="hashMap">
 		select tt_date,mv_num,ts_num from timetable
 		where ts_num = #{ts_num}
 	</select>

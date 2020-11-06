@@ -1,5 +1,6 @@
 package kr.co.cgvnew.ticket;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -34,8 +35,8 @@ public class TicketDAO {
 		return list;
 	}
 
-	public List<TTDTO> selectTimeTable(String ts_num) {
-		List<TTDTO> list = sqlSession.selectList("TicketMapper.selectTimeTable", ts_num);
+	public List<TTDTO> selectTimeTable(HashMap<String, Object> map) {
+		List<TTDTO> list = sqlSession.selectList("TicketMapper.selectTimeTable", map);
 		return list;
 	}
 

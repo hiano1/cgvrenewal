@@ -1,5 +1,6 @@
 package kr.co.cgvnew.ticket;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +34,8 @@ public class TicketService {
 		return list;
 	}
 
-	public List<TTDTO> selectTimeTable(String ts_num) {
-		List<TTDTO> list =  dao.selectTimeTable(ts_num);
+	public List<TTDTO> selectTimeTable(HashMap<String,Object> map) {
+		List<TTDTO> list =  dao.selectTimeTable(map);
 		return list;
 	}
 

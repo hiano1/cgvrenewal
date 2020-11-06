@@ -66,7 +66,15 @@ $(document).ready(function() {
 		case 6 : day = '토'; break;
 	};
 	
-	$(".tablel").append("Timenow : " +year + '/' + month + '/' + date +" "+ day + "요일");
+	$(".tablel").append("Timenow : " +year + '/' + month + '/' + date +" "+ day + "요일"+"<br>");
+	$(".tablel").append(
+		  "<a href='#'>" +(date)  + "</a>"
+		+ "<a href='#'>" +(date+1)+ "</a>"
+		+ "<a href='#'>" +(date+2)+ "</a>"
+		+ "<a href='#'>" +(date+3)+ "</a>"
+		+ "<a href='#'>" +(date+4)+ "</a>"
+		+ "<a href='#'>" +(date+5)+ "</a>"
+	);
 	
 	//if(psccnt == 2)
 		let ts_num;
@@ -98,7 +106,7 @@ $(document).ready(function() {
 		,type:"GET"
 		,dataType:"json"
 		,contentType: "application/json"
-		,data:{ts_num : ts_num}
+		,data:{ts_num : ts_num , date : date}
 		,success : function(data){
 	 			$.each(data,function(index,dto){
 				$(".tablel").append(

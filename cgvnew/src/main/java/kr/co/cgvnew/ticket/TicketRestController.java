@@ -1,5 +1,6 @@
 package kr.co.cgvnew.ticket;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,11 @@ public class TicketRestController {
 	}
 	
 	@RequestMapping(value = "timetable", method = RequestMethod.GET)
-	public List<TTDTO> selectTimeTable(String ts_num){
-		List<TTDTO> list = service.selectTimeTable(ts_num);
+	public List<TTDTO> selectTimeTable(String ts_num ,String date){
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		map.put("ts_num", ts_num);
+		map.put("date", date);
+		List<TTDTO> list = service.selectTimeTable(map);
 		
 		return list;
 	}
