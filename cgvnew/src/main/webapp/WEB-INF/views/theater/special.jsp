@@ -89,7 +89,8 @@ section.cards {
 	width: 100%;
 }
 .titleBox{
-	margin-bottom: 70px
+
+	margin-bottom: 40px;
 }
 
 
@@ -98,7 +99,7 @@ section.cards {
 	letter-spacing: 2px;
 	opacity: 0.9;
 	color: #595959;
-	padding-bottom: 0.5em;
+	
 }
 
 .bigTitle {
@@ -108,6 +109,7 @@ section.cards {
 	font-weight: 700;
 	padding-bottom: 0.5em;
 	transition: all 0.25s ease;
+	
 }
 
 .card__excerpt {
@@ -129,14 +131,14 @@ h5 {
 			<%@ include file="../home_header.jsp"%>
 		</div>
 		<div class="contentBox">
-			<div class="form-inline mb-5">
+			<div class="form-inline mb-3">
 				<h5 class="mr-5">특별관</h5>
 				<h6>
 					<a href="${root}/theater">전체극장</a>
 				</h6>
 			</div>
-			<div class="titleBox">
 				<p class="litTitle">영화, 그 이상의 감동</p>
+			<div class="titleBox">
 				<h1 class="bigTitle">CGV SPECIAL</h1>
 				<h6>CGV만의 특별함을 느껴보세요.</h6>
 			</div>

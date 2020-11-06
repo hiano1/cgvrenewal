@@ -232,6 +232,13 @@ body {
 .container>*:not (.tab-wrap ) {
 	padding: 0 80px;
 }
+.litTitle {
+	font-size: 12px;
+	letter-spacing: 2px;
+	opacity: 0.9;
+	color: #595959;
+	
+}
 
 h1, h2 {
 	margin: 0;
@@ -342,13 +349,13 @@ $(document).ready(function() {
 	<div class="contentBox">
 	
 	
-		<div class="form-inline mt-5 mb-5">
+		<div class="form-inline mb-3">
 			<h5 class="mr-5">전체극장</h5>
 			<h6>
 				<a href="${root}/thea/spT">특별관</a>
 			</h6>
 		</div>
-
+			<p class="litTitle">영화, 그 이상의 감동</p>
 		<div class="tab-wrap">
 			<c:forEach var="llist" items="${largeList}" varStatus="status">
 				<input type="radio" id="tab" name="tabGroup2" class="tab">
