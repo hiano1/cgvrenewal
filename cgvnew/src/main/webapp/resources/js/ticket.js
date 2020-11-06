@@ -117,7 +117,7 @@ $(document).ready(function() {
 				$(".tablel").append(
 					"<tr>"
 					+ "<td>"
-					+ dto.date_format(t.tt_date,'%H:%i') +"<br>"
+					+ dto.tt_date +"<br>"
 					+ dto.mv_num +"<br>"
 					+ dto.ts_num
 					+ dto.ts_tcount

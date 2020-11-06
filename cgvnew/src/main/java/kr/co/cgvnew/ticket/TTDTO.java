@@ -29,4 +29,12 @@ public class TTDTO {
 	private String tt_date;
 	private String mv_num;
 	private String ts_num;
+	private String ts_tcount;
+	public String getTs_tcount() {
+		return ts_tcount;
+	}
+	public void setTs_tcount(String ts_tcount) {
+		this.ts_tcount = ts_tcount;
+	}
+	
 }

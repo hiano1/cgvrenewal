@@ -30,7 +30,9 @@
 	
 	<select resultType="kr.co.cgvnew.ticket.TTDTO"
 		id="selectTimeTable" parameterType="hashMap">
-		select t.tt_num,date_format(t.tt_date,'%H:%i'),t.mv_num,t.ts_num,s.ts_tcount from timetable as t
+		select t.tt_num,date_format(t.tt_date,'%H:%i') tt_date
+			,t.mv_num,t.ts_num,s.ts_tcount
+		from timetable as t
 		join tsmall as s
 		where t.ts_num = #{ts_num} and date_format(t.tt_date,'%e') =  #{date};
 	</select>
