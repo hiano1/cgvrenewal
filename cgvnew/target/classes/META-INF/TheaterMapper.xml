@@ -18,5 +18,4 @@
 		id="middledetail" parameterType="java.lang.String">
 		select tm_num,tm_nm, th_add, th_addn, th_bus, th_sub from tmiddle where tm_num = #{mcode}
 	</select>
-
 </mapper>

@@ -26,4 +26,11 @@ public class TicketRestController {
 		
 		return list;
 	}
+	
+	@RequestMapping(value = "timetable", method = RequestMethod.GET)
+	public List<TTDTO> selectTimeTable(String ts_num){
+		List<TTDTO> list = service.selectTimeTable(ts_num);
+		
+		return list;
+	}
 }

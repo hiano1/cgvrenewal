@@ -34,4 +34,9 @@ public class TicketDAO {
 		return list;
 	}
 
+	public List<TTDTO> selectTimeTable(String ts_num) {
+		List<TTDTO> list = sqlSession.selectList("TicketMapper.selectTimeTable", ts_num);
+		return list;
+	}
+
 }

@@ -33,5 +33,10 @@ public class TicketService {
 		return list;
 	}
 
+	public List<TTDTO> selectTimeTable(String ts_num) {
+		List<TTDTO> list =  dao.selectTimeTable(ts_num);
+		return list;
+	}
+
 
 }

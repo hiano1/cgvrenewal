@@ -18,13 +18,21 @@
 
 	<select resultType="kr.co.cgvnew.movie.MDTO" id="selectedmovie"
 		parameterType="java.lang.String">
-		select mv_nm, mv_p from movie 
+		select mv_nm, mv_p from movie
 		WHERE mv_num = #{mnum}
 	</select>
 
 	<select resultType="kr.co.cgvnew.ticket.SeatDTO" id="selectList"
 		parameterType="java.lang.String">
-		select ts_num, ts_nm,ts_tcount,tm_num from tsmall 
+		select ts_num, ts_nm,ts_tcount,tm_num from tsmall
 		WHERE tm_num = #{tm_num}
 	</select>
+	
+	<select resultType="kr.co.cgvnew.ticket.TTDTO"
+		id="selectTimeTable" parameterType="java.lang.String">
+		select tt_date,mv_num,ts_num from timetable
+		where ts_num = #{ts_num}
+	</select>
+
+
 </mapper>

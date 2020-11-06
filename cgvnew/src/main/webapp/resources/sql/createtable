@@ -69,3 +69,16 @@ ev_num int primary key not null auto_increment
 
 insert into event(ev_nm,ev_sdate,ev_edate,ev_p) values('테스트이벤트','시작일은~~','종료일은~~','포스터url');
 
+
+=================시간표테이블=================
+create table timetable(
+tt_num int primary key not null auto_increment
+, tt_date time
+, mv_num int
+, ts_num int
+,FOREIGN KEY (mv_num) REFERENCES movie(mv_num)
+,FOREIGN KEY (ts_num) REFERENCES tsmall(ts_num)
+);
+
+insert into timetable(tt_date,mv_num,ts_num)values
+("11:35:00",5,2);
