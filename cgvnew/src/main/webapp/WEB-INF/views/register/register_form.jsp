@@ -21,7 +21,6 @@ body {
 	color: white;
 }
 
-
 button {
     font-size: 1.1rem;
     padding: 10px;
@@ -37,6 +36,8 @@ flex-direction: column;
 margin-top: 50px;
 align-items: center;
 }
+
+h2 { color: #b30000; }
 </style>
 
 <script type="text/javascript">

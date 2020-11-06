@@ -98,10 +98,12 @@ margin-top: 200px;
   		
   		<div class="csslogin">
     	<p>
-    		<input type="text" id="mb_login_id" name="mb_login_id" placeholder="ID">
+    		<input type="text" id="mb_login_id" name="mb_login_id" 
+    			   placeholder="ID">
     	</p>
     	<p>
-      		<input type="password" id="mb_login_pwd" name="mb_login_pwd" placeholder="Access code">
+      		<input type="password" id="mb_login_pwd" name="mb_login_pwd" 
+      			   placeholder="Access code">
     	</p>
   		<p class="text-center">
 			<button type="button" id="btn_login"> Login </button>

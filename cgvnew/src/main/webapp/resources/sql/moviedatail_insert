@@ -8,14 +8,16 @@ insert into movie values(
 2,'반도','전대미문의 재난 이후 4년이 흐른 대한민국은 버려진 땅이 되어버렸다. 사람들은 고립된 섬이 된 반도에 갇혔고 누구의 생사도 확인할 수 없는 상황에서 정석은 피할 수 없는 미션을 받고 한국 땅에 다시 발을 들인다. 정석은 미지의 세계인 그곳에서 예상치 못한 습격을 받고 일촉즉발의 순간 ‘반도’의 생존자들을 만나게 된다','https://www.youtube.com/embed/h2Q5ZFAXhKk',
 '액션,공포,스릴러','115분','15세이상관람가','연상호','2020-07-15','강동원,이정현,이례','7점','예매율','98만명','사진','제작사'
 );
-
+insert into movie values(
+2,'존 윅 3: 파라벨룸','사랑하는 아내와 반려견이 죽은 후 복수를 위해 돌아온 전설의 킬러, 존 윅은 성역 콘티넨탈 호텔에서는 살인하면 안 된다는 룰을 깨면서 전세계 킬러들의 표적이 된다. 전편에서 존 윅이 국제암살자연맹에서 파문당한 직후 1시간 동안 도망갈 시간을 내어 준 윈스턴은 최고회의로부터 그를 도왔다는 이유로 자리에서 물러날 것을 요구받는다. 현상금이 1400만달러로 불어난 존 윅은 옛 동료이자 현재 카사블랑카 콘티넨탈 호텔의 지점장인 소피아에게 도움을 청한다.','https://www.youtube.com/embed/nbaFJw8i8jE',
+'액션,스릴러,범죄','131분','청소년관람불가','Chad Stahelski','2019-06-26','키아누 리브스, 할리 베리, 이안 맥쉐인','8.64점','예매율','78만명','https://image.tmdb.org/t/p/w220_and_h330_face/judgsR2sH5kie1mTW94LWaebWLK.jpg','서밋 엔터테인먼트'
+);
 
 
 insert into movie values(
 3,'기생충','전원 백수로 살 길 막막하지만 사이는 좋은 기택 가족. 장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박 사장 집으로 향하는 기우. 글로벌 IT기업의 CEO인 박 사장의 저택에 도착하자 젊고 아름다운 사모님 연교와 가정부 문광이 기우를 맞이한다. 큰 문제 없이 박 사장의 딸 다혜의 과외를 시작한 기우. 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고 있는데...','https://www.youtube.com/embed/jBdRhhSt3Bc',
 '코미디,드라마,스릴러','131분','15세이상관람가','봉준호','2019-05-30','송강호,이선균,조예정','8.5점','예매율','98만명','https://image.tmdb.org/t/p/w220_and_h330_face/eJ0kCMcqKLBUaHhB9PfOMFu2uim.jpg','제작사'
 );
-
 
 
 insert into movie values(
@@ -28,8 +30,6 @@ insert into movie values(
 5,'삼진그룹영어토익반','1995년, 토익 600점만 넘기면 대리가 될 수 있다는 이야기에 입사 8년차 동기인 말단 여직원들이 삼진그룹 영어토익반에 모인다. 실무 능력 퍼펙트, 현실은 커피 타기 달인인 생산관리3부 오지랖 이자영. 추리소설 마니아로 뼈 때리는 멘트의 달인 마케팅부 돌직구 정유나. 수학 올림피아드 우승 출신, 실체는 가짜 영수증 메꾸기 달인 회계부 수학왕 심보람은 대리가 되면 진짜 ‘일’을 할 수 있을 것이라는 희망에 부푼다. 잔심부름을 하러 간 공장에서 검은 폐수가 유출되는 것을 목격한 자영은 유나, 보람과 함께 회사가 무엇을 감추고자 하는지, 결정적 증거를 찾으려 한다. 불가능해 보이는 싸움, 세 친구는 해고의 위험을 무릅쓰고 고군분투를 시작하는데…','https://www.youtube.com/embed/Vg8VH4BH6uo',
 '드라마','110분','12세이상관람가','이종필','2020-10-21','고아성,이솜,박혜수','8.0점','예매율','98천명','https://image.tmdb.org/t/p/w220_and_h330_face/axdXIoZkjTDhdsE08Z2xIb9eWjp.jpg','제작사'
 );
-
-
 
 
 insert into movie values(
@@ -61,9 +61,6 @@ insert into movie values(
 );
 
 
-
-
-
 insert into movie values(
 11,'도굴','흙 맛만 봐도 보물을 찾아내는 타고난 천재 도굴꾼 강동구. 자칭 한국의 인디아나 존스로 불리는 고분벽화 도굴 전문가 존스 박사, 전설의 삽질 달인 삽다리를 만나 환상의 팀플레이를 자랑하며 위험천만하고도 짜릿한 도굴의 판을 키운다. 한편, 그의 재능을 알아본 고미술계 엘리트 큐레이터 윤실장은 강동구에게 매력적이면서도 위험한 거래를 제안하는데...','https://www.youtube.com/embed/HHXyQiCGgKw',
 '범죄','115분','12세이상관람가','박정배','
@@ -74,4 +71,104 @@ insert into movie values(
 insert into movie values(
 12,'도망친여자','남편이 출장을 간 사이 감희는 세 명의 친구를 만난다. 두 명은 그녀가 그들의 집들을 방문한 것이고, 세 번째 친구는 극장에서 우연히 만났다. 우정의 대화가 이어지는 동안, 언제나처럼, 바다 수면 위와 아래로 여러 물결들이 독립적으로 진행되고 있다.','https://www.youtube.com/embed/J38Yz2NYRpQ',
 '드라마','77분','청소년관람불가','홍상수','2020/09/17','김민희,서용화,송선미','6.5점','57.4%','98만명','https://image.tmdb.org/t/p/w220_and_h330_face/s2wD7eO9S9XAIR7H1nrwLKGFkEW.jpg','제작사'
+);
+
+insert into movie values(
+13, '더 콜', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/iKmykghTmvQj6zum79TsdUL5mPF.jpg', ''
+);
+
+insert into movie values(
+14, '2 HEARTS', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/a7bW3uKOMPBnmHs8gnlpfhTD8YQ.jpg', ''
+);
+
+insert into movie values(
+15, '테넷', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/ylQRi3edixhzUiubw7LQP1YhI6W.jpg', ''
+);
+
+insert into movie values(
+16, '샤이닝', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/vzc4lvpjaZrrfxsnqmhURm37gmB.jpg', ''
+);
+
+insert into movie values(
+17, '로스트 걸 & 러브 호텔', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/vQgXwuJrlpzGDI8169tRQRy71Nv.jpg', ''
+);
+
+insert into movie values(
+18, '익스펄션', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/jWXi6KAKR7gnI0VaM7EWIdabaQE.jpg', ''
+);
+
+insert into movie values(
+19, '엑소시스트', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/1Y0h6vedMbWPJNzqBnRkik16MO4.jpg', ''
+);
+
+insert into movie values(
+20, '어디갔어, 버나뎃', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/5h2TXf85X1gC7A0p74ZQyacGmbD.jpg', ''
+);
+
+insert into movie values(
+21, '팜 스프링스', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/yf5IuMW6GHghu39kxA0oFx7Bxmj.jpg', ''
+);
+
+insert into movie values(
+22, '프리키 데스데이', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/1qy7rSE4rF8ERdl6quTLrbCX9Sl.jpg', ''
+);
+
+insert into movie values(
+23, '에놀라 홈즈', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/riYInlsq2kf1AWoGm80JQW5dLKp.jpg', ''
+);
+
+insert into movie values(
+24, '더 위치스', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/betExZlgK0l7CZ9CsCBVcwO1OjL.jpg', ''
+);
+
+insert into movie values(
+25, '코코', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/6AANwKhjIEVyya95oW4IA6joL1Z.jpg', ''
+);
+
+insert into movie values(
+26, '해피 할로윈, 스쿠비 두!', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/5aL71e0XBgHZ6zdWcWeuEhwD2Gw.jpg', ''
+);
+
+insert into movie values(
+27, '홀리데이트', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/lAaJc9842RDVrjvR3OLPMTeHkiA.jpg', ''
+);
+
+insert into movie values(
+28, '조커', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/wrCwH6WOvXQvVuqcKNUrLDCDxdw.jpg', ''
+);
+
+insert into movie values(
+29, '러브 앤 몬스터즈', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/r4Lm1XKP0VsTgHX4LG4syAwYA2I.jpg', ''
+);
+
+insert into movie values(
+30, '스폰지밥 무비: 핑핑이 구출 대작전', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/kYt81ABji13xxTjZDfQtOrC4hg1.jpg', ''
+);
+
+insert into movie values(
+31, '라이온 킹', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/qlBePshN1ujPwm27JzT6bP6XVeR.jpg', ''
+);
+
+insert into movie values(
+32, '1917', '', '', '', '', '', '', '', '', '', '', ''
+, 'https://image.tmdb.org/t/p/w220_and_h330_face/u2oRQqUashBBIj5UNeOd5TN0bmB.jpg', ''
 );
