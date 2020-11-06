@@ -68,12 +68,12 @@ $(document).ready(function() {
 	
 	$(".tablel").append("Timenow : " +year + '/' + month + '/' + date +" "+ day + "요일"+"<br>");
 	$(".tablel").append(
-		  "<a href='#'>" +(date)  + "</a>"
-		+ "<a href='#'>" +(date+1)+ "</a>"
-		+ "<a href='#'>" +(date+2)+ "</a>"
-		+ "<a href='#'>" +(date+3)+ "</a>"
-		+ "<a href='#'>" +(date+4)+ "</a>"
-		+ "<a href='#'>" +(date+5)+ "</a>"
+		  "<a id = 'day0' href='#'>" +(date)  + "</a>"
+		+ "<a id = 'day1' href='#'>" +(date+1)+ "</a>"
+		+ "<a id = 'day2' href='#'>" +(date+2)+ "</a>"
+		+ "<a id = 'day3' href='#'>" +(date+3)+ "</a>"
+		+ "<a id = 'day4' href='#'>" +(date+4)+ "</a>"
+		+ "<a id = 'day5' href='#'>" +(date+5)+ "</a>"
 	);
 	
 	//if(psccnt == 2)
@@ -101,27 +101,34 @@ $(document).ready(function() {
 			case 'cgv광양 엘에프스퀘어': ts_num = 20; break;
 			}; //switch
 	
-		$.ajax({
-		url:"/cgvnew/ticketrest/timetable"
-		,type:"GET"
-		,dataType:"json"
-		,contentType: "application/json"
-		,data:{ts_num : ts_num , date : date}
-		,success : function(data){
+		$(document).on("click","a[id^=day]",function(){
+			date = $(this).text()
+		
+		
+			$.ajax({
+			url:"/cgvnew/ticketrest/timetable"
+			,type:"GET"
+			,dataType:"json"
+			,contentType: "application/json"
+			,data:{ts_num : ts_num , date : date}
+			,success : function(data){
+				$(".tablel").empty();
 	 			$.each(data,function(index,dto){
 				$(".tablel").append(
 					"<tr>"
 					+ "<td>"
-					+ dto.tt_date +"<br>"
+					+ dto.date_format(t.tt_date,'%H:%i') +"<br>"
 					+ dto.mv_num +"<br>"
 					+ dto.ts_num
+					+ dto.ts_tcount
 					+ "</td>"
 					+ "</tr>"
-				);
-			}); //each 
+					);
+				}); //each 
 	 			
 			}//success								
 		});//ajax
-	
+		
+		});//click day
 	});	//click next							
 });//ready
