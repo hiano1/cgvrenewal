@@ -120,8 +120,12 @@ btn
   float: right;
 
 }
+#mov_tr{
+margin-top: 5px;
 
+}
 </style>
+
 
 </head>
 
@@ -159,8 +163,8 @@ btn
       <hr class="break" />
 		 <div class="bottom-info">
         <a class="btn btn-min-w btn-web btn-s" href="${root}/ticket/main?mnum=${movie_detail.mv_num}" role="button">영 화 예 매 </a>
-        <a class="btn btn-min-w btn-grey " href="#" role="button">트 레 일 러</a>
       </div>
+        <iframe class="btn btn-min-w btn-grey " id="mov_tr" width="1000" height="450" src="${movie_detail.mv_tr}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 
 	</section>
