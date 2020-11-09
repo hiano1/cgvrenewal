@@ -381,9 +381,10 @@ $(document).ready(function() {
 
 			<div class="tab__content">
 				<div class="chz">
-					<h3>극장을 선택해주세요</h3>
+					<div id="mid_detail">
+						<h3>극장을 선택해주세요</h3>
+					</div>
 				</div>
-				<div id="mid_detail"></div>
 			</div>
 
 			<div class="tab__content">

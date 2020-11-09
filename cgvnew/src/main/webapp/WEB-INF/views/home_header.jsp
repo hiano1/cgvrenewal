@@ -10,7 +10,9 @@
 		<c:when
 			test="${login_id_session !=null && login_id_session.length() > 0 }">
 			<div ><a href="${root}/"><img class="logo" src="${root}/resources/image/cgv_logo.png" /></a></div>
-			<div></div>
+			<div>
+			
+			</div>
 			<div class="urlcolor">
 				<a class="" href="#">MyCGV</a>
 			</div>

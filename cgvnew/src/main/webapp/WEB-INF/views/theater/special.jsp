@@ -32,10 +32,11 @@ body {
 }
 
 .contentBox {
-	max-width: 948px;
-	margin: 4em auto;
-	padding: 4em;
-	background: #fff;
+	max-width: 1500px;
+    margin: 4em auto;
+    padding: 4em;
+    background: #fff;
+    border-radius: 7px;
 
 }
 

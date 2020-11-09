@@ -29,7 +29,18 @@ public class HomeController {
 
 		
 		return "home";
-	}
+	}//home
+	@RequestMapping(value = "/header", method = RequestMethod.GET)
+	public String homeheader(Model model) {
+		
+		List<HDTO> list = service.list();
+		
+		model.addAttribute("home_list",list);
+		
+		
+		
+		return "home_header2";
+	}//home
 	
 
 	
