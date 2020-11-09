@@ -25,17 +25,16 @@
 	<select resultType="kr.co.cgvnew.ticket.SeatDTO" id="selectList"
 		parameterType="java.lang.String">
 		select ts_num, ts_nm,ts_tcount,tm_num from tsmall
-		WHERE tm_num = #{tm_num}
+		WHERE
+		tm_num = #{tm_num}
 	</select>
-	
+
 	<select resultType="kr.co.cgvnew.ticket.TTDTO"
 		id="selectTimeTable" parameterType="hashMap">
-		select t.tt_num,date_format(t.tt_date,'%H:%i') tt_date
-			,t.mv_num,t.ts_num,s.ts_tcount
-		from timetable as t
-		join tsmall as s
-		where t.ts_num = #{ts_num} and date_format(t.tt_date,'%e') =  #{date};
+	
+		select t.tt_num ,t.tt_date ,t.mv_num, t.ts_num ,s.ts_tcount
+		from timetable t , tsmall s
+		where s.ts_num = #{ts_num} and date_format(t.tt_date,'%e') = #{date};
 	</select>
-
-
+	
 </mapper>

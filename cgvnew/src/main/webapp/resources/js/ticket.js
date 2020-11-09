@@ -34,17 +34,47 @@ $(document).ready(function() {
 				);
 			}); //each 
 			}
-			, "json");
+			, "json");//get
 			pcscnt = 1;
 		}); //click lcode
 	$(document).on("click","a[id^=mcode]",function(){
-		$("#selM").text($(this).text());
 		pcscnt = 2;
-	});
+		$("#selM").text($(this).text());
+	});//click mcode
 	
 	//next 버튼 눌릴때 시간표페이지로 넘어감
 	//side var text 가 null이면 false
 	$("#nextBtn").click(function(){
+	
+	if(psccnt == 2){
+	
+	}else if(psccnt == 3){
+	//로그인 검사
+	//total 가져와서 좌석 찍기
+	
+	//tcount 가져와서
+	//ui 찍기
+		let tmpidPre = A;
+		let tmpidSuf = 0;
+	for(i=1; i<=(tcount/15); i++){
+		//tmpidPre = (Int)tmpidPre + 1 ? //대문자 사용
+		
+		for(j=1; j<=15; j++){
+			tmpidSuf = tmpidSuf + 1;  //소문자 사용 db에 저장은 소문자로 유저에게 보여울땐 숫자로?
+			//사각형 찍기 체크박스
+			//if(예매코드 번호  == tmpidPre+tmpidSuf) 비활성된 사각형 append
+			//else{} 클릭 가능한 사각형 append
+			
+			//좌석수 번호가 두자릿수가 될때 코드의 구분을 어떻게 할것인지 영어 대소문자?
+			
+		}//for j
+		//append(br) 줄바꿈
+		}//for i
+	}else if (psccnt ==4){
+	//결제 + 예매코드 생성
+	}else{
+		//오류 페이지 세션정보를 잃었거나 비 정상일경우
+	}
 	
 	$(".tablel").empty();
 	$("#mid_table").empty();
@@ -76,7 +106,7 @@ $(document).ready(function() {
 		+ "<a id = 'day5' href='#'>" +(date+5)+ "</a>"
 	);
 	
-	//if(psccnt == 2)
+	
 		let ts_num;
 		switch ($("#selM").text()) {
 			case 'car cinema': ts_num = 1; break;
@@ -115,11 +145,11 @@ $(document).ready(function() {
 				$(".tablel").empty();
 	 			$.each(data,function(index,dto){
 				$(".tablel").append(
-					"<tr>"
+					"<tr id='scode"+index+"'>"
 					+ "<td>"
 					+ dto.tt_date +"<br>"
 					+ dto.mv_num +"<br>"
-					+ dto.ts_num
+					+ dto.ts_num +"<br>"
 					+ dto.ts_tcount
 					+ "</td>"
 					+ "</tr>"
@@ -130,5 +160,16 @@ $(document).ready(function() {
 		});//ajax
 		
 		});//click day
-	});	//click next							
+	});	//click next	
+	
+	//day 클릭시 cnt 3 넥스트시 3검사 로그인 세션검사(나중에 페이지에서 로그인시도 시 진행정보 그냥 날리기로?)
+	//클릭한 칸의 값을 스크립트에서 저장? --> if cnt3 으로 가져와서 쿼리 돌려서 tcount 뽑고 거기서 2중 if 돌려서 좌석 뽑음
+	$(document).on("click","a[id^=scode]",function(){
+		psccnt = 3;
+		$("#selT").text($(this).text());
+	});
+	
+	//좌석 체크박스 클릭시 selS에 텍스트 추가 or 삭제
+	// psccnt = 4;
+	
 });//ready
