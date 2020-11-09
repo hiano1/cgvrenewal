@@ -81,4 +81,4 @@ tt_num int primary key not null auto_increment
 );
 
 insert into timetable(tt_date,mv_num,ts_num)values
-("2020/11/06 11:35:00",5,2);
+("2020/11/09 11:35:00",5,2);

@@ -12,7 +12,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style type="text/css">
 .container {
-	display: flex
+	display: flex;
+	color: white;
 }
 
 .ticketcon {
@@ -50,6 +51,7 @@
 	height: 98px;
 	background-color: black;
 	padding: 29px 21px;
+	
 }
 
 .logo {
@@ -90,21 +92,18 @@
 #selL {
 	width: 252px;
 	height: 24px;
-	color: white;
 	font: 21px;
 }
 
 #selM {
 	width: 252px;
 	height: 24px;
-	color: white;
 	font: 21px;
 }
 
 #selT {
 	width: 252px;
 	height: 24px;
-	color: white;
 	font: 21px;
 }
 
@@ -113,7 +112,6 @@
 	height: 24px;
 	margin: 0px 0px 7px;
 	font: 15.75px;
-	color: white;
 }
 
 body, html {
