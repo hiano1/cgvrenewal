@@ -12,8 +12,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="resources/css/header.css">
-
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style type="text/css">
 
 body {
@@ -177,7 +179,7 @@ h2 { color: #b30000; }
 	<div class="wrap">
 	
 	<div class="header_container">
-			<%@ include file="../home_header.jsp"%>
+			<%@ include file="../header_navi.jsp"%>
 	</div>
 	<h2 class="text-center">Create Account</h2>
 	<div class="cssres">
