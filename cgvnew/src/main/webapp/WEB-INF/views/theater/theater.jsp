@@ -198,7 +198,7 @@ th, td {
 }
 
 .fee-table-box .fee-table {
-	width: 500px;
+	width: 450px;
 	float: left;
 	margin-right: 10px;
 	margin-left: 10px;
@@ -263,7 +263,7 @@ h5 {
 p {
 	line-height: 1.6;
 	margin-bottom: 20px;
-	color: white;
+	color: f2f2f2;
 }
 ul{
 	list-style-type: none;
@@ -320,15 +320,15 @@ $(document).ready(function() {
 									$("#mid_detail").empty();
 									$.each(data, function(index, dto) {
 										$("#mid_detail").append(
-												"<table>"+
-												"<tr>"+
-												"<td>"+ dto.tm_num+"</td>"+
-												"<td>"+ dto.tm_nm+"</td>"+
-												"<td>"+ dto.th_add+"</td>"+
-												"<td>"+ dto.th_addn+"</td>"+
-												"<td>"+ dto.th_bus+"</td>"+
-												"<td>"+ dto.th_sub+"</td>"+
-												"</tr></table>"
+												"<div>"+
+												/* "<h6>"+ dto.tm_num+"</h6>"+ */
+												"<h1 class='mb-5'>"+ dto.tm_nm+"</h1>"+
+												/* "<h2>"+ dto.th_add+"</h2>"+ */
+												"<h2> 주소 "+ dto.th_addn+"</h2>"+
+												"<h2 class='mb-3 tex'>교통안내</h1>"+
+												"<h2> 버스"+ dto.th_bus+"</h2>"+
+												"<h2> 지하철"+ dto.th_sub+"</h2>"+
+												"</div>"
 											//추가
 										);
 									});//each
@@ -521,15 +521,7 @@ $(document).ready(function() {
 		</div>
 
 			<div class="demo-section">
-			<p>Etiam ut purus enim justo, rhoncus ut, imperdiet a, venenatis
-				vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere.
-				Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a
-				purus blandit viverra.</p>
-
-			<p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-				Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum
-				eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla
-				vel, aliquet nec, vulputate eget, arcu.</p>
+			<p>ㆍ입장 지연에 따른 관람 불편을 최소화하기 위해 영화는 10분 후 상영이 시작됩니다.</p>
 		</div>
 
 
