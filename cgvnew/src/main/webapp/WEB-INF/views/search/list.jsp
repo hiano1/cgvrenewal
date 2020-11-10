@@ -16,14 +16,42 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-	
-</script>
-<link rel="stylesheet" type="text/css"
-	href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-<script type="text/javascript"
-	src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<link rel="stylesheet" type="text/css" href="${root}/resources/css/header.css">
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style type="text/css">
+.consearchlist {
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+
+	width: 250px;
+	height: 350px;
+}
+.list_b {
+	text-align: center;
+}
+.divsearch {
+	display: inline-grid;
+}
+
+
+
+.poster {
+	width: 100%;
+	height: 80%;
+}
+
+.wraplist {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+</style>
 
 <script type="text/javascript">
 	function getList() {
@@ -87,7 +115,7 @@
 <body>
 	<div class="wraplist">
 		<div class="header_container">
-			<%@ include file="../home_header.jsp"%>
+			<%@ include file="../header_navi.jsp"%>
 		</div>
 
 		<div class="container ">

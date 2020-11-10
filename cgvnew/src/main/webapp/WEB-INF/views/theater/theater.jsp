@@ -17,17 +17,12 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style type="text/css">
 
- .contentBox {
-	 max-width: 948px;
-	 margin: 4em auto;
-	 padding: 4em;
-	 background: #fff;
-	 border-radius: 7px;
-}
+
 .tab-wrap {
 	transition: 0.3s box-shadow ease;
 	border-radius: 6px;
@@ -219,22 +214,23 @@ th, td {
 
 /* boring stuff */
 body {
-	font-family: 'Nanum Gothic', sans-serif;
-	font-family: 'Nanum Gothic Coding', monospace;
+	
 	padding: 30px 0;
 	font-weight: 300;
 	font-size: 15px;
-	background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
+	
 }
 
-.container {
-	margin: 0 auto;
-	/* max-width: 800px; */
+
+.contentBox {
+	max-width: 1500px;
+    margin: 4em auto;
+    padding: 4em;
+    background: #fff;
+    border-radius: 7px;
+
 }
 
-.container>*:not (.tab-wrap ) {
-	padding: 0 80px;
-}
 .litTitle {
 	font-size: 12px;
 	letter-spacing: 2px;

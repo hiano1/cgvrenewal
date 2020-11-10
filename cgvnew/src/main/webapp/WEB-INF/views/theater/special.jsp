@@ -16,8 +16,9 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="${root}/resources/css/header.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style type="text/css">
 body {
 	padding: 30px 0;
@@ -129,7 +130,7 @@ h5 {
 <body>
 	<div class="container">
 		<div class="header_container">
-			<%@ include file="../home_header.jsp"%>
+			<%@ include file="../header_navi.jsp"%>
 		</div>
 		<div class="contentBox">
 			<div class="form-inline mb-3">

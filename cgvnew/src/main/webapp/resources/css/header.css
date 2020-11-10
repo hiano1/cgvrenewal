@@ -1,41 +1,42 @@
 @charset "UTF-8";
 
 
-.wrap {
-	width: 1200px;
-	margin: 0 auto;
-background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
+.alignaaa {
+	text-align: center;
 }
 
-.alignaaa{
-text-align: center;
+.onehead {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	margin-top: 10px;
 }
 
-.onehead{
- width: 100%;
-  height: 80px;
-  display: flex;
-}
 .logo {
-width: 150px; 
+	width: 150px;
 }
-.onehead div:nth-of-type(1) {flex-grow: 2 ;text-align: center;}
-.onehead div:nth-of-type(2) {flex-grow: 30;}
-.onehead div:nth-of-type(3) {flex-grow: 1;text-align: center;}
-.onehead div:nth-of-type(4) {flex-grow: 1;text-align: center;}
 
+.onehead div:nth-of-type(1) {
+	flex-grow: 2;
+	text-align: center;
+}
+
+.onehead div:nth-of-type(2) {
+	flex-grow: 30;
+}
+
+.onehead div:nth-of-type(3) {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.onehead div:nth-of-type(4) {
+	flex-grow: 1;
+	text-align: center;
+}
 
 .divsearch {
 	display: inline-grid;
-}
-
-.consearchlist {
-	display: inline-block;
-	padding: 5px;
-	text-align: center;
-/* 	border: 1px solid black; */
-	width: 250px;
-	height: 350px;
 }
 
 .poster {
@@ -46,19 +47,21 @@ width: 150px;
 .wraplist {
 	width: 1200px;
 	margin: 0 auto;
-	background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
-
+	
 }
 
 .list_b {
 	text-align: center;
 }
-.urlcolor a {color: white;
-	text-decoration : none;
+
+.urlcolor a {
+	color: white;
+	text-decoration: none;
 	font-weight: bold;
-	font-size: medium;
-	}
-.urlcolor a:hover{
+	font-size: 15px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.urlcolor a:hover {
 	color: red;
-	
 }
