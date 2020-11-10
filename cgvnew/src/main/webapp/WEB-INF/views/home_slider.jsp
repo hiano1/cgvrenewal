@@ -16,32 +16,48 @@
 
 <style type="text/css">
 #slider-wrap {
-	width: 1000px;
-	height: 300px;
+	width: 1920px;
+	height: 560px;
+	overflow: hidden; /* 이거 안하면 위로 네비가 겹쳐서 나옴*/
+	position: relative;
+	margin: 0 auto;
 }
 
-.slide img{
-
-width: 100%
-
-	
+.slide {
+	width: 100%;
+	height: 560px;
+	position: relative;
 }
 
+.slide img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
 </style>
 </head>
 <body>
+
 	<div id="slider-wrap">
 		<div class="slide">
-			<img src="${root}/resources/image/samjin.PNG" />
+			<a href="${root}/mdetail?mv_nm=삼진그룹영어토익반"> 
+				<img src="${root}/resources/image/samjin.png" />
+			</a>
 		</div>
 		<div class="slide">
-			<img src="${root}/resources/image/1.jpg" />
+			<a href="${root}/mdetail?mv_nm=도굴">
+				<img src="${root}/resources/image/dogul.png" />
+			</a>
 		</div>
 		<div class="slide">
-			<img src="${root}/resources/image/2.JPG" />
+			<a href="${root}/mdetail?mv_nm=더%20위치스">
+				<img src="${root}/resources/image/thewitches.png" />
+			</a>
 		</div>
 		<div class="slide">
-			<img src="${root}/resources/image/4.jpg" />
+			<a href="${root}/mdetail?mv_nm=살인의추억">
+				<img src="${root}/resources/image/murder.png" />
+			</a>
 		</div>
 	</div>
 
@@ -61,7 +77,7 @@ width: 100%
 				vertical : false, // 세로 방향 슬라이드 옵션
 				draggable : true, //드래그 가능 여부 
 				accessibility : true, //탭이나 방향키로 오브젝트 선택 가능여부
-				adaptiveHeight : true, //슬라이드 높이에 맞게 높이 자동조정 여부
+				adaptiveHeight : false, //슬라이드 높이에 맞게 높이 자동조정 여부
 				centerMode : false,
 				variableWidth : false
 			});

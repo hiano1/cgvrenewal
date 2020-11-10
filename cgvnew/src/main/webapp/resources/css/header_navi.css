@@ -19,6 +19,8 @@ header {
 
 span{
 	margin-top: 5px;
+	font-weight: bold;
+	color: white;
 }
 .urlcolor {
 	margin-top: 5px;

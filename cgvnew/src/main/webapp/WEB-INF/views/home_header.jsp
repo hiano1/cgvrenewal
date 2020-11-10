@@ -16,6 +16,7 @@
 			<div class="urlcolor">
 				<a class="" href="#">MyCGV</a>
 			</div>
+			<span>|</span>
 			<div class="urlcolor">
 				<a class="" href="${root}/logout">Logout</a>
 			</div>
@@ -26,6 +27,7 @@
 			<div class="urlcolor">
 				<a class="" href="${root}/registerForm">SignUp</a>
 			</div >
+			<span>|</span>
 			<div class="urlcolor">
 				<a class="" href="${root}/loginForm">Login</a>
 			</div>
