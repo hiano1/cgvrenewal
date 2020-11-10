@@ -42,7 +42,7 @@
 			</div>
 				<p class="litTitle">영화, 그 이상의 감동</p>
 			<div class="titleBox">
-				<h6>CGV SPECIAL</h6>
+				<h6 class="pt">CGV SPECIAL</h6>
 				<h3 class="bigTitle">CGV만의 특별함을 느껴보세요.</h3>
 			</div>
 
