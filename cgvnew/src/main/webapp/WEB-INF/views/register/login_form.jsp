@@ -37,12 +37,17 @@ text-align: center;
 margin-top: 200px;
 }
 
-
-
 </style>
 
-	<script>
+<script>
 	$(document).ready(function() {
+		
+		$("#btn_findidForm").click(function() {
+			$("#findid_modal").modal("show");
+		});//click
+		$("#btn_findpwdForm").click(function() {
+			$("#findpwd_modal").modal("show");
+		});//click
 		
 		//비밀번호 입력하고 엔터 누르면 로그인
 		$("#mb_login_pwd").keyup(function() {
@@ -81,18 +86,18 @@ margin-top: 200px;
 		});//click
 		
 	});//ready
-	</script>
+</script>
 
 </head>
 <body>
 	
-	
-	
 	<div class="wrap">
 	
 	<div class="header_container">
-			<%@ include file="../home_header.jsp"%>
-		</div>
+		<%@ include file="../home_header.jsp"%>
+		<%@ include file="findid_modal.jsp" %>
+		<%@ include file="findpwd_modal.jsp" %>
+	</div>
 	
 	<form id="loginForm" method="post" action="${root}/login">
   		
@@ -108,11 +113,20 @@ margin-top: 200px;
   		<p class="text-center">
 			<button type="button" id="btn_login"> Login </button>
   		</p>
-  		
-		<span id="notice"></span>
+  		<span id="notice"></span>
   		</div>
-  	
-		
+  		
+  		<p class="text-center">
+  		<label>
+  		<a data-toggle="modal" href="#findid_modal">Forget Your ID?</a>
+  		</label>
+  		</p>
+  		<p class="text-center">
+  		<label>
+  		<a data-toggle="modal" href="#findpwd_modal">Forget Your Password?</a>
+  		</label>
+  		</p>
+  		
 	</form>
 	<div class="footer-container">
 		<%@ include file="../home_footer.jsp"%>

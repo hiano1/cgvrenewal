@@ -1,5 +1,7 @@
 package kr.co.cgvnew.register;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,6 +44,11 @@ public class RegisterService {
 		int idCount = dao.idChk(mb_id);
 		return idCount;
 	}//idChk
+
+	public List<RegisterDTO> findId(RegisterDTO inDto) {
+		List<RegisterDTO> list = dao.findId(inDto);
+		return list;
+	}//findId
 	
 	
 	

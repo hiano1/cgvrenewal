@@ -1,5 +1,7 @@
 package kr.co.cgvnew.register;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -37,6 +39,11 @@ public class RegisterDAO {
 		= sqlSession.selectOne("RegisterMapper.idChk", mb_id);
 		return idCount;
 	}//idChk
+
+	public List<RegisterDTO> findId(RegisterDTO inDto) {
+		List<RegisterDTO> list = sqlSession.selectList("RegisterMapper.findId", inDto);
+		return list;
+	}//findId
 
 	
 	
