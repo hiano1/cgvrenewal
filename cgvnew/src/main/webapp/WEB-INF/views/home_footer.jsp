@@ -7,7 +7,7 @@
 
 <style type="text/css">
 .foot{
-background: black;
+
 color : white;
  width: 100%;
  height: 100px;

@@ -28,22 +28,7 @@
   text-align:center;
   margin:30px auto;
 }
-.slider-event .next{
-  position:absolute;
-  top:49%;
-  right:30px;
-  font-size:2em;
-  color:gray;
-  cursor: pointer;
-}
-.slider-event .prev{
-  position:absolute;
-  top:49%;
-  left:30px;
-  font-size:2em;
-  color:gray;
-    cursor: pointer;
-}
+
 .slider-event .ev_postwapp{
 
   width:84%;
@@ -73,8 +58,8 @@
   border-top-right-radius:5px;
 }
 .ev_wrap {
-	width: 1200px;
-	margin: 0 auto;
+   width: 1200px;
+   margin: 0 auto;
 background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
 }
 
@@ -90,22 +75,19 @@ $('.ev_postwapp').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-  nextArrow:$('.next'),
-  prevArrow:$('.prev'),
+  arrows: false
 });
 
-	});
+   });
 </script>
 <div class="ev_wrap">
 <div class="header_container">
-			<%@ include file="../home_header.jsp"%>
-		</div>
+         <%@ include file="../home_header.jsp"%>
+      </div>
 <div class="slider-event">
 
 <h1 class="ev_name">${dto.ev_num}</h1>
 
-<i class="fas fa-chevron-left prev"></i>  
-<i class="fas fa-chevron-right next"></i> 
 
 <div class="ev_postwapp">
 
@@ -118,8 +100,7 @@ $('.ev_postwapp').slick({
 <div class="slider-event">
 
 <h1 class="ev_name">${dto.ev_num}</h1>
-<i class="fas fa-chevron-left prev"></i>  
-        <i class="fas fa-chevron-right next"></i> 
+
 <div class="ev_postwapp">
 <c:forEach var="dto" items="${event_list}" varStatus="status">
 <div class="ev_post"><img width="100%" height="100%" src="${dto.ev_p}"></div>
@@ -129,8 +110,7 @@ $('.ev_postwapp').slick({
 <div class="slider-event">
 
 <h1 class="ev_name">${dto.ev_num}</h1>
-<i class="fas fa-chevron-left prev"></i>  
-        <i class="fas fa-chevron-right next"></i> 
+
 <div class="ev_postwapp">
 <c:forEach var="dto" items="${event_list}" varStatus="status">
 <div class="ev_post"><img width="100%" height="100%" src="${dto.ev_p}"></div>
@@ -138,8 +118,8 @@ $('.ev_postwapp').slick({
 </div>
 </div>
 <div class="footer-container">
-		<%@ include file="../home_footer.jsp"%>
-	</div>
+      <%@ include file="../home_footer.jsp"%>
+   </div>
 </div>
 
 </body>
