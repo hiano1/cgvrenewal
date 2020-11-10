@@ -22,6 +22,9 @@
 	.divsearch{
 	display: inline-grid;
 	}
+	body{
+	background-color: linear-gradient(to top, #4d4d4d 0%, black 100%);
+	}
 	
 	</style>
 </head>
