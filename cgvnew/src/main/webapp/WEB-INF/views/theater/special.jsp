@@ -17,6 +17,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style type="text/css">
@@ -30,7 +31,7 @@
     padding: 4em;
     background: #fff;
     border-radius: 7px;
-
+	
 }
 
 section.cards {

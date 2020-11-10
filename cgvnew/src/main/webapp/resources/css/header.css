@@ -99,3 +99,34 @@ span{
 	width: 1200px;
 	margin: 0 auto;
 }
+
+.home_ul{
+	justify-content: space-between;
+	flex: 2;
+	text-align: center;
+	/* margin-right: 50x; */
+	margin-top: 25px;
+	padding-bottom:10px;
+	font-family: 'Noto Sans KR', sans-serif;
+	border-bottom: 1px solid #999999;
+}
+.home_li {
+	list-style: none;
+	display: inline-block;
+	
+}
+.home_li a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 70px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+.home_li a:hover{
+	text-decoration: none;
+	color: red;
+	bottom: 2px;
+	padding-bottom:10px;
+	border-bottom: 3px solid red;
+}

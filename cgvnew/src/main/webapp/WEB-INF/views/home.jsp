@@ -29,26 +29,12 @@
 	<%@ include file="./home_slider.jsp"%>
 
 	<div class="wrap">
-		<nav class="navbar navbar-expand-sm bg-dark">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a
-					class="nav-link text-white font-weight-bold ml-3"
-					href="${root}/ticket/main">영화예매</a></li>
-
-				<li class="nav-item"><a
-					class="nav-link text-white font-weight-bold ml-3"
-					href="${root}/theater">영화관</a></li>
-
-				<li class="nav-item"><a
-					class="nav-link text-white font-weight-bold ml-3"
-					href="${root}/ev1">이벤트</a></li>
-
-				<li class="nav-item"><a
-					class="nav-link text-white font-weight-bold ml-3"
-					href="${root}/list">영화검색</a></li>
-
-			</ul>
-		</nav>
+		<ul class="home_ul">
+			<li class="home_li"><a href="${root}/ticket/main">영화예매</a></li>
+			<li class="home_li"><a href="${root}/theater">영화관</a></li>
+			<li class="home_li"><a href="${root}/ev1">이벤트</a></li>
+			<li class="home_li"><a href="${root}/list">영화검색</a></li>
+		</ul>
 
 
 		<div class="alignaaa">
