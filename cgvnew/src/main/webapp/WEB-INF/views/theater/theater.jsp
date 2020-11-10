@@ -93,12 +93,15 @@ $(document).ready(function() {
 
 	<!-- <h1>전체극장</h1> -->
 
-	<div class="container">
-		<div class="header_container">
+	<div class="wrap">
 			<%@ include file="../header_navi.jsp"%>
-		</div>
-		
+	</div>
 	
+	<div class="backimg">
+		<img src="${root}/resources/image/theaterimg.png" />
+	</div>
+	
+	<div class="wrap">
 	<div class="contentBox">
 	
 	

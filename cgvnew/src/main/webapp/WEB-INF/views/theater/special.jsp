@@ -17,114 +17,22 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/theater.css">
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-<style type="text/css">
 
-
-
-
-.contentBox {
-	max-width: 1500px;
-    margin: 4em auto;
-    padding: 4em;
-    background: #fff;
-    border-radius: 7px;
-	
-}
-
-section.cards {
-	margin: 0 auto;
-	display: grid;
-	grid-auto-flow: row dense;
-	grid-template-columns: repeat(3, 256px);
-	grid-template-rows: repeat(12, 196px);
-	grid-gap: 16px;
-}
-
-.card {
-	display: flex;
-	border: 1px solid rgba(0, 0, 0, 0);
-	transition: all 0.25s ease;
-}
-
-.card:hover {
-	transform: scale(1.05);
-}
-
-.vertical {
-	flex-direction: column;
-	grid-row: span 2; 
-	grid-column: span 1;
-}
-.small {
-	flex-direction: column;
-	grid-row: span 1; 
-	grid-column: span 1;
-}
-
-.horizontal {
-	flex-direction: row;
-	grid-row: span 1;
-	grid-column: span 2;
-}
-
-.reverse-horizontal {
-	flex-direction: row-reverse;
-	grid-row: span 1;
-	grid-column: span 2;
-}
-
-.horizontal .card__img, .reverse-horizontal .card__img {
-	height: 100%;
-}
-
-.vertical .card__img {
-	width: 100%;
-}
-.titleBox{
-
-	margin-bottom: 40px;
-}
-
-
-.litTitle {
-	font-size: 12px;
-	letter-spacing: 2px;
-	opacity: 0.9;
-	color: #595959;
-	
-}
-
-.bigTitle {
-	color: #f46D0D;
-	font-size: 40px;
-	opacity: 0.8;
-	font-weight: 700;
-	padding-bottom: 0.5em;
-	transition: all 0.25s ease;
-	
-}
-
-.card__excerpt {
-	font-size: 16px;
-	padding-bottom: 0.5em;
-}
-
-
-
-/* font */
-h5 {
-	font-weight: bold;
-}
-</style>
 </head>
 <body>
-	<div class="container">
-		<div class="header_container">
-			<%@ include file="../header_navi.jsp"%>
+		<div class="wrap">
+				<%@ include file="../header_navi.jsp"%>
 		</div>
+		
+		<div class="backimg">
+			<img src="${root}/resources/image/theaterimg.png" />
+		</div>
+		
+		<div class="wrap">
 		<div class="contentBox">
 			<div class="form-inline mb-3">
 				<h5 class="mr-5">특별관</h5>
@@ -134,68 +42,32 @@ h5 {
 			</div>
 				<p class="litTitle">영화, 그 이상의 감동</p>
 			<div class="titleBox">
-				<h1 class="bigTitle">CGV SPECIAL</h1>
-				<h6>CGV만의 특별함을 느껴보세요.</h6>
+				<h6>CGV SPECIAL</h6>
+				<h3 class="bigTitle">CGV만의 특별함을 느껴보세요.</h3>
 			</div>
 
 			<section class="cards">
 				<article class="vertical card">
 					<img class="card__img"
-						src="https://picsum.photos/256/196/?image=990" class="card__image">
-					<div class="card__content">
-						<div class="card__type">세로</div>
-						<div class="card__title">Test Post: Electric Boogaloo</div>
-						<div class="card__date">14 March 2011 &middot; 5 min read</div>
-						<div class="card__excerpt">This is a test article, in a
-							perculiar context, to see whether grid and flexbox works to make
-							a blog...</div>
-						<div class="card__tags">
-							<div class="tag">
-								<i class="fa fa-tag"></i>test
-							</div>
-							<div class="tag">
-								<i class="fa fa-tag"></i>test
-							</div>
-						</div>
-					</div>
+						src="${root}/resources/image/cinefore.jpg" class="card__image">
 				</article>
 				<article class="horizontal card">
 					<img class="card__img"
 						src="${root}/resources/image/special4DX.jpg" class="card__image">
-				
 				</article>
 				<article class="small card">
 					<img class="card__img"
-						src="https://picsum.photos/256/196/?image=123" class="card__image">
+						src="${root}/resources/image/cinekids.jpg" class="card__image">
 				</article>
-				<article class="small card">
+				<article class="vertical card">
 					<img class="card__img"
-						src="https://picsum.photos/256/196/?image=421" class="card__image">
+						src="${root}/resources/image/sweetbox.jpg" class="card__image">
 				</article>
 				<article class="reverse-horizontal card">
 					<img class="card__img"
-						src="https://picsum.photos/256/196/?image=161" class="card__image">
-					<div class="card__content">
-						<div class="card__type">가로</div>
-						<div class="card__title">Test Post: Electric Boogaloo</div>
-						<div class="card__date">14 March 2011 &middot; 5 min read</div>
-						<div class="card__excerpt">This is a test article, in a
-							perculiar context, to see whether grid and flexbox works to make
-							a blog...</div>
-						<div class="card__tags">
-							<div class="tag">
-								<i class="fa fa-tag"></i>test
-							</div>
-							<div class="tag">
-								<i class="fa fa-tag"></i>test
-							</div>
-						</div>
-					</div>
+						src="${root}/resources/image/cineliving.jpg" class="card__image">
 				</article>
-				<article class="small card">
-					<img class="card__img"
-						src="https://picsum.photos/256/196/?image=721" class="card__image">
-				</article>
+				
 				
 				
 			</section>

@@ -7,8 +7,10 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 	margin-top: 10px;
+	padding-bottom:15px;
+	border-bottom: 1px solid #8c8c8c;
 }
 
 
@@ -59,7 +61,7 @@ span{
 	text-decoration: none;
 	color: whitesmoke;
 	
-	padding: 10px 20px;
+	padding: 10px 40px;
 	font-size: 20px;
 }
 
@@ -67,6 +69,6 @@ span{
 	text-decoration: none;
 	color: red;
 	bottom: 2px;
-	padding-bottom:10px;
+	padding-bottom:30px;
 	border-bottom: 3px solid red;
 }
