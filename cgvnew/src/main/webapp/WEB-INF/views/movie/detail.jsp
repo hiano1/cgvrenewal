@@ -9,17 +9,15 @@
 <meta charset="UTF-8">
 <title>cgv_moviedetail</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="resources/css/header.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
 <style type="text/css">
 
@@ -131,9 +129,10 @@ margin-top: 5px;
 
 <body>
 
-	<div class="header_container">
-		<%@ include file="../home_header.jsp"%>
-	</div>
+	<div class="container">
+		<div class="header_container">
+			<%@ include file="../header_navi.jsp"%>
+		</div>
 <div class="wrap">
 	<section class="mov_box" >
    <div class="mov_p"> <img src="${movie_detail.mv_p}"></div> 
@@ -173,6 +172,7 @@ margin-top: 5px;
 
 		<div class="footer_container">
 		<%@ include file="../home_footer.jsp"%>
+	</div>
 	</div>
 </body>
 </html>

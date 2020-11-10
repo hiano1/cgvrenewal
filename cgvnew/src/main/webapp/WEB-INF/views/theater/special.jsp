@@ -20,17 +20,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style type="text/css">
-body {
-	padding: 30px 0;
-	font-weight: 300;
-	font-size: 15px;
-	background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
-}
 
 
-* {
-	/* box-sizing: border-box; */
-}
+
 
 .contentBox {
 	max-width: 1500px;

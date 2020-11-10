@@ -113,7 +113,7 @@
 
 </head>
 <body>
-	<div class="wraplist">
+	<div class="container">
 		<div class="header_container">
 			<%@ include file="../header_navi.jsp"%>
 		</div>
