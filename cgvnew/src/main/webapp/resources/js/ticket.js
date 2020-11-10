@@ -2,6 +2,7 @@ $(document)
     .ready(
         function() {
             let pcscnt;
+            let subtime;
             $("a[id^=lcode]")
                 .click(
                     function() {
@@ -253,7 +254,6 @@ $(document)
                                                                         "</td>" +
                                                                         "</tr>");
                                                             }); // each
-
                                                 } // success
                                             }); // ajax
 
@@ -267,15 +267,71 @@ $(document)
                             // ui 찍기
                             let tmpidPre = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'];
                             let tmpidSuf = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v'];
-                            for (i = 0; i < (tcount / 15); i++) {
+                            
+                            const seatDiv = document.querySelector(".seatsdiv");
+                            let test = [];
+                            let teststr = "";
+                            let selectedSeats = new Array();
+                            let selectedSeatsMap = [];
+                            let clicked = "";
+                            let div = "";
+                            
+                            for (i = 0; i < (subtime / 15); i++) {
                                 // tmpidPre = (Int)tmpidPre + 1
                             	
-                                // ? //대문자 사용
+                            	div = document.createElement("div");
+                            	seatDiv.append(div);
 
                                 for (j = 0; j < 15; j++) {
                                    
-                                    impidPre[i]+tmpidSuf[j];
-                               
+                                    const input = document.createElement('input');
+                                    input.type = "button";
+                                    input.name = "seats"
+                                    input.classList = "seat";
+                                    input.value = tmpidPre[i]+tmpidSuf[j];
+                                    
+                                    
+                                    div.append(input);
+                                    input.addEventListener('click', function(e) {
+                                    	
+                                        //중복방지 함수
+                                        selectedSeats = selectedSeats.filter((element, index) => selectedSeats.indexOf(element) != index);
+                                        $("#selS").empty();
+                                        //click class가 존재할때(제거해주는 toggle)
+                                        if (input.classList.contains("clicked")) {
+                                            input.classList.remove("clicked");
+                                            clicked = document.querySelectorAll(".clicked");
+                                            selectedSeats.splice(selectedSeats.indexOf(e.target.value), 1);
+                                            clicked.forEach((data) => {
+                                                selectedSeats.push(data.value);
+                                            });
+                                            for(let i in test){
+                                            	if(test[i] === $(this).val()){
+                                            		test.splice(i,1);
+                                            	}else{
+                                            		teststr = teststr + test[i];
+                                            	}
+                                            }
+                                            $("#selS").text(teststr);
+                                            teststr = "";
+                                            
+                                        //click class가 존재하지 않을때 (추가해주는 toggle)
+                                        } else {
+                                            input.classList.add("clicked");
+                                            clicked = document.querySelectorAll(".clicked");
+                                            clicked.forEach((data) => {
+                                                selectedSeats.push(data.value);
+                                            });
+                                            test.push($(this).val());
+                                            
+                                            for(let i in test){
+                                            	teststr = teststr + test[i];
+                                            }
+                                            $("#selS").text(teststr);
+                                            teststr = "";
+                                        }//if checked
+                                    });//add event
+                                    
                                     // 사각형 찍기 체크박스
                                     // if(예매코드 번호 ==
                                     // tmpidPre+tmpidSuf) 비활성된
@@ -290,6 +346,7 @@ $(document)
                                 } // for j
                                 // append(br) 줄바꿈
                             } // for i
+                            pcscnt = 4;
                         } else if (pcscnt === 4) {
                             // 결제 + 예매코드 생성
                         } else {
@@ -306,6 +363,8 @@ $(document)
             $(document).on("click", "tr[id^=scode]", function() {
             	pcscnt = 3;
                 $("#selT").text($(this).text());
+                subtime = ($(this).text()).substring(21,24);
+               // $("#selT").text(subtime);
             });
 
             // 좌석 체크박스 클릭시 selS에 텍스트 추가 or 삭제

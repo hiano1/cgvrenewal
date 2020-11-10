@@ -137,6 +137,18 @@ body, html {
 	display: flex;
 	margin: 0 auto;
 }
+.seat{
+	width : 30px;
+	height : 30px;
+}
+
+.clicked{
+	background-color: red;
+	color: white;
+}
+.seatsdiv{
+	width: 100%;
+}
 </style>
 
 </head>
