@@ -13,6 +13,62 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="resources/css/header.css">
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
+<style type="text/css">
+
+.alignaaa {
+	text-align: center;
+}
+
+.onehead {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	margin-top: 10px;
+}
+
+.logo {
+	width: 150px;
+}
+
+.onehead div:nth-of-type(1) {
+	flex-grow: 2;
+	text-align: center;
+}
+
+.onehead div:nth-of-type(2) {
+	flex-grow: 30;
+}
+
+.onehead div:nth-of-type(3) {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.onehead div:nth-of-type(4) {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.divsearch {
+	display: inline-grid;
+}
+
+.poster {
+	width: 100%;
+	height: 80%;
+}
+
+.wraplist {
+	width: 1200px;
+	margin: 0 auto;
+	
+}
+
+.list_b {
+	text-align: center;
+}
+
+</style>
 </head>
 <body>
 	<div class="wrap">
