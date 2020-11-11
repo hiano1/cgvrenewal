@@ -8,27 +8,40 @@
 <meta charset="UTF-8">
 <title>theater</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/theater.css">
 <link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style type="text/css">
+.TName{
+	color: #404040;
+	font-weight: bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+}
 
+.Ttitle{
+	color: #f46D0D;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: left;
+	padding: 10px 20px;
+}
+.Tcnts{
+	color: #404040;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: left;
+	margin-left: 20px;
+	padding: 10px 20px;
+}
+</style>
 </head>
 <body>
-
-
 <script type="text/javascript">
-
-
 $(document).ready(function() {
 
 	
@@ -70,12 +83,16 @@ $(document).ready(function() {
 										$("#mid_detail").append(
 												"<div>"+
 												/* "<h6>"+ dto.tm_num+"</h6>"+ */
-												"<h1 class='mb-5'>"+ dto.tm_nm+"</h1>"+
+												"<h1 class='TName'>"+ dto.tm_nm+"</h1>"+
 												/* "<h2>"+ dto.th_add+"</h2>"+ */
-												"<h2> 주소 "+ dto.th_addn+"</h2>"+
-												"<h2 class='mb-3 tex'>교통안내</h1>"+
-												"<h2> 버스"+ dto.th_bus+"</h2>"+
-												"<h2> 지하철"+ dto.th_sub+"</h2>"+
+												"<h4 class='Ttitle'> 주소 </h4>"+ 
+												"<h6 class='Tcnts'>"+dto.th_addn+"</h6>"+
+												"<br><br><br><br>"+
+												"<h4 class='Ttitle'>오시는 길</h4>"+
+												"<h5 class='Ttitle'> 버스 </h5>"+
+												"<h6 class='Tcnts'>"+dto.th_bus+"</h6>"+
+												"<h5 class='Ttitle'> 지하철</h5>"+
+												"<h6 class='Tcnts'>"+ dto.th_sub+"</h6>"+
 												"</div>"
 											//추가
 										);
