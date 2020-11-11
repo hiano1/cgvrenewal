@@ -34,7 +34,11 @@
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
 	rel="stylesheet">
 <style type="text/css">
+body{
+font-size: medium;
+color: white;
 
+}
 .slider-event {
 	width: 100%;
 	margin: 0px auto;
@@ -85,6 +89,7 @@
 height: 10%;
 
 }
+
 </style>
 
 </head>
@@ -94,6 +99,8 @@ height: 10%;
 			$('.ev_postwap').slick({
 				slidesToShow: 1,
 				  slidesToScroll: 1,
+				  autoplay : true,
+					autoplaySpeed : 2000,
 				  arrows: false,
 				  fade: true,
 				  asNavFor: '.ev_postwapp'
@@ -101,7 +108,7 @@ height: 10%;
 
 			$('.ev_postwapp').slick({
 				slidesToShow : 4,
-				slidesToScroll : 1,
+				slidesToScroll : 4,
 				autoplay : true,
 				autoplaySpeed : 2000,
 				arrows : false
@@ -109,59 +116,67 @@ height: 10%;
 		
 		});
 	</script>
-	<div class="container">
+	<div class="wrap">
+	
 		<div class="header_container">
 			<%@ include file="../header_navi.jsp"%>
 		</div>
+<div class="container">
 		<div class="slider-event">
 
-			<h1 class="ev_name">${dto.ev_num}</h1>
+		
 
 
 			<div class="ev_postwap">
 
 				<c:forEach var="dto" items="${event_list}" varStatus="status">
-					<div class="ev_post1">
+					<div class="ev_post1"><a href="${root}/ev_detail?ev_num=${dto.ev_num}">
 						<img width="100%" height="100%" src="${dto.ev_p}">
+					</a>
 					</div>
 
 				</c:forEach>
 			</div>
 		</div>
 		<div class="slider-event">
-
 			<h1 class="ev_name">${dto.ev_num}</h1>
+<p class="evv_name">추천 이벤트</p>
 
 			<div class="ev_postwapp">
 				<c:forEach var="dto" items="${event_list}" varStatus="status">
-					<div class="ev_post">
+					<div class="ev_post"><a href="${root}/ev_detail?ev_num=${dto.ev_num}">
 						<img width="100%" height="100%" src="${dto.ev_p}">
+					</a>
 					</div>
 				</c:forEach>
 			</div>
 		</div>
 		<div class="slider-event">
-
 			<h1 class="ev_name">${dto.ev_num}</h1>
+<p>진행중인 이벤트</p>
 
 			<div class="ev_postwapp">
 				<c:forEach var="dto" items="${event_list}" varStatus="status">
-					<div class="ev_post">
+					<div class="ev_post"><a href="${root}/ev_detail?ev_num=${dto.ev_num}">
 						<img width="100%" height="100%" src="${dto.ev_p}">
+					</a>
 					</div>
 				</c:forEach>
 			</div>
 		</div>
 		<div class="slider-event">
-
 			<h1 class="ev_name">${dto.ev_num}</h1>
+<p>종료된 이벤트</p>
 
 			<div class="ev_postwapp">
 				<c:forEach var="dto" items="${event_list}" varStatus="status">
 					<div class="ev_post">
+					<a href="${root}/ev_detail?ev_num=${dto.ev_num}">
 						<img width="100%" height="100%" src="${dto.ev_p}">
+					</a>
 					</div>
 				</c:forEach>
+			</div>
 			</div>
 		</div>
 		<div class="footer-container">

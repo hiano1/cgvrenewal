@@ -8,5 +8,11 @@
    <select id="list" resultType="kr.co.cgvnew.event.EventBoardDTO">
       select ev_num,ev_nm,ev_sdate,ev_edate,ev_p from event 
    </select>
-
+   
+   
+<select id="detail" parameterType="java.lang.String"
+		resultType="kr.co.cgvnew.event.EventBoardDTO">
+		select ev_num, ev_nm, ev_sdate, ev_edate, ev_p, ev_p2  from event
+		where ev_num = #{ev_num}
+	</select>
 </mapper>

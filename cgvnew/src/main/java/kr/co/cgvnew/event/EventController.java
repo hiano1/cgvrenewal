@@ -24,4 +24,16 @@ public class EventController {
 		
 		return "event/ev_main";
 	}
+	@RequestMapping(value = "/ev_detail",method = RequestMethod.GET)
+	public String eventdetail(Model model, String ev_num) {
+		
+		System.out.println(ev_num);
+		EventBoardDTO dto = service.detail(ev_num);
+		model.addAttribute("event_detail", dto);
+		
+		return "/event/ev_detail";
+		
+		
+	}
+	
 }

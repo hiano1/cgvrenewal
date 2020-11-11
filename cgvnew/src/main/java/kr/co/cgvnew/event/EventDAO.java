@@ -20,4 +20,12 @@ public class EventDAO {
 		return list;
 	}
 
+
+
+	public EventBoardDTO detail(String ev_num) {
+		EventBoardDTO dto = SqlSession.selectOne("EventListMapper.detail", ev_num);		
+		return dto;
+		
+	}
+
 }

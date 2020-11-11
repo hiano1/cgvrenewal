@@ -6,6 +6,13 @@ public class EventBoardDTO {
 	private String ev_sdate;
 	private String ev_edate;
 	private String ev_p;
+	public String getEv_p2() {
+		return ev_p2;
+	}
+	public void setEv_p2(String ev_p2) {
+		this.ev_p2 = ev_p2;
+	}
+	private String ev_p2;
 	public String getEv_num() {
 		return ev_num;
 	}

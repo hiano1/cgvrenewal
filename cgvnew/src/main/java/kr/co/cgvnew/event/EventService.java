@@ -15,4 +15,9 @@ public class EventService {
 		List<EventBoardDTO> list = dao.eventlist();
 		return list;
 	}
+
+	public EventBoardDTO detail(String ev_num) {
+		EventBoardDTO dto = dao.detail(ev_num);
+		return dto;
+	}
 }

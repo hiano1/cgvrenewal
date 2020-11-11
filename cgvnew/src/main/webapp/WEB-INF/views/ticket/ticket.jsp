@@ -11,6 +11,15 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style type="text/css">
+html, body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
 .container {
 	display: flex;
 	color: white;
@@ -25,83 +34,55 @@
 	flex-basis: 30%;
 }
 
-.side_nav2 {
-	flex-basis: 15%;
-}
-
-.side_nav3 {
-	flex-basis: 15%;
-}
-
-.side_nav4 {
+.side_nav2 .side_nav3 .side_nav4 {
 	flex-basis: 15%;
 }
 
 .nextBtnclass {
 	
-}
+}/*버튼 css*/
 
 .tablel {
 	margin-top: 50px;
 }
 
 .tkheader_container {
-	display: flex; padding : 29px 21px;
+	display: flex;
+	padding: 29px 21px;
 	width: 273px;
 	height: 98px;
 	background-color: black;
 	padding: 29px 21px;
-	
 }
 
 .logo {
 	width: 168px;
-	margin: 0px 31.5px;
+	margin: 0px 31px;
 }
 
 .side_nav1 {
 	padding: 14px;
 	width: 315px;
-	height: 329.59px;
+	height: 329px;
 }
 
 .side_nav1 img {
-	width: 135.3px;
-	height: 180.39px;
+	width: 135px;
+	height: 180px;
 	margin: 11px 80px 15px;
 }
 
 .side_navvv {
 	width: 315px;
-	height: 275.85px;
+	height: 275px;
 	padding: 0px 21px;
 }
 
-.side_nav2 {
+.side_nav2 .side_nav3 .side_nav4 {
 	padding: 13.3px 21px 14px 0px;
 }
 
-.side_nav3 {
-	padding: 13.3px 21px 14px 0px;
-}
-
-.side_nav4 {
-	padding: 13.3px 21px 14px 0px;
-}
-
-#selL {
-	width: 252px;
-	height: 24px;
-	font: 21px;
-}
-
-#selM {
-	width: 252px;
-	height: 24px;
-	font: 21px;
-}
-
-#selT {
+#selL #selM #selT {
 	width: 252px;
 	height: 24px;
 	font: 21px;
@@ -114,15 +95,6 @@
 	font: 15.75px;
 }
 
-body, html {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
-
 .container {
 	width: 315px;
 	height: 100%;
@@ -131,22 +103,25 @@ body, html {
 }
 
 .wrap {
-	width: 100% s;
-	height: 100%; margin : 0 auto;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
 	background-color: white;
 	display: flex;
 	margin: 0 auto;
 }
-.seat{
-	width : 30px;
-	height : 30px;
+
+.seat {
+	width: 30px;
+	height: 30px;
 }
 
-.clicked{
+.clicked {
 	background-color: red;
 	color: white;
 }
-.seatsdiv{
+
+.seatsdiv {
 	width: 100%;
 }
 </style>
