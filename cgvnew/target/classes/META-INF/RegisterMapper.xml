@@ -40,5 +40,23 @@
 	where mb_nm = #{mb_nm} and mb_email = #{mb_email}
 	</select>
 	
+	
+	<select id="userYNForPWD"
+			parameterType="kr.co.cgvnew.register.RegisterDTO"
+			resultType="int">
+		SELECT COUNT(mb_id)
+		FROM member
+		WHERE mb_id = #{mb_id}
+		AND mb_email = #{mb_email}
+	</select>
+
+	<update id="updatePwd"
+			parameterType="kr.co.cgvnew.register.RegisterDTO">
+		UPDATE member
+		SET mb_pwd = #{mb_pwd}
+		WHERE mb_id = #{mb_id}
+		AND mb_email = #{mb_email}
+	</update>
+	
 
 </mapper>

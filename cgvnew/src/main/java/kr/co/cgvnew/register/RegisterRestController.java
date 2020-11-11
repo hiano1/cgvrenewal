@@ -2,6 +2,8 @@ package kr.co.cgvnew.register;
 
 import java.util.List;
 
+import javax.mail.MessagingException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,18 @@ public class RegisterRestController {
 		
 	}//findId
 	
+	
+	@RequestMapping(value="/register/findpwd", method=RequestMethod.POST)
+	public String findPwd(RegisterDTO inDto) {
+		int successCnt = 0;
+		try {
+			successCnt = service.findPwd(inDto);
+		} catch (MessagingException e) {
+			successCnt = -3;
+			e.printStackTrace();
+		}
+		return ""+successCnt;
+	}//findPwd
 	
 	
 }

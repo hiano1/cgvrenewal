@@ -13,7 +13,6 @@ public class RegisterDAO {
 	private SqlSession sqlSession;
 	
 	
-	
 	public int register(RegisterDTO inDto) {
 		int successCnt = sqlSession.insert("RegisterMapper.register", inDto);
 		return successCnt;
@@ -45,6 +44,21 @@ public class RegisterDAO {
 		return list;
 	}//findId
 
+
+	public int userYNForPWD(RegisterDTO inDto) {
+		int userYN = sqlSession.selectOne(
+				"RegisterMapper.userYNForPWD", inDto);
+		return userYN;
+	}//userYNForPWD
+
 	
+	public int updatePwd(RegisterDTO inDto) {
+		int successCnt = sqlSession.update(
+				"RegisterMapper.updatePwd", inDto);
+		return successCnt;
+	}//updatePwd
+
 	
 }//class
+
+

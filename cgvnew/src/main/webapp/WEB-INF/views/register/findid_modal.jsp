@@ -15,16 +15,16 @@
 	<form id="findidForm" method="post"
 		  action="${root}/findId">
 	<div class="form-group">
-		<label for="res_nm">Your Name</label>
-		<input class="form-control" type="text" id="res_nm" name="res_nm">
+		<label for="res1_nm">Your Name</label>
+		<input class="form-control" type="text" id="res1_nm" name="res1_nm">
 	</div>
 	<div class="form-group">
-		<label for="res_email">Your Email</label>
+		<label for="res1_email">Your Email</label>
 		<div class="form-inline">
 		<input type="text" class="form-control mr-1"
-				id="res_email1" name="res_email1">
+				id="res1_email1" name="res1_email1">
 		@ <input type="text" class="form-control mr-1"
-				id="res_email2" name="res_email2">
+				id="res1_email2" name="res1_email2">
 		</div>
 	</div>
 	</form>
@@ -48,7 +48,7 @@ $(document).ready(function() {
 	$("#btn_findid").click(function() {
 		$.post(
 			"${root}/register/findid"
-			, { mb_nm : $("#res_nm").val() , mb_email : $("#res_email1").val()+"@"+$("#res_email2").val() }
+			, { mb_nm : $("#res1_nm").val() , mb_email : $("#res1_email1").val()+"@"+$("#res1_email2").val() }
 			, function(data, status) {
 				$("#find_notice").empty();
 				if(data.length <= 0) { //id 없음.
@@ -69,7 +69,7 @@ $(document).ready(function() {
 <style type="text/css">
 h4 { color: black; }
 .modal-body { color: black; }
-#res_nm { width: 220px; }
-#res_email1, #res_email2 { width: 115px; }
+#res1_nm { width: 220px; }
+#res1_email1, #res1_email2 { width: 115px; }
 #find_notice { color: black; }
 </style>
