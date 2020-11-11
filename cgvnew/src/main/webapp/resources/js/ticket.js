@@ -261,6 +261,16 @@ $(document)
 
                         } else if (pcscnt === 3) {
                             // 로그인 검사
+                        	let session = '<%=Session["login_id_session"] != null%>';
+                        	 if (session == false) {
+                        		 alert("로그인이 필요한 서비스입니다.");
+                                 window.location = "../home.jsp";
+                             }
+                        		
+                        	
+                        	
+                        	
+                        	
                             // total 가져와서 좌석 찍기
 
                             // tcount 가져와서
@@ -347,6 +357,7 @@ $(document)
                                 // append(br) 줄바꿈
                             } // for i
                             pcscnt = 4;
+                            //next 버튼이 예매 버튼으로 바뀜
                         } else if (pcscnt === 4) {
                             // 결제 + 예매코드 생성
                         } else {
