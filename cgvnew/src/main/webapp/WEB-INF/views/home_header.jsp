@@ -23,7 +23,11 @@
 			</div>
 		</c:when>
 		<c:otherwise>
-
+			<div>
+				<a href="${root}/"><img class="logo"
+					src="${root}/resources/image/cgv_logo.png" /></a>
+			</div>
+			<div></div>
 			<div class="urlcolor">
 				<a class="" href="${root}/registerForm">SignUp</a>
 			</div>
