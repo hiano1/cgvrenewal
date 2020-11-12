@@ -65,7 +65,8 @@ ev_num int primary key not null auto_increment
 , ev_nm varchar(50)
 , ev_sdate varchar(20)
 , ev_edate varchar(20)
-, ev_p varchar(100));
+, ev_p varchar(100)
+, ev_p2 varchar(100));
 
 insert into event(ev_nm,ev_sdate,ev_edate,ev_p) values('테스트이벤트','시작일은~~','종료일은~~','포스터url');
 
@@ -82,3 +83,15 @@ tt_num int primary key not null auto_increment
 
 insert into timetable(tt_date,mv_num,ts_num)values
 ("2020/11/09 11:35:00",5,2);
+=================회원테이블=================
+create table member(
+mb_no int primary key not null auto_increment
+, mb_id varchar(200)
+, mb_pwd varchar(200)
+, mb_nm varchar(50)
+, mb_gen varchar(20)
+, mb_birth varchar(200)
+, mb_tel varchar(200)
+, mb_email varchar(200)
+, mb_point int
+);

@@ -113,12 +113,12 @@
 
 </head>
 <body>
-	<div class="container">
+	<div class="wrap">
+	
 		<div class="header_container">
 			<%@ include file="../header_navi.jsp"%>
 		</div>
-
-		<div class="container ">
+		<div class="container">
 
 
 			<form class="pagination justify-content-center  mb-5">

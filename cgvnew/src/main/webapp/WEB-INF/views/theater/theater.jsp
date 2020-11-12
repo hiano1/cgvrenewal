@@ -38,6 +38,22 @@
 	margin-left: 20px;
 	padding: 10px 20px;
 }
+.mul {
+	list-style-type: none;
+}
+
+.mli a {
+	text-decoration: none;
+	color: #262626;
+	padding: 25px 25px;
+	float: left;
+}
+
+.mli a:hover {
+	text-decoration: none;
+	color: #f46D0D;
+}
+
 </style>
 </head>
 <body>
@@ -66,8 +82,8 @@ $(document).ready(function() {
 				$("#mid_table").empty();//mid_detail
 				$.each(data, function(index, dto) {
 					$("#mid_table").append(
-							"<ul>"+
-							"<li>"+ 
+							"<ul class='mul'>"+
+							"<li class='mli'>"+ 
 							"<a href='#' id='middle_"+index+"' value='"+dto.tm_num+"'>"+ dto.tm_nm+"</a>"+
 							"</li>"+
 							"</ul>"
@@ -112,13 +128,13 @@ $(document).ready(function() {
 
 	<div class="wrap">
 			<%@ include file="../header_navi.jsp"%>
-	</div>
+	
 	
 	<div class="backimg">
 		<img src="${root}/resources/image/theaterimg.png" />
 	</div>
 	
-	<div class="wrap">
+	
 	<div class="contentBox">
 	
 	

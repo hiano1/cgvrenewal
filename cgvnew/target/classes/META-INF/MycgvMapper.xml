@@ -7,7 +7,7 @@
 
    <select id="myinfo" resultType="kr.co.cgvnew.mycgv.MycgvDTO"
    parameterType="java.lang.String">
-      select mb_no, mb_id, mb_pwd,mb_nm,mb_gen,mb_birth, mb_tel, mb_email, mb_point
+      select mb_no, mb_id, mb_pwd,mb_nm,mb_gen,mb_birth, mb_tel, mb_email, mb_point, mb_Rpoint
       from member
       where mb_id = #{idchk}
    </select>

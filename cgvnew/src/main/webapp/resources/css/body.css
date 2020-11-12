@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 body {
-	font-family: 'Noto Sans KR', sans-serif;
 	background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
 	padding: 15px 0;
 	font-weight: 300;
@@ -17,4 +16,7 @@ a:hover{
 .wrap {
 	width: 1200px;
 	margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans KR', sans-serif;
 }

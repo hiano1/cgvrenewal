@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 .backimg{
 	width: 1300px;
 	height: 240px;
@@ -220,9 +220,7 @@ body {
 	opacity: 0.9;
 	color: #cccccc;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Noto Sans KR', sans-serif;
-}
+
 h1, h2 {
 	margin: 0;
 	color: #444;
@@ -266,21 +264,6 @@ p {
 	color: white;
 }
 
-ul {
-	list-style-type: none;
-}
-
-ul li a {
-	text-decoration: none;
-	color: #262626;
-	padding: 25px 25px;
-	float: left;
-}
-
-ul li a:hover {
-	text-decoration: none;
-	color: #f46D0D;
-}
 
 
 /*special*/

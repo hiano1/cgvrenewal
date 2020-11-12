@@ -10,8 +10,14 @@ public class MycgvDTO {
 	private String mb_tel; 
 	private String mb_email;
 	private String mb_point;
+	private String mb_Rpoint;
 	
-	
+	public String getMb_Rpoint() {
+		return mb_Rpoint;
+	}
+	public void setMb_Rpoint(String mb_Rpoint) {
+		this.mb_Rpoint = mb_Rpoint;
+	}
 	public String getMb_no() {
 		return mb_no;
 	}
