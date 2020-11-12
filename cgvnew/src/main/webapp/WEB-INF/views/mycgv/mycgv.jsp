@@ -127,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 70px 100px;
 	background-color: #f2f2f2;
 	border-radius: 10px 10px 0px 0px;
+	border-bottom: 5px solid white;
 }
 .profileImg{
 	float:left;
@@ -144,11 +145,11 @@ h1, h2, h3, h4, h5, h6 {
 	float:left;
 	font-weight: bold;
 }
-h5 a{
+h6 a{
 	text-decoration: none;
 	color: #4d4d4d;
 }
-h5 a:hover{
+h6 a:hover{
 	text-decoration:underline;
 }
 
@@ -156,7 +157,7 @@ h5 a:hover{
 	width: 100%;
 	height: 200px;
 	padding: 30px 100px;
-	background-color: #bfbfbf;
+	background-color: #f2f2f2;
 	border-radius: 0px 0px 10px 10px;
 }
 .listContents{
@@ -222,7 +223,7 @@ color : grey;
 								</c:otherwise>
 							</c:choose>
 					</div>
-							<h5><a href="${root}/infoupdate">개인 정보 수정 ></a></h5>
+							<h6><a href="${root}/infoupdate">개인 정보 수정 ></a></h6>
 				</div><!-- 회원카드 윗부분 -->
 				<div class="mbrboxBottom"><!-- 회원카드 아랫부분 -->
 						<h4>사용가능 포인트 : ${info.mb_point} </h4>
