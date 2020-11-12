@@ -260,16 +260,15 @@ $(document)
                                     }); // click day
 
                         } else if (pcscnt === 3) {
+                            
                             // 로그인 검사
-                        	let session = '<%=Session["login_id_session"] != null%>';
-                        	 if (session == false) {
-                        		 alert("로그인이 필요한 서비스입니다.");
-                                 window.location = "../home.jsp";
-                             }
-                        		
+                        	let session = sessionStorage.getItem("login_id_storage");
                         	
-                        	
-                        	
+                            alert(session);
+                             if (session == null) {
+                                alert("로그인이 필요한 서비스입니다.");
+                                  window.location = "../loginForm";
+                              }
                         	
                             // total 가져와서 좌석 찍기
 

@@ -15,11 +15,11 @@
 			</div>
 			<div></div>
 			<div class="urlcolor">
-				<a class="" href="${root}/mycgv">MyCGV</a>
+				<a  class="" href="${root}/mycgv">MyCGV</a>
 			</div>
 			<span>|</span>
 			<div class="urlcolor">
-				<a class="" href="${root}/logout">Logout</a>
+				<a id="logoutTest" class="" href="${root}/logout">Logout</a>
 			</div>
 		</c:when>
 		<c:otherwise>
@@ -38,7 +38,18 @@
 		</c:otherwise>
 	</c:choose>
 </div>
-
+<c:if test="${login_id_session != null && login_id_session.length() > 0}">
+	<script>
+		sessionStorage.setItem("login_id_storage", "${login_id_session}");
+	</script>
+</c:if>
+<script>
+$(document).ready(function() {
+	$("#logoutTest").click(function() {
+		sessionStorage.clear();
+	});
+});
+</script>
 
 <!-- header nav end -->
 <!-- home_header end -->

@@ -23,79 +23,6 @@ html, body {
 .container {
 	display: flex;
 	color: white;
-}
-
-.ticketcon {
-	text-align: center;
-	width: 100%;
-}
-
-.side_nav1 {
-	flex-basis: 30%;
-}
-
-.side_nav2 .side_nav3 .side_nav4 {
-	flex-basis: 15%;
-}
-
-.nextBtnclass {
-	
-}/*버튼 css*/
-
-.tablel {
-	margin-top: 50px;
-}
-
-.tkheader_container {
-	display: flex;
-	padding: 29px 21px;
-	width: 273px;
-	height: 98px;
-	background-color: black;
-	padding: 29px 21px;
-}
-
-.logo {
-	width: 168px;
-	margin: 0px 31px;
-}
-
-.side_nav1 {
-	padding: 14px;
-	width: 315px;
-	height: 329px;
-}
-
-.side_nav1 img {
-	width: 135px;
-	height: 180px;
-	margin: 11px 80px 15px;
-}
-
-.side_navvv {
-	width: 315px;
-	height: 275px;
-	padding: 0px 21px;
-}
-
-.side_nav2 .side_nav3 .side_nav4 {
-	padding: 13.3px 21px 14px 0px;
-}
-
-#selL #selM #selT {
-	width: 252px;
-	height: 24px;
-	font: 21px;
-}
-
-.tklabel {
-	width: 252px;
-	height: 24px;
-	margin: 0px 0px 7px;
-	font: 15.75px;
-}
-
-.container {
 	width: 315px;
 	height: 100%;
 	flex-direction: column;
@@ -111,14 +38,77 @@ html, body {
 	margin: 0 auto;
 }
 
+.ticketcon {
+	text-align: center;
+	width: 100%;
+}
+
+.side_nav1 {
+	border: 1px solid white;
+}
+
+.side_nav2 {
+	flex-basis: 25%;
+	border: 1px solid white;
+}
+
+.nextBtnclass {
+	
+} /*버튼 css*/
+.tablel {
+	margin-top: 50px;
+}
+
+.tkheader_container {
+	display: flex;
+	padding: 29px 21px;
+	background-color: black;
+}
+
+.tkheader_container>div {
+	margin: 0 auto;
+}
+
+.logo {
+	width: 200px;
+}
+
+.side_nav1 {
+	text-align: center;
+}
+
+.side_navvv {
+	
+}
+
+#selL #selM #selT {
+	width: 252px;
+	height: 24px;
+	font: 21px;
+}
+
+.tklabel {
+	width: 252px;
+	height: 24px;
+	margin: 0px 0px 7px;
+	font: 15.75px;
+}
+
 .seat {
+	background-color: #444451;
+	height: 24px;
 	width: 30px;
-	height: 30px;
+	margin: 3px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 .clicked {
-	background-color: red;
+	background-color: #6feaf6;
 	color: white;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .seatsdiv {
@@ -149,19 +139,23 @@ html, body {
 					<!-- 선택된 지역 / 영화관 -->
 					<p class="tklabel">선택된 지역 :</p>
 					<p id="selL"></p>
+				</div>
+				<div class="side_nav2">
 					<p class="tklabel">선택된 영화관 :</p>
 					<p id="selM"></p>
-				</div>
-				<div class="side_nav3">
 					<!-- 선택된 시간표 -->
+
+				</div>
+				<div class="side_nav2">
 					<p class="tklabel">선택된 시간표 :</p>
 					<p id="selT"></p>
 				</div>
-				<div class="side_nav4">
-					<!-- 선택된 좌석 -->
+				<div class="side_nav2">
 					<p class="tklabel">선택된 좌석 :</p>
 					<p id="selS"></p>
 				</div>
+				<!-- 선택된 좌석 -->
+
 			</div>
 		</div>
 
@@ -175,7 +169,6 @@ html, body {
 				<tbody>
 					<c:forEach var="llist" items="${largeList}" varStatus="status">
 						<tr id="sel_l">
-
 							<td><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></td>
 						</tr>
 					</c:forEach>
@@ -196,7 +189,12 @@ html, body {
 
 		<!-- ticketcon -->
 
+		<script type="text/javascript">
+			function getSession(id) {
 
+				id = "asdf";
+			}
+		</script>
 		<script type="text/javascript" src="${root}/resources/js/ticket.js"></script>
 	</div>
 

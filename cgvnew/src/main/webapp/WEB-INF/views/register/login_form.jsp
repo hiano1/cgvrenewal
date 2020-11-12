@@ -77,7 +77,7 @@ margin-top: 200px;
 				, success : function(data) {
 					if(data == "1") {
 						location.href = "${root}/";
-					} else if (data == "-1") {
+					}else if (data == "-1") {
 						alert("아이디가 없습니다.");
 					} else if(data == "0") {
 						alert("비밀번호를 확인해 주세요.");
