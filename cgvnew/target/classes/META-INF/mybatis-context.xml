@@ -12,6 +12,7 @@
 		<mapper resource="META-INF/TicketMapper.xml" />
 		<mapper resource="META-INF/RegisterMapper.xml" />
 		<mapper resource="META-INF/HomeListMapper.xml" />
+		<mapper resource="META-INF/MycgvMapper.xml" />
 	</mappers>
 
 </configuration>
