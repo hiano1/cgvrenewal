@@ -22,6 +22,9 @@ public class MycgvController {
 		String myInfo = (String)session.getAttribute("login_id_session");
 		List<MycgvDTO> list = service.myInfo(myInfo);
 		model.addAttribute("myInfo",list);
+
+		List<MycgvDTO> list2 = service.myInfo2(myInfo);
+		model.addAttribute("myInfo2",list2);
 		return"mycgv/mycgv";
 	}//myCgvPage
 	

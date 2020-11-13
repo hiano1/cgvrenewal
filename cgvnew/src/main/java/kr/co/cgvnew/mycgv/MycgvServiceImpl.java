@@ -45,5 +45,11 @@ public class MycgvServiceImpl implements MycgvService {
 		int updateCnt = dao.infoUpdate(inDto);
 		return updateCnt;
 	}//infoUpdate
+	
+	@Override
+	public List<MycgvDTO> myInfo2(String myInfo) {
+		List<MycgvDTO> list2 = dao.myInfo2(myInfo);
+		return list2;
+	}
 
 }//class

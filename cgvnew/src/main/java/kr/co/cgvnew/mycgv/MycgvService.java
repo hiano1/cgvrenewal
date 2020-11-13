@@ -8,6 +8,8 @@ public interface MycgvService {
 
 	public MycgvDTO memberInfo(String memberInfo);
 
-	public int infoUpdate(MycgvDTO inDto); 
+	public int infoUpdate(MycgvDTO inDto);
+
+	public List<MycgvDTO> myInfo2(String myInfo); 
 
 }

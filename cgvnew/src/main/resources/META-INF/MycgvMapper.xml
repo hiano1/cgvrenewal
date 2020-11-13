@@ -10,9 +10,15 @@
    parameterType="java.lang.String">
       select mb_no, mb_id, mb_pwd, mb_nm, mb_gen, mb_birth, mb_tel, mb_email, mb_point, mb_Rpoint
       from member
-      where mb_id = #{idchk}
+      where mb_id = #{myInfo}
    </select>
-   
+   <select id="myinfo2" resultType="kr.co.cgvnew.mycgv.MycgvDTO"
+		parameterType="java.lang.String">
+		select mc.mb_no, m.mb_id, mc.cpn_num, c.cpn_kind,
+		c.cpn_nm, c.cpn_sdate, c.cpn_edate
+		from member m , coupon c, mbr_coupon mc
+		where m.mb_no = mc.mb_no and mc.cpn_num = c.cpn_num and m.mb_id = #{myInfo}
+	</select>
    
    <select id="memberInfo" resultType="kr.co.cgvnew.mycgv.MycgvDTO"
    parameterType="java.lang.String">
