@@ -223,7 +223,7 @@ color : grey;
 								</c:otherwise>
 							</c:choose>
 					</div>
-							<h6><a href="${root}/infoupdate">개인 정보 수정 ></a></h6>
+							<h6><a href="infoupdateForm">개인 정보 수정 ></a></h6>
 				</div><!-- 회원카드 윗부분 -->
 				<div class="mbrboxBottom"><!-- 회원카드 아랫부분 -->
 						<h4>사용가능 포인트 : ${info.mb_point} </h4>

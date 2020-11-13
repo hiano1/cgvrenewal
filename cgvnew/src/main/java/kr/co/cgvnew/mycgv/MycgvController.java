@@ -25,10 +25,11 @@ public class MycgvController {
 		return"mycgv/mycgv";
 	}//myCgvPage
 	
-	@RequestMapping(value = "/infoupdate", method = RequestMethod.GET)
-	public String infoUpdate() {
-		return"mycgv/infoUpdate";
-	}
+	@RequestMapping(value="/infoupdateForm", method = RequestMethod.GET)
+	public String infoUpdateForm() {
+		
+		return"mycgv/infoupdate_form";
+	}//infoUpdate
 	
 	
 }//class
