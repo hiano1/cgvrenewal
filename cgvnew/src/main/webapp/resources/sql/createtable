@@ -109,7 +109,20 @@ cpn_num int primary key auto_increment
 ,cpn_sdate date
 ,cpn_edate date
 );
-
+==============티켓 테이블====================
+create table ticket(
+tc_num int primary key not null auto_increment
+,mv_num int
+,tm_num int
+,tt_num int
+,seat_num varchar(200)
+,mb_no int
+,tc_date datetime
+,FOREIGN KEY (mv_num) REFERENCES movie(mv_num)
+,FOREIGN KEY (tm_num) REFERENCES tmiddle(tm_num)
+,FOREIGN KEY (tt_num) REFERENCES timetable(tt_num)
+,FOREIGN KEY (mb_no) REFERENCES member(mb_no)
+);
 
 
 
