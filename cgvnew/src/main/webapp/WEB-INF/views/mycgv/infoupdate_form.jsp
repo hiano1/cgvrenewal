@@ -118,7 +118,6 @@ $(document).ready(function() {
 				}
 		}//success
 		, error : function(xhr, status, error) {
-			alert("에러");
 		}
 	});
 	
