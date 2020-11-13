@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MycgvServiceImpl implements MycgvService {
+	
 	@Autowired
 	private MycgvDAO dao;
 	
@@ -39,4 +40,10 @@ public class MycgvServiceImpl implements MycgvService {
 		return info;
 	}//memberInfo: 회원 정보 수정 페이지
 
-}
+	@Override
+	public int infoUpdate(MycgvDTO inDto) {
+		int updateCnt = dao.infoUpdate(inDto);
+		return updateCnt;
+	}//infoUpdate
+
+}//class

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class MycgvDAOImpl implements MycgvDAO {
+	
 	@Autowired
 	private SqlSession sqlsession;
 	
@@ -23,4 +24,10 @@ public class MycgvDAOImpl implements MycgvDAO {
 		return info;
 	}//memberInfo: 회원 정보 수정 페이지
 
-}
+	@Override
+	public int infoUpdate(MycgvDTO inDto) {
+		int updateCnt = sqlsession.update("MycgvMapper.infoUpdate", inDto);
+		return updateCnt;
+	}//infoUpdate
+
+}//class

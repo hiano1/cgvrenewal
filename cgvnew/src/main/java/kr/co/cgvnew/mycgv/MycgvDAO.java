@@ -8,4 +8,6 @@ public interface MycgvDAO {
 
 	public MycgvDTO memberInfo(String memberInfo);
 
+	public int infoUpdate(MycgvDTO inDto); 
+
 }

@@ -20,6 +20,17 @@
       from member 
       where mb_id = #{idchk}
    </select>
+   
+    <update id="infoUpdate"
+			parameterType="kr.co.cgvnew.mycgv.MycgvDTO">
+		UPDATE member 
+		SET mb_pwd = #{mb_pwd}
+			, mb_nm = #{mb_nm}
+			, mb_gen = #{mb_gen}
+			, mb_tel = concat(#{mb_tel1},'-',#{mb_tel2},'-',#{mb_tel3})
+			, mb_email = concat(#{mb_email1},'@',#{mb_email2})
+		WHERE mb_id = #{mb_id}
+	</update>
 	
 	
 </mapper>

@@ -61,8 +61,68 @@ $(document).ready(function() {
 	});//keyup
 	
 	
+	$("#btn_infoupdate").click(function() {
+		
+		if( !confirm("정말 수정하시겠습니까?") ) {
+			return;
+		}
+		if( $.trim( $("#mb_pwd").val() ) == "" ){
+			alert("패스워드를 확인 해 주세요.");
+			return;
+		}
+		if( $.trim( $("#mb_pwdre").val() ) == "" ){
+			alert("패스워드 확인을 입력 해 주세요.");
+			return;
+		}
+		if( $("#mb_pwd").val() != $("#mb_pwdre").val() ){
+			alert("패스워드와 패스워드 확인이 서로 다릅니다.\n"
+					+ "패스워드를 확인 해 주세요.");
+			return;
+		}
+		if( $.trim( $("#mb_nm").val() ) == "" ){
+			alert("이름을 입력 해 주세요.");
+			return;
+		}
+		if( $.trim( $("#mb_tel1").val() ) == ""
+			|| $.trim( $("#mb_tel2").val() ) == ""
+			|| $.trim( $("#mb_tel3").val() ) == "" ){
+			alert("전화번호를 확인 해 주세요.");
+			return;
+		}
+		if( $.trim( $("#mb_email1").val() ) == ""
+			|| $.trim( $("#mb_email2").val() ) == "" ){
+			alert("이메일을 확인 해 주세요.");
+			return;
+		}
+		
+		
+	$.ajax({
+		type:"POST"
+		, url:"${root}/mycgv/infoupdate"
+		, dataType:"JSON"
+		, data : { 
+				mb_id : $("#mb_id").val()
+				, mb_pwd : $("#mb_pwd").val()
+				, mb_nm : $("#mb_nm").val() 
+				, mb_tel1 : $("#mb_tel1").val()
+				, mb_tel2 : $("#mb_tel2").val()
+				, mb_tel3 : $("#mb_tel3").val()
+				, mb_email1 : $("#mb_email1").val()
+				, mb_email2 : $("#mb_email2").val()}
+		, success : function(data) {
+				if(data == 1) {
+					alert("회원 정보가 수정 되었습니다.")
+					location.href = "${root}/mycgv";
+				} else if(data == "-1") {
+					alert("다시 시도 해 주세요.");
+				}
+		}//success
+		, error : function(xhr, status, error) {
+			alert("에러");
+		}
+	});
 	
-	
+	});//click
 	
 });//ready
 </script>
