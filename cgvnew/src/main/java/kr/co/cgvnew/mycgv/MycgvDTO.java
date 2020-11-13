@@ -19,7 +19,55 @@ public class MycgvDTO {
 	private String mb_birth1; 
 	private String mb_birth2; 
 	private String mb_birth3; 
-	
+	private String cpn_num;
+	private String cpn_kind; 
+	private String cpn_nm;
+	private String cpn_sdate; 
+	public String getCpn_num() {
+		return cpn_num;
+	}
+	public void setCpn_num(String cpn_num) {
+		this.cpn_num = cpn_num;
+	}
+	public String getCpn_kind() {
+		return cpn_kind;
+	}
+	public void setCpn_kind(String cpn_kind) {
+		this.cpn_kind = cpn_kind;
+	}
+	public String getCpn_nm() {
+		return cpn_nm;
+	}
+	public void setCpn_nm(String cpn_nm) {
+		this.cpn_nm = cpn_nm;
+	}
+	public String getCpn_sdate() {
+		return cpn_sdate;
+	}
+	public void setCpn_sdate(String cpn_sdate) {
+		this.cpn_sdate = cpn_sdate;
+	}
+	public String getCpn_edate() {
+		return cpn_edate;
+	}
+	public void setCpn_edate(String cpn_edate) {
+		this.cpn_edate = cpn_edate;
+	}
+	public String getMcpn_num() {
+		return mcpn_num;
+	}
+	public void setMcpn_num(String mcpn_num) {
+		this.mcpn_num = mcpn_num;
+	}
+	public String getMcpn_code() {
+		return mcpn_code;
+	}
+	public void setMcpn_code(String mcpn_code) {
+		this.mcpn_code = mcpn_code;
+	}
+	private String cpn_edate;
+	private String mcpn_num;
+	private String mcpn_code;
 	public String getMb_Rpoint() {
 		return mb_Rpoint;
 	}

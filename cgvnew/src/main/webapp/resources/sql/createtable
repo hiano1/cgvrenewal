@@ -109,6 +109,16 @@ cpn_num int primary key auto_increment
 ,cpn_sdate date
 ,cpn_edate date
 );
+=================멤버 쿠폰테이블=================
+create table mbr_coupon(
+mcpn_num int primary key
+,mcpn_code varchar(30)
+,mb_no int
+,cpn_num int
+,foreign key (mb_no) references member(mb_no)
+,foreign key (cpn_num) references coupon(cpn_num)
+);
+
 ==============티켓 테이블====================
 create table ticket(
 tc_num int primary key not null auto_increment

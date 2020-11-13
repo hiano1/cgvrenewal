@@ -14,7 +14,7 @@
    </select>
    <select id="myinfo2" resultType="kr.co.cgvnew.mycgv.MycgvDTO"
 		parameterType="java.lang.String">
-		select mc.mb_no, m.mb_id, mc.cpn_num, c.cpn_kind,
+		select mc.mb_no, m.mb_id, mc.cpn_num, mc.mcpn_code, c.cpn_kind,
 		c.cpn_nm, c.cpn_sdate, c.cpn_edate
 		from member m , coupon c, mbr_coupon mc
 		where m.mb_no = mc.mb_no and mc.cpn_num = c.cpn_num and m.mb_id = #{myInfo}

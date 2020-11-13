@@ -240,7 +240,42 @@ color : grey;
 					<div class="list-cnt">
 						<h5>예매 내역이 없습니다.</h5>
 					</div>
-				</div>
+				</div><!-- 나의 예매 내역 -->
+				<div class="list-card"><!-- 나의 쿠폰 내역 -->
+					<div class="list-Title">
+						<h4 class="ml-5">나의 쿠폰 내역</h4>
+					</div>
+					<div class="list-cnt">
+						<c:choose>
+							<c:when test="${empty myInfo2}">
+								<h5>쿠폰 내역이 없습니다.</h5>
+							</c:when>
+							<c:when test="${not empty myInfo2}">
+								<table class="table table">
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>쿠폰명</th>
+											<th>유효기간</th>
+										</tr>
+									</thead>
+									<c:forEach var="cpn" items="${myInfo2}">
+										<tbody>
+											<tr>
+												<td>${cpn.cpn_kind}</td>
+												<td>
+												${cpn.cpn_nm}<br>
+												${cpn.mcpn_code}
+												</td>
+												<td>${cpn.cpn_sdate} ~ ${cpn.cpn_edate}</td>
+											</tr>
+										</tbody>
+									</c:forEach>
+								</table>
+							</c:when>
+						</c:choose>
+					</div>
+				</div><!-- 나의 쿠폰 내역 -->
 				<div class="list-card"><!-- 나의 구매 내역 -->
 					<div class="list-Title">
 						<h4 class="ml-5">나의 구매 내역</h4>
@@ -248,15 +283,7 @@ color : grey;
 					<div class="list-cnt">
 						<h5>구매 내역이 없습니다.</h5>
 					</div>
-				</div>
-				<div class="list-card"><!-- 나의 쿠폰 내역 -->
-					<div class="list-Title">
-						<h4 class="ml-5">나의 쿠폰 내역</h4>
-					</div>
-					<div class="list-cnt">
-						<h5>쿠폰 내역이 없습니다.</h5>
-					</div>
-				</div>
+				</div><!-- 나의 구매 내역 -->
 			</div>
 			
 				
