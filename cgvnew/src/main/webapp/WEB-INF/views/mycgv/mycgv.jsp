@@ -114,17 +114,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mbrbox {/*회원카드*/
 	width: 95%;
-	height: 500px;
-	margin: 4em auto;
-	
-	
+	height: 300px;
+	margin: 20px auto;
 }
 
 .mbrboxTop {/*회원카드 윗부분*/
 	position: relative;
 	width: 100%;
-	height: 300px;
-	padding: 70px 100px;
+	height: 200px;
+	padding: 20px 100px;
 	background-color: #f2f2f2;
 	border-radius: 10px 10px 0px 0px;
 	border-bottom: 5px solid white;
@@ -138,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .info{
 	margin-top: 20px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 .rate{
 	color: #F46D0D;
@@ -155,15 +153,15 @@ h6 a:hover{
 
 .mbrboxBottom {/*회원카드 아랫부분*/
 	width: 100%;
-	height: 200px;
-	padding: 30px 100px;
+	height: 100px;
+	padding: 23px 150px;
 	background-color: #f2f2f2;
 	border-radius: 0px 0px 10px 10px;
 }
 .listContents{
 	width: 90%;
 	margin: 50px auto;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 .list-card{
 	margin-top: 80px;
@@ -173,6 +171,10 @@ h6 a:hover{
 	border-bottom: 5px solid grey;
 }
 .list-cnt{
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+}
+.listNone{
 	margin-top: 50px;
 	margin-bottom: 50px;
 	text-align: center;
@@ -190,6 +192,14 @@ color : grey;
  margin-top: 70px;
  }
 
+.pnt{
+	    padding: 0px 20px;
+	    border-right: 1px solid grey
+}
+.pntd{
+	    padding: 0px 40px;
+	    font-family: 'Noto Sans KR', sans-serif;
+}
 </style>
 </head>
 <body>
@@ -226,8 +236,36 @@ color : grey;
 							<h6><a href="infoupdateForm">개인 정보 수정 ></a></h6>
 				</div><!-- 회원카드 윗부분 -->
 				<div class="mbrboxBottom"><!-- 회원카드 아랫부분 -->
-						<h4>사용가능 포인트 : ${info.mb_point} </h4>
-						<h4>누적 포인트 : ${info.mb_Rpoint} </h4>
+					<table>
+						<c:choose>
+							<c:when test="${empty info.mb_point}">
+								<tr>
+								<th class="pnt">사용가능 포인트</th>
+								<td class="pntd">0P</td>
+								</tr>
+							</c:when>
+							<c:when test="${not empty info.mb_point}">
+								<tr>
+								<th class="pnt">사용가능 포인트</th>
+								<td class="pntd">${info.mb_point}P</td>
+								</tr>
+							</c:when>
+						</c:choose>
+						<c:choose>
+							<c:when test="${empty info.mb_Rpoint}">
+								<tr>
+								<th class="pnt">누적 포인트</th>
+								<td class="pntd">0P</td>
+								</tr>
+							</c:when>
+							<c:when test="${not empty info.mb_Rpoint}">
+								<tr>
+								<th class="pnt">누적 포인트</th>
+								<td class="pntd">${info.mb_Rpoint}P</td>
+								</tr>
+							</c:when>
+						</c:choose>
+					</table>
 				</div><!-- 회원카드 아랫부분 -->
 
 			</div><!-- 회원카드 -->
@@ -238,7 +276,7 @@ color : grey;
 						<h4 class="ml-5">나의 예매 내역</h4>
 					</div>
 					<div class="list-cnt">
-						<h5>예매 내역이 없습니다.</h5>
+						<h5 class="listNone">예매 내역이 없습니다.</h5>
 					</div>
 				</div><!-- 나의 예매 내역 -->
 				<div class="list-card"><!-- 나의 쿠폰 내역 -->
@@ -248,7 +286,7 @@ color : grey;
 					<div class="list-cnt">
 						<c:choose>
 							<c:when test="${empty myInfo2}">
-								<h5>쿠폰 내역이 없습니다.</h5>
+								<h5 class="listNone">쿠폰 내역이 없습니다.</h5>
 							</c:when>
 							<c:when test="${not empty myInfo2}">
 								<table class="table table">
@@ -281,7 +319,7 @@ color : grey;
 						<h4 class="ml-5">나의 구매 내역</h4>
 					</div>
 					<div class="list-cnt">
-						<h5>구매 내역이 없습니다.</h5>
+						<h5 class="listNone">구매 내역이 없습니다.</h5>
 					</div>
 				</div><!-- 나의 구매 내역 -->
 			</div>
