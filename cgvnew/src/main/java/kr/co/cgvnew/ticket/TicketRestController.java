@@ -37,4 +37,13 @@ public class TicketRestController {
 		
 		return list;
 	}
+	
+	@RequestMapping(value = "makeTicket" ,method = RequestMethod.POST)
+	public int makeTicket(ReserveDTO indto) {
+		
+		int sucCnt = service.makeTicket(indto);
+		
+		return sucCnt;
+	}
+	
 }

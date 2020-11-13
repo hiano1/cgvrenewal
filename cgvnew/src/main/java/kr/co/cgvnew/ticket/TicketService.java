@@ -39,5 +39,11 @@ public class TicketService {
 		return list;
 	}
 
+	public int makeTicket(ReserveDTO indto) {
+		int sucCnt = dao.makeTicket(indto);
+		
+		return sucCnt;
+	}
+
 
 }

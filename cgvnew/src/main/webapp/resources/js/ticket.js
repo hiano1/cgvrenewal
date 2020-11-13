@@ -361,7 +361,29 @@ $(document)
                         	$(".nextBtnclass").empty();
                         	$(".seatsdiv").empty();
                         	
+                        
                         	
+                        	$.ajax({
+                        		type:"POST"
+                        		,url:"../ticketrest/makeTicket"
+                        		,dataType : "JSON"
+                        		,data : {mv_num : mv_num
+                        				,tm_num : $("#selM").text()
+                        				,tt_num : $("#selT").text()
+                        				,seat_num : $("#selS").text()
+                        				,mb_id : sessionStorage.getItem("login_id_storage") //
+                        				}
+                        		,success : function(data){
+                        			//예매코드가 생성되었음을 알림
+                        			//영화 사진
+                        			//예매코드
+                        			//문구(예매가 완료되었습니다)
+                        			//버튼 (홈으로)
+                        			alert("예매완료");
+                        		}
+                        		
+                        		
+                        	});//ajax
                         	
                         	
                         } else {
@@ -381,7 +403,24 @@ $(document)
                 subtime = ($(this).text()).substring(21,24);
                // $("#selT").text(subtime);
             });
-
+//        	function getFormatDate(date){
+//        		
+//        		let year = date.getFullyear();
+//        		let month = new String(date.getMonth() + 1);
+//        		month = month >= 10 ? month : '0' + month; // month 두자리로 저장
+//        		let day = new String(date.getDate());
+//        		day = day >= 10 ? day : '0' + day; //day 두자리로 저장
+//        		
+//        		let hours = date.getHours();
+//        		hours = hours >= 10 ? hours : '0' + hours;
+//        		let min = date.getMinutes();
+//        		min = min >= 10 ? min : '0' + min;
+//        		let sec = date.getSeconds();
+//        		sec = sec >= 10 ? sec : '0' + sec;
+//        		
+//        		return year + '/' + month + '/' + day + " "+ hours + ":" + min + ":" + sec;
+//        	}
+        	
             // 좌석 체크박스 클릭시 selS에 텍스트 추가 or 삭제
             // pcscnt = 4;
 

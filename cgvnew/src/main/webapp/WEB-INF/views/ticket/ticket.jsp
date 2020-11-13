@@ -129,7 +129,10 @@ html, body {
 				<!-- 선택된 영화 -->
 				<c:forEach var="smv" items="${smv}" varStatus="status">
 					<img src="${smv.mv_p}">
-					<h3 style="text-align: center;">${smv.mv_nm}</h3>
+					<h3 id="selMV" style="text-align: center;">${smv.mv_nm}</h3>
+					<script type="text/javascript">
+					mv_num = "${smv.mv_num}";
+					</script>
 				</c:forEach>
 			</div>
 			<div class="side_navvv">
@@ -188,10 +191,7 @@ html, body {
 		<!-- ticketcon -->
 
 		<script type="text/javascript">
-			function getSession(id) {
-
-				id = "asdf";
-			}
+			let mv_num;
 		</script>
 		<script type="text/javascript" src="${root}/resources/js/ticket.js"></script>
 	</div>

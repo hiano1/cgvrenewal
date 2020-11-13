@@ -40,4 +40,10 @@ public class TicketDAO {
 		return list;
 	}
 
+	public int makeTicket(ReserveDTO indto) {
+		int sucCnt = sqlSession.insert("TicketMapper.makeTicket",indto);
+		
+		return sucCnt;
+	}
+
 }

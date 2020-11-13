@@ -18,7 +18,7 @@
 
 	<select resultType="kr.co.cgvnew.movie.MDTO" id="selectedmovie"
 		parameterType="java.lang.String">
-		select mv_nm, mv_p from movie
+		select mv_num,mv_nm, mv_p from movie
 		WHERE mv_num = #{mnum}
 	</select>
 
@@ -36,5 +36,12 @@
 		from timetable t , tsmall s
 		where s.ts_num = #{ts_num} and date_format(t.tt_date,'%e') = #{date};
 	</select>
+	
+	<insert id="makeTicket" 
+	parameterType="kr.co.cgvnew.ticket.ReserveDTO">
+		insert into ticket (mv_num, tm_num, tt_num, seat_num,mb_no, tc_date)
+		values(#{mv_num},#{tm_num},#{tt_num},#{seat_num},#{mb_no},now())
+		
+	</insert>
 	
 </mapper>
