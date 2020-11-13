@@ -206,12 +206,12 @@ color : grey;
 					<div class="info"><!-- 간단정보 -->
 							
 							<c:choose>
-								<c:when test="${info.mb_Rpoint >= 11000}">
+								<c:when test="${info.mb_Rpoint >= 30000}">
 									<h2>${info.mb_nm}님은 </h2>
 									<h1 class="rate mr-2">GOLD</h1>
 									<h1>등급 입니다.</h1>
 								</c:when>
-								<c:when test="${info.mb_Rpoint >= 5000}">
+								<c:when test="${info.mb_Rpoint >= 10000}">
 									<h2>${info.mb_nm}님은 </h2>
 									<h1 class="rate mr-2">SILVER</h1>
 									<h1>등급 입니다.</h1>

@@ -94,4 +94,9 @@ mb_no int primary key not null auto_increment
 , mb_tel varchar(200)
 , mb_email varchar(200)
 , mb_point int
+, mb_Rpoint int
 );
+test ==============
+insert into member values (1,'tester1', '1111','Gold_Kim','Male','2013년1월1일', '010-1234-4567', 'asdf123@naver.com',15000,33000);
+insert into member values (2,'tester2', '1111','Silver_Kim','Male','2013년1월1일', '010-1234-4567', 'asdf123@naver.com',30000,12000);
+insert into member values (3,'tester3', '1111','Normal_Kim','Male','2013년1월1일', '010-1234-4567', 'asdf123@naver.com',50000,8000);
