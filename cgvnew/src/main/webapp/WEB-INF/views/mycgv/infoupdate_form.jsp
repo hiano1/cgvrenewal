@@ -94,32 +94,33 @@ $(document).ready(function() {
 			alert("이메일을 확인 해 주세요.");
 			return;
 		}
-		
-		
-	$.ajax({
-		type:"POST"
-		, url:"${root}/mycgv/infoupdate"
-		, dataType:"JSON"
-		, data : { 
-				mb_id : $("#mb_id").val()
-				, mb_pwd : $("#mb_pwd").val()
-				, mb_nm : $("#mb_nm").val() 
-				, mb_tel1 : $("#mb_tel1").val()
-				, mb_tel2 : $("#mb_tel2").val()
-				, mb_tel3 : $("#mb_tel3").val()
-				, mb_email1 : $("#mb_email1").val()
-				, mb_email2 : $("#mb_email2").val()}
-		, success : function(data) {
-				if(data == 1) {
-					alert("회원 정보가 수정 되었습니다.")
-					location.href = "${root}/mycgv";
-				} else if(data == "-1") {
-					alert("다시 시도 해 주세요.");
+
+		$.post(
+				"${root}/mycgv/infoupdate"
+				, { 
+					mb_id : $("#mb_id").val()
+					, mb_pwd : $("#mb_pwd").val()
+					, mb_nm : $("#mb_nm").val() 
+					, mb_gen : $('input:radio[name=mb_gen]:checked').val() 
+					, mb_tel1 : $("#mb_tel1").val()
+					, mb_tel2 : $("#mb_tel2").val()
+					, mb_tel3 : $("#mb_tel3").val()
+					, mb_email1 : $("#mb_email1").val()
+					, mb_email2 : $("#mb_email2").val()
 				}
-		}//success
-		, error : function(xhr, status, error) {
-		}
-	});
+				, function(data, status) {
+					if(status == 'success') {
+						if(data == 1) {
+							alert("회원 정보가 수정 되었습니다.")
+							location.href = "${root}/mycgv";
+						} else if(data == "-1") {
+							alert("다시 시도 해 주세요.");
+						}
+					} else {
+						alert("에러");
+					}
+				}
+		);//post
 	
 	});//click
 	

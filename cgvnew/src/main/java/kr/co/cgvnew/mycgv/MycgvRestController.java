@@ -20,7 +20,7 @@ public class MycgvRestController {
 	
 	
 	@RequestMapping(value="/infoupdate", method=RequestMethod.POST)
-	public int infoUpdate(@RequestBody MycgvDTO inDto) {
+	public int infoUpdate(MycgvDTO inDto) {
 		int updateCnt = service.infoUpdate(inDto);
 		logger.info(""+updateCnt);
 		return updateCnt;
