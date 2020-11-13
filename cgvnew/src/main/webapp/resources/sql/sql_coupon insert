@@ -1,0 +1,41 @@
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매점','[강남,압구정,청담]콤보 2000원 할인','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[강남,압구정,청담]주중영화 7000원 관람쿠폰','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[강남,압구정,청담]주중영화 7000원 관람쿠폰','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[강남,압구정,청담] 콤보 3000원 할인','2020-10-12','2020-11-13');
+
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매점','[왕십리,미아,상봉]콤보 2000원 할인','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[왕십리,미아,상봉]주중영화 7000원 관람쿠폰','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[왕십리,미아,상봉]주중영화 7000원 관람쿠폰','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[왕십리,미아,상봉] 콤보 3000원 할인','2020-10-12','2020-11-13');
+
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매점','[송파,천호,강변]콤보 2000원 할인','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[송파,천호,강변]주중영화 7000원 관람쿠폰','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[송파,천호,강변]주중영화 7000원 관람쿠폰','2020-10-12','2020-11-13');
+insert into coupon(cpn_kind,cpn_nm,cpn_sdate,cpn_edate)
+values ('매표','[송파,천호,강변] 콤보 3000원 할인','2020-10-12','2020-11-13');
+
+==================================멤버별 쿠폰===============================================
+
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('1', '1', '1');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('2', '2', '1');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('3', '3', '1');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('4', '4', '1');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('5', '5', '2');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('6', '6', '2');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('7', '7', '2');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('8', '8', '2');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('9', '9', '3');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('10', '10', '3');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('11', '11', '3');
+INSERT INTO `cgv`.`mbr_coupon` (`mcpn_num`, `cpn_num`, `mb_no`) VALUES ('12', '12', '3');
