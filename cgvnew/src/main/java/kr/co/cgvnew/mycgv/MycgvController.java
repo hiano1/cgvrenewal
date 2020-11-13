@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-
 @Controller
 public class MycgvController {
+	
 	@Autowired
 	private MycgvService service;
 	
@@ -26,8 +26,10 @@ public class MycgvController {
 	}//myCgvPage
 	
 	@RequestMapping(value="/infoupdateForm", method = RequestMethod.GET)
-	public String infoUpdateForm() {
-		
+	public String infoUpdateForm(HttpSession session, Model model) {
+		String memberInfo = (String)session.getAttribute("login_id_session");
+		MycgvDTO info = service.memberInfo(memberInfo);
+		model.addAttribute("info", info);
 		return"mycgv/infoupdate_form";
 	}//infoUpdate
 	

@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface MycgvDAO {
 
-	List<MycgvDTO> myInfo(String myInfo);
+	public List<MycgvDTO> myInfo(String myInfo);
+
+	public MycgvDTO memberInfo(String memberInfo);
 
 }

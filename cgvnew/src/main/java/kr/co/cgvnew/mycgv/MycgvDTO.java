@@ -11,6 +11,14 @@ public class MycgvDTO {
 	private String mb_email;
 	private String mb_point;
 	private String mb_Rpoint;
+	private String mb_tel1; 
+	private String mb_tel2; 
+	private String mb_tel3; 
+	private String mb_email1;
+	private String mb_email2;
+	private String mb_birth1; 
+	private String mb_birth2; 
+	private String mb_birth3; 
 	
 	public String getMb_Rpoint() {
 		return mb_Rpoint;
@@ -72,7 +80,53 @@ public class MycgvDTO {
 	public void setMb_point(String mb_point) {
 		this.mb_point = mb_point;
 	}
-	
-	
-	
+	public String getMb_tel1() {
+		return mb_tel1;
+	}
+	public void setMb_tel1(String mb_tel1) {
+		this.mb_tel1 = mb_tel1;
+	}
+	public String getMb_tel2() {
+		return mb_tel2;
+	}
+	public void setMb_tel2(String mb_tel2) {
+		this.mb_tel2 = mb_tel2;
+	}
+	public String getMb_tel3() {
+		return mb_tel3;
+	}
+	public void setMb_tel3(String mb_tel3) {
+		this.mb_tel3 = mb_tel3;
+	}
+	public String getMb_email1() {
+		return mb_email1;
+	}
+	public void setMb_email1(String mb_email1) {
+		this.mb_email1 = mb_email1;
+	}
+	public String getMb_email2() {
+		return mb_email2;
+	}
+	public void setMb_email2(String mb_email2) {
+		this.mb_email2 = mb_email2;
+	}
+	public String getMb_birth1() {
+		return mb_birth1;
+	}
+	public void setMb_birth1(String mb_birth1) {
+		this.mb_birth1 = mb_birth1;
+	}
+	public String getMb_birth2() {
+		return mb_birth2;
+	}
+	public void setMb_birth2(String mb_birth2) {
+		this.mb_birth2 = mb_birth2;
+	}
+	public String getMb_birth3() {
+		return mb_birth3;
+	}
+	public void setMb_birth3(String mb_birth3) {
+		this.mb_birth3 = mb_birth3;
+	}
+
 }//MycgvDTO

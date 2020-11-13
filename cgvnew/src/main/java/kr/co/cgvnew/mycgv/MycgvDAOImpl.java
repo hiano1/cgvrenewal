@@ -15,6 +15,12 @@ public class MycgvDAOImpl implements MycgvDAO {
 	public List<MycgvDTO> myInfo(String myInfo) {
 		List<MycgvDTO> list = sqlsession.selectList("MycgvMapper.myinfo",myInfo);
 		return list;
-	}
+	}//myInfo
+
+	@Override
+	public MycgvDTO memberInfo(String memberInfo) {
+		MycgvDTO info = sqlsession.selectOne("MycgvMapper.memberInfo", memberInfo);
+		return info;
+	}//memberInfo: 회원 정보 수정 페이지
 
 }
