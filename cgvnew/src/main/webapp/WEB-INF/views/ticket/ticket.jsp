@@ -24,14 +24,12 @@ html, body {
 	display: flex;
 	color: white;
 	width: 315px;
-	height: 100%;
 	flex-direction: column;
 	background-color: black;
 }
 
 .wrap {
 	width: 100%;
-	height: 100%;
 	margin: 0 auto;
 	background-color: white;
 	display: flex;
@@ -138,21 +136,21 @@ html, body {
 				<div class="side_nav2">
 					<!-- 선택된 지역 / 영화관 -->
 					<p class="tklabel">선택된 지역 :</p>
-					<p id="selL"></p>
+					<p id="selL"> </p>
 				</div>
 				<div class="side_nav2">
 					<p class="tklabel">선택된 영화관 :</p>
-					<p id="selM"></p>
+					<p id="selM"> </p>
 					<!-- 선택된 시간표 -->
 
 				</div>
 				<div class="side_nav2">
 					<p class="tklabel">선택된 시간표 :</p>
-					<p id="selT"></p>
+					<p id="selT"> </p>
 				</div>
 				<div class="side_nav2">
 					<p class="tklabel">선택된 좌석 :</p>
-					<p id="selS"></p>
+					<p id="selS"> </p>
 				</div>
 				<!-- 선택된 좌석 -->
 

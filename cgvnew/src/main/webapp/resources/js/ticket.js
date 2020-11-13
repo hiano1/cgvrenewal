@@ -228,9 +228,6 @@ $(document)
                                                 },
                                                 success: function(
                                                     data) {
-                                                    $(
-                                                            ".tablel")
-                                                        .empty();
                                                     $
                                                         .each(
                                                             data,
@@ -260,11 +257,12 @@ $(document)
                                     }); // click day
 
                         } else if (pcscnt === 3) {
-                            
+                        	//ticket con ? 비움
+                        	$(".ticketcon").empty();
                             // 로그인 검사
                         	let session = sessionStorage.getItem("login_id_storage");
                         	
-                            alert(session);
+//                            alert(session);
                              if (session == null) {
                                 alert("로그인이 필요한 서비스입니다.");
                                   window.location = "../loginForm";
@@ -359,6 +357,13 @@ $(document)
                             //next 버튼이 예매 버튼으로 바뀜
                         } else if (pcscnt === 4) {
                             // 결제 + 예매코드 생성
+                        	// ticketcon nextbtn seats div(이거는 클래스로 빼기) 묶기?
+                        	$(".nextBtnclass").empty();
+                        	$(".seatsdiv").empty();
+                        	
+                        	
+                        	
+                        	
                         } else {
                             // 오류 페이지 세션정보를 잃었거나 비 정상일경우
                         }
