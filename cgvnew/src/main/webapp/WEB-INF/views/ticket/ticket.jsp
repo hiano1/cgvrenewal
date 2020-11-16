@@ -8,32 +8,74 @@
 <meta charset="UTF-8">
 <title>ticket</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/header_navi.css">
+<link rel="stylesheet" type="text/css" href="${root}/resources/css/body.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style type="text/css">
-html, body {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
 
-.container {
+/* .container {
 	display: flex;
 	color: white;
 	width: 315px;
 	flex-direction: column;
 	background-color: black;
+} */
+body {
+	color: white;
+	min-height: 1000px;
+	
+}
+.ticketBox{
+	width: 90%;
+	height: 800px;
+	margin: 20px auto;
+	background-color: grey;
+}
+.right-ticketBox{
+	position:relative;
+	width:25%;
+	height:800px;
+	background-image: linear-gradient(to top, #4d4d4d 0%, black 100%);
+	float:left;
+}
+.side_nav1{
+	padding: 20px 10px;
+}
+.left-ticketBox{
+	width:75%;
+	height:800px;
+	background-color: grey;
+	float:right;
+}
+.leftTopLabel{
+	margin-left: 20px;
+	display: block;
 }
 
-.wrap {
-	width: 100%;
-	margin: 0 auto;
-	background-color: white;
-	display: flex;
-	margin: 0 auto;
+
+.selLarge{
+	
+	
+}
+.selLarge a{
+	color:white;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+	padding: 10px 15px;
+	
+}
+.selLarge a:hover{
+	color:red;
+	border-bottom: 4px solid red;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding: 10px 15px;
+}
+.leftmidLabel{
+	display:block;
 }
 
 .ticketcon {
@@ -41,13 +83,11 @@ html, body {
 	width: 100%;
 }
 
-.side_nav1 {
-	border: 1px solid white;
-}
+
 
 .side_nav2 {
 	flex-basis: 25%;
-	border: 1px solid white;
+	border-top: 1px solid white;
 }
 
 .nextBtnclass {
@@ -67,29 +107,20 @@ html, body {
 	margin: 0 auto;
 }
 
-.logo {
-	width: 200px;
-}
-
 .side_nav1 {
 	text-align: center;
 }
 
-.side_navvv {
-	
-}
-
 #selL #selM #selT {
-	width: 252px;
-	height: 24px;
 	font: 21px;
 }
 
 .tklabel {
 	width: 252px;
-	height: 24px;
+	min-height: 50px;
 	margin: 0px 0px 7px;
 	font: 15.75px;
+	padding: 10px 10px;
 }
 
 .seat {
@@ -117,78 +148,69 @@ html, body {
 </head>
 <body>
 	<div class="wrap">
+		<%@ include file="../header_navi.jsp"%>
+
 		<div class="container">
-			<div class="tkheader_container">
-				<div>
-					<a href="${root}/"><img class="logo"
-						src="${root}/resources/image/cgv_logo.png" /></a>
+			<div class="ticketBox"><!-- 전체박스 -->
+			
+				<div class="right-ticketBox"><!-- 오른쪽 박스 -->
+					<div class="ticket-navi1">
+						<div class="side_nav1"><!-- 선택된 영화 -->
+							<c:forEach var="smv" items="${smv}" varStatus="status">
+								<img src="${smv.mv_p}"><!-- 포스터 -->
+								<h3 id="selMV" style="text-align: center;">${smv.mv_nm}</h3>
+								<script type="text/javascript">
+									mv_num = "${smv.mv_num}";
+								</script>
+							</c:forEach>
+						</div>
+						<div class="side_navvv"><!-- 선택된 좌석 -->
+							<div class="side_nav2"><!-- 선택된 지역 / 영화관 -->
+								<p class="tklabel">선택된 지역 :</p>
+								<p id="selL"></p>
+							</div>
+							<div class="side_nav2"><!-- 선택된 시간표 -->
+								<p class="tklabel">선택된 영화관 :</p>
+								<p id="selM"></p>
+							</div>
+							<div class="side_nav2">
+								<p class="tklabel">선택된 시간표 :</p>
+								<p id="selT"></p>
+							</div>
+							<div class="side_nav2">
+								<p class="tklabel">선택된 좌석 :</p>
+								<p id="selS"></p>
+							</div>
+						</div><!-- 선택된 좌석 -->
+					</div>
+				</div><!-- 오른쪽 박스 -->
+				<div class="left-ticketBox"><!-- 왼쪽 박스 -->
+					<div class ="leftTopLabel"><!-- 선택정보1 -->
+						<table class="tablel">
+							<c:forEach var="llist" items="${largeList}" varStatus="status">
+								<tr id="sel_l">
+									<span class="selLarge"><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></span>
+								</tr>
+							</c:forEach>
+						</table>
+					</div><!-- 선택정보 -->
+					<div class ="leftmidLabel"><!-- 선택정보2 -->
+						<table id="mid_table"></table>
+					</div>
+					<div class="nextBtnclass">
+				</div><!-- 왼쪽 박스 -->
+					
 				</div>
+				<div class="seatsdiv"></div>
 			</div>
 
-			<div class="side_nav1">
-				<!-- 선택된 영화 -->
-				<c:forEach var="smv" items="${smv}" varStatus="status">
-					<img src="${smv.mv_p}">
-					<h3 id="selMV" style="text-align: center;">${smv.mv_nm}</h3>
-					<script type="text/javascript">
-					mv_num = "${smv.mv_num}";
-					</script>
-				</c:forEach>
-			</div>
-			<div class="side_navvv">
-				<div class="side_nav2">
-					<!-- 선택된 지역 / 영화관 -->
-					<p class="tklabel">선택된 지역 :</p>
-					<p id="selL"> </p>
-				</div>
-				<div class="side_nav2">
-					<p class="tklabel">선택된 영화관 :</p>
-					<p id="selM"> </p>
-					<!-- 선택된 시간표 -->
-
-				</div>
-				<div class="side_nav2">
-					<p class="tklabel">선택된 시간표 :</p>
-					<p id="selT"> </p>
-				</div>
-				<div class="side_nav2">
-					<p class="tklabel">선택된 좌석 :</p>
-					<p id="selS"> </p>
-				</div>
-				<!-- 선택된 좌석 -->
-
-			</div>
-		</div>
-
-		<div class="ticketcon">
-			<table class="tablel">
-				<thead>
-					<tr>
-						<th>지역이름</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="llist" items="${largeList}" varStatus="status">
-						<tr id="sel_l">
-							<td><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-
-			<table id="mid_table">
-
-			</table>
-
-		</div>
-		<div class="nextBtnclass">
+			</div><!-- 전체박스 -->
 			<button id="nextBtn">next</button>
+			
+
 		</div>
-		<div class="seatsdiv"></div>
 
-
-
-		<!-- ticketcon -->
+		<div class="ticketcon"><!-- ticketcon -->
 
 		<script type="text/javascript">
 			let mv_num;
