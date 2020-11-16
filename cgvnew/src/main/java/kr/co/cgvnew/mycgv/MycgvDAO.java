@@ -10,6 +10,8 @@ public interface MycgvDAO {
 
 	public int infoUpdate(MycgvDTO inDto);
 
-	public List<MycgvDTO> myInfo2(String myInfo); 
+	public List<MycgvDTO> myInfo2(String myInfo);
+
+	public int mbrDelete(MycgvDTO inDto); 
 
 }

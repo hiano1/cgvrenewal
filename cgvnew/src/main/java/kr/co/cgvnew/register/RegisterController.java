@@ -52,7 +52,7 @@ public class RegisterController {
 		logger.info(""+successCnt);
 		
 		if(successCnt == 1) { //로그인 성공.
-			session.setAttribute("login_id_session", inDto.getMb_login_id());
+			session.setAttribute("login_id_session", inDto.getMb_login_id());			
 			return ""+successCnt;
 		}else { //로그인 실패.
 			if(successCnt == -1) { //id 없음.

@@ -29,9 +29,18 @@ public class MycgvDAOImpl implements MycgvDAO {
 		int updateCnt = sqlsession.update("MycgvMapper.infoUpdate", inDto);
 		return updateCnt;
 	}//infoUpdate
+	
 	@Override
 	public List<MycgvDTO> myInfo2(String myInfo) {
 		List<MycgvDTO> list2 = sqlsession.selectList("MycgvMapper.myinfo2",myInfo);
 		return list2;
 	}
+
+	@Override
+	public int mbrDelete(MycgvDTO inDto) {
+		int deleteCnt = sqlsession.delete("MycgvMapper.mbrDelete", inDto);
+		return deleteCnt;
+	}//mbrDelete
+	
+	
 }//class

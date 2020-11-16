@@ -2,8 +2,7 @@ package kr.co.cgvnew.register;
 
 public class RegisterDTO {
 	
-	private String mb_id;
-	private String mb_pwd; 
+	private String mb_no;
 	private String mb_login_id;
 	private String mb_login_pwd;
 	
@@ -23,7 +22,16 @@ public class RegisterDTO {
 	private String mb_email1; 
 	private String mb_email2;
 	
+	private String mb_id;
+	private String mb_pwd; 
 	
+	
+	public String getMb_no() {
+		return mb_no;
+	}
+	public void setMb_no(String mb_no) {
+		this.mb_no = mb_no;
+	}
 	public String getMb_id() {
 		return mb_id;
 	}

@@ -52,4 +52,10 @@ public class MycgvServiceImpl implements MycgvService {
 		return list2;
 	}
 
+	@Override
+	public int mbrDelete(MycgvDTO inDto) {
+		int deleteCnt = dao.mbrDelete(inDto);
+		return deleteCnt;
+	}//mbrDelete
+
 }//class

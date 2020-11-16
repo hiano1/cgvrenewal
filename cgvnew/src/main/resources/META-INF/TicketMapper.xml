@@ -39,8 +39,13 @@
 	
 	<insert id="makeTicket" 
 	parameterType="kr.co.cgvnew.ticket.ReserveDTO">
+		<selectKey resultType="java.lang.String"
+					keyProperty="mb_no" order="BEFORE">
+			select mb_no from member where mb_id = #{mb_id}
+		</selectKey>
+	
 		insert into ticket (mv_num, tm_num, tt_num, seat_num,mb_no, tc_date)
-		values(#{mv_num},#{tm_num},#{tt_num},#{seat_num},#{mb_no},now())
+		values(#{mv_num}, #{tm_num}, #{tt_num}, #{seat_num}, #{mb_no}, now())
 		
 	</insert>
 	

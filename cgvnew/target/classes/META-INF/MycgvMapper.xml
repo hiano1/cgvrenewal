@@ -39,4 +39,11 @@
 	</update>
 	
 	
+	<delete id="mbrDelete"
+			parameterType="kr.co.cgvnew.mycgv.MycgvDTO">
+	DELETE FROM member 
+	WHERE mb_no = #{mb_no}
+	</delete>
+	
+	
 </mapper>

@@ -3,7 +3,7 @@ package kr.co.cgvnew.mycgv;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +25,13 @@ public class MycgvRestController {
 		logger.info(""+updateCnt);
 		return updateCnt;
 	}//infoUpdate
+	
+	
+	@RequestMapping(value="/mbrdelete", method=RequestMethod.DELETE)
+	public int mbrDelete(MycgvDTO inDto) {
+		int deleteCnt = service.mbrDelete(inDto);
+		return deleteCnt;
+	}//mbrDelete
 	
 	
 }//class
