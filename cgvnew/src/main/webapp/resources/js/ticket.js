@@ -81,10 +81,9 @@ $(document)
             $("#nextBtn")
                 .click(
                     function() {
-
                         if (pcscnt === 2) {
 
-                            $(".tablel").empty();
+                            $("#sel_l").empty();
                             $("#mid_table").empty();
 
                             let today = new Date();
@@ -121,12 +120,12 @@ $(document)
                                     break;
                             };
 
-                            $(".tablel").append(
+                            $("#sel_l").append(
                                 "Timenow : " + year + '/' +
                                 month + '/' +
                                 date + " " + day +
                                 "요일" + "<br>");
-                            $(".tablel")
+                            $("#mid_table")
                                 .append(
                                     "<a id = 'day0' href='#'>" +
                                     (date) +
@@ -153,6 +152,8 @@ $(document)
                                     "click",
                                     "a[id^=day]",
                                     function() {
+                                    	$(".Contentsdiv").empty();
+                                    	
                                         date = $(this)
                                             .text()
 
@@ -177,7 +178,7 @@ $(document)
                                                             	tt_date = dto.tt_num;
                                                             	tt_datedate = dto.tt_date;
                                                             	mv_num = dto.mv_num;
-                                                                $(".tablel")
+                                                                $(".Contentsdiv")
                                                                     .append(
                                                                         "<tr id='scode" +
                                                                         index +
@@ -200,7 +201,7 @@ $(document)
 
                         } else if (pcscnt === 3) {
                         	//ticket con ? 비움
-                        	$(".ticketcon").empty();
+                        	$(".Contentsdiv").empty();
                             // 로그인 검사
                         	let session = sessionStorage.getItem("login_id_storage");
                         	
@@ -217,7 +218,7 @@ $(document)
                             let tmpidPre = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'];
                             let tmpidSuf = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v'];
                             
-                            const seatDiv = document.querySelector(".seatsdiv");
+                            const seatDiv = document.querySelector(".Contentsdiv");
                             let test = [];
                             let teststr = "";
                             let selectedSeats = new Array();
