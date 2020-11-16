@@ -5,6 +5,7 @@ $(document)
             let subtime;
             let tt_date;
             let mv_num;
+            let tt_datedate;
             $("a[id^=lcode]")
                 .click(
                     function() {
@@ -147,7 +148,6 @@ $(document)
                                     "</a>");
 
                             let ts_num = getMcode($("#selM").text());
-                            alert(ts_num);
                             $(document)
                                 .on(
                                     "click",
@@ -175,6 +175,7 @@ $(document)
                                                                 index,
                                                                 dto) {
                                                             	tt_date = dto.tt_num;
+                                                            	tt_datedate = dto.tt_date;
                                                             	mv_num = dto.mv_num;
                                                                 $(".tablel")
                                                                     .append(
@@ -299,20 +300,24 @@ $(document)
                         } else if (pcscnt === 4) {
                             // 결제 + 예매코드 생성
                         	// ticketcon nextbtn seats div(이거는 클래스로 빼기) 묶기?
-                        	$(".nextBtnclass").empty();
-                        	$(".seatsdiv").empty();
+//                        	$(".nextBtnclass").empty();
+//                        	$(".seatsdiv").empty();
+                        	let tm_nm = $("#selM").text()
+                        	let tm_num = getMcode($("#selM").text())
+                        	let seat_num = $("#selS").text()
+                        	let mb_id = sessionStorage.getItem("login_id_storage")
                         	
+                        	$(".wrap").empty();
                         
-                        	
                         	$.ajax({
                         		 url:"../ticketrest/makeTicket"
                         		,type:"POST"
                         		,dataType : "JSON"
                         		,data : {mv_num : mv_num
-                        				,tm_num :  getMcode($("#selM").text())
+                        				,tm_num :  tm_num
                         				,tt_num : tt_date
-                        				,seat_num : $("#selS").text()
-                        				,mb_id : sessionStorage.getItem("login_id_storage") //
+                        				,seat_num : seat_num
+                        				,mb_id : mb_id //
                         				}
                         		,success : function(data){
                         			//예매코드가 생성되었음을 알림
@@ -321,9 +326,16 @@ $(document)
                         			//문구(예매가 완료되었습니다)
                         			//버튼 (홈으로)
                         			alert("예매완료");
+                        			$(".wrap").append(
+                        					"<ul><li> 예매가 완료되었습니다. </li>"
+                        					+ "<li> <img src = '' /> </li>"
+                        					+ "<li> 영화관 : " + tm_nm + "</li>"
+                        					+ "<li> 일시 : " + tt_datedate + "</li>"
+                        					+ "<li> 좌석 번호 : "+ seat_num +" </li>"
+                        					+ "<li> 홈으로  /  MyCGV </li></ul>"
+                        			
+                        			)
                         		}
-                        		
-                        		
                         	});//ajax
                         	
                         	

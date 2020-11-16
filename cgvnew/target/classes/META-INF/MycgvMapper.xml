@@ -42,7 +42,7 @@
 	<delete id="mbrDelete"
 			parameterType="kr.co.cgvnew.mycgv.MycgvDTO">
 	DELETE FROM member 
-	WHERE mb_no = #{mb_no}
+	WHERE mb_id = #{mb_id}
 	</delete>
 	
 	
