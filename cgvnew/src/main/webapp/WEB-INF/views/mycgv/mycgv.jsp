@@ -233,7 +233,7 @@ color : grey;
 								</c:otherwise>
 							</c:choose>
 					</div>
-							<h6><a href="infoupdateForm">개인 정보 수정 ></a></h6>
+							<h6><a href="infoupdateForm">회원 정보 수정 ></a></h6>
 				</div><!-- 회원카드 윗부분 -->
 				<div class="mbrboxBottom"><!-- 회원카드 아랫부분 -->
 					<table>

@@ -19,10 +19,189 @@
 
 <style type="text/css">
 body {
-	background: black;
-	color: white;
+	background-image: linear-gradient(to top, #f2f2f2 0%, white 100%);
+	padding: 15px 0;
+	font-weight: 300;
+	font-size: 15px;
 }
 
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+header {
+	width: 100%;
+	min-height: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: 60px;
+	margin-top: 10px;
+	padding-bottom:15px;
+	border-bottom: 1px solid grey;
+}
+
+
+.logo {
+	width: 150px;
+}
+
+
+span{
+	margin-top: 4px;
+	font-weight: bold;
+	color: grey;
+	font-size: 10px;
+}
+.urlcolor {
+	margin-top: 5px;
+}
+
+.urlcolor a {
+	color: grey;
+	text-decoration: none;
+	font-size: 13px;
+	font-family: 'Poppins', sans-serif;
+	margin-left: 15px;
+	margin-right: 15px;
+	
+}
+
+.urlcolor a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+.navi_ul {
+	flex: 2;
+	text-align: center;
+	/* margin-right: 50x; */
+	margin-top: 40px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.navi_li {
+	list-style: none;
+	display: inline-block;
+}
+
+.navi_li a {
+	text-decoration: none;
+	color: grey;
+	padding: 10px 40px;
+	font-size: 20px;
+}
+
+.navi_ul .navi_li a:hover {
+	text-decoration: none;
+	color: red;
+	bottom: 2px;
+	padding-bottom:29px;
+	border-bottom: 4px solid red;
+}
+/* header css*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.contentBox {
+	min-height: 1000px;
+}
+.mbrbox {/*회원카드*/
+	width: 95%;
+	height: 300px;
+	margin: 20px auto;
+}
+
+.mbrboxTop {/*회원카드 윗부분*/
+	position: relative;
+	width: 100%;
+	height: 200px;
+	padding: 20px 100px;
+	background-color: #f2f2f2;
+	border-radius: 10px 10px 0px 0px;
+	border-bottom: 5px solid white;
+}
+.profileImg{
+	float:left;
+	position:relative;
+	height:100%;
+	margin-top: 20px;
+	margin-right: 50px;
+}
+.info{
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.rate{
+	color: #F46D0D;
+	float:left;
+	font-weight: bold;
+}
+h6 a{
+	text-decoration: none;
+	color: #4d4d4d;
+}
+h6 a:hover{
+	text-decoration:underline;
+}
+
+.mbrboxBottom {/*회원카드 아랫부분*/
+	width: 100%;
+	height: 100px;
+	padding: 23px 150px;
+	background-color: #f2f2f2;
+	border-radius: 0px 0px 10px 10px;
+}
+.listContents{
+	width: 90%;
+	margin: 50px auto;
+	margin-top: 50px;
+}
+.list-card{
+	margin-top: 80px;
+	border-bottom: 1px solid grey;
+}
+.list-Title{
+	border-bottom: 5px solid grey;
+}
+.list-cnt{
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+}
+.listNone{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	auto: 0;
+}
+.foot{
+
+color : grey;
+ width: 100%;
+ height: 100px;
+ text-align: center;
+
+ }
+.copyright{
+ margin-top: 70px;
+ }
+
+.pnt{
+	    padding: 0px 20px;
+	    border-right: 1px solid grey
+}
+.pntd{
+	    padding: 0px 40px;
+	    font-family: 'Noto Sans KR', sans-serif;
+}
 button {
     font-size: 1.1rem;
     padding: 10px;
@@ -229,9 +408,13 @@ $(document).ready(function() {
 	</div>
 	</div>
 	
-	<div class="footer-container">
-		<%@ include file="../home_footer.jsp"%>
-	</div>
+	<div class="foot">
+
+			<h5 class="copyright">&copy;2020 CGV. All Rights Reserved</h5>
+			<div class="links">
+				<a href="#">Terms of Service</a> <a href="#">Privacy Policy</a>
+			</div>
+		</div>
 	</div>
 	
 	
