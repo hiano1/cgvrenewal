@@ -3,6 +3,8 @@ $(document)
         function() {
             let pcscnt;
             let subtime;
+            let tt_date;
+            let mv_num;
             $("a[id^=lcode]")
                 .click(
                     function() {
@@ -144,70 +146,8 @@ $(document)
                                     (date + 5) +
                                     "</a>");
 
-                            let ts_num;
-                            switch ($("#selM").text()) {
-                                case 'car cinema':
-                                    ts_num = 1;
-                                    break;
-                                case 'cgv강남':
-                                    ts_num = 2;
-                                    break;
-                                case 'cgv강변':
-                                    ts_num = 3;
-                                    break;
-                                case 'cgv홍대':
-                                    ts_num = 4;
-                                    break;
-                                case 'cgv경기광주':
-                                    ts_num = 5;
-                                    break;
-                                case 'cgv고양행신':
-                                    ts_num = 6;
-                                    break;
-                                case 'cgv계양':
-                                    ts_num = 7;
-                                    break;
-                                case 'cgv남주안':
-                                    ts_num = 8;
-                                    break;
-                                case 'cgv강릉':
-                                    ts_num = 9;
-                                    break;
-                                case 'cgv원주':
-                                    ts_num = 10;
-                                    break;
-                                case 'cgv당진':
-                                    ts_num = 11;
-                                    break;
-                                case 'cgv대전':
-                                    ts_num = 12;
-                                    break;
-                                case 'cgv대구':
-                                    ts_num = 13;
-                                    break;
-                                case 'cgv대구수성':
-                                    ts_num = 14;
-                                    break;
-                                case 'cgv남포':
-                                    ts_num = 15;
-                                    break;
-                                case 'cgv대연':
-                                    ts_num = 16;
-                                    break;
-                                case 'cgv거제':
-                                    ts_num = 17;
-                                    break;
-                                case 'cgv고성':
-                                    ts_num = 18;
-                                    break;
-                                case 'cgv광양':
-                                    ts_num = 19;
-                                    break;
-                                case 'cgv광양 엘에프스퀘어':
-                                    ts_num = 20;
-                                    break;
-                            }; // switch
-
+                            let ts_num = getMcode($("#selM").text());
+                            alert(ts_num);
                             $(document)
                                 .on(
                                     "click",
@@ -234,8 +174,9 @@ $(document)
                                                             function(
                                                                 index,
                                                                 dto) {
-                                                                $(
-                                                                        ".tablel")
+                                                            	tt_date = dto.tt_num;
+                                                            	mv_num = dto.mv_num;
+                                                                $(".tablel")
                                                                     .append(
                                                                         "<tr id='scode" +
                                                                         index +
@@ -364,12 +305,12 @@ $(document)
                         
                         	
                         	$.ajax({
-                        		type:"POST"
-                        		,url:"../ticketrest/makeTicket"
+                        		 url:"../ticketrest/makeTicket"
+                        		,type:"POST"
                         		,dataType : "JSON"
                         		,data : {mv_num : mv_num
-                        				,tm_num : $("#selM").text()
-                        				,tt_num : $("#selT").text()
+                        				,tm_num :  getMcode($("#selM").text())
+                        				,tt_num : tt_date
                         				,seat_num : $("#selS").text()
                         				,mb_id : sessionStorage.getItem("login_id_storage") //
                         				}
@@ -423,5 +364,75 @@ $(document)
         	
             // 좌석 체크박스 클릭시 selS에 텍스트 추가 or 삭제
             // pcscnt = 4;
+            
+            function getMcode(data){
+            	
+            		let ts_num = data
+            	  switch (ts_num) {
+                  case 'car cinema':
+                      ts_num = 1;
+                      break;
+                  case 'cgv강남':
+                      ts_num = 2;
+                      break;
+                  case 'cgv강변':
+                      ts_num = 3;
+                      break;
+                  case 'cgv홍대':
+                      ts_num = 4;
+                      break;
+                  case 'cgv경기광주':
+                      ts_num = 5;
+                      break;
+                  case 'cgv고양행신':
+                      ts_num = 6;
+                      break;
+                  case 'cgv계양':
+                      ts_num = 7;
+                      break;
+                  case 'cgv남주안':
+                      ts_num = 8;
+                      break;
+                  case 'cgv강릉':
+                      ts_num = 9;
+                      break;
+                  case 'cgv원주':
+                      ts_num = 10;
+                      break;
+                  case 'cgv당진':
+                      ts_num = 11;
+                      break;
+                  case 'cgv대전':
+                      ts_num = 12;
+                      break;
+                  case 'cgv대구':
+                      ts_num = 13;
+                      break;
+                  case 'cgv대구수성':
+                      ts_num = 14;
+                      break;
+                  case 'cgv남포':
+                      ts_num = 15;
+                      break;
+                  case 'cgv대연':
+                      ts_num = 16;
+                      break;
+                  case 'cgv거제':
+                      ts_num = 17;
+                      break;
+                  case 'cgv고성':
+                      ts_num = 18;
+                      break;
+                  case 'cgv광양':
+                      ts_num = 19;
+                      break;
+                  case 'cgv광양 엘에프스퀘어':
+                      ts_num = 20;
+                      break;
+              }; // switch
+              
+              return ts_num;
+            }
+            
 
         }); // ready

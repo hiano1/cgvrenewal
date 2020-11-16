@@ -38,7 +38,7 @@ public class TicketRestController {
 		return list;
 	}
 	
-	@RequestMapping(value = "makeTicket" ,method = RequestMethod.POST)
+	@RequestMapping(value = "makeTicket" ,method = {RequestMethod.POST,RequestMethod.GET})
 	public int makeTicket(ReserveDTO indto) {
 		
 		int sucCnt = service.makeTicket(indto);
