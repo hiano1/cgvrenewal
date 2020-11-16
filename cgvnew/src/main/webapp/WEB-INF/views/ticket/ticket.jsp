@@ -32,7 +32,8 @@ body {
 	width: 90%;
 	height: 800px;
 	margin: 20px auto;
-	background-color: grey;
+	
+
 }
 .right-ticketBox{
 	position:relative;
@@ -47,19 +48,16 @@ body {
 .left-ticketBox{
 	width:75%;
 	height:800px;
-	background-color: grey;
+	background-color:#333333;
 	float:right;
 }
 .leftTopLabel{
-	margin-left: 20px;
 	display: block;
+	padding: 15px 60px;
+	border-bottom:1px solid grey;
 }
 
 
-.selLarge{
-	
-	
-}
 .selLarge a{
 	color:white;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -72,11 +70,18 @@ body {
 	color:red;
 	border-bottom: 4px solid red;
 	font-family: 'Noto Sans KR', sans-serif;
-	padding: 10px 15px;
+	padding: 12px 15px;
 }
 .leftmidLabel{
-	display:block;
+	display: block;
+	padding: 15px 25px;
+	min-height:116px;
+	border-bottom:1px solid grey;
 }
+tr td a{
+	color:white;
+}
+
 
 .ticketcon {
 	text-align: center;
@@ -99,7 +104,6 @@ body {
 
 .tkheader_container {
 	display: flex;
-	padding: 29px 21px;
 	background-color: black;
 }
 
@@ -112,15 +116,15 @@ body {
 }
 
 #selL #selM #selT {
+	
 	font: 21px;
 }
 
 .tklabel {
-	width: 252px;
 	min-height: 50px;
-	margin: 0px 0px 7px;
 	font: 15.75px;
 	padding: 10px 10px;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .seat {
@@ -186,13 +190,11 @@ body {
 				</div><!-- 오른쪽 박스 -->
 				<div class="left-ticketBox"><!-- 왼쪽 박스 -->
 					<div class ="leftTopLabel"><!-- 선택정보1 -->
-						<table class="tablel">
+						<div id="sel_l">
 							<c:forEach var="llist" items="${largeList}" varStatus="status">
-								<tr id="sel_l">
 									<span class="selLarge"><a href="#" id="lcode${status.count}">${llist.tl_nm}</a></span>
-								</tr>
 							</c:forEach>
-						</table>
+						</div>
 					</div><!-- 선택정보 -->
 					<div class ="leftmidLabel"><!-- 선택정보2 -->
 						<table id="mid_table"></table>
