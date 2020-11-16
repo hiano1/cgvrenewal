@@ -90,10 +90,7 @@ tr td a{
 
 
 
-.side_nav2 {
-	flex-basis: 25%;
-	border-top: 1px solid white;
-}
+
 
 .nextBtnclass {
 	
@@ -115,18 +112,22 @@ tr td a{
 	text-align: center;
 }
 
-#selL #selM #selT {
-	
-	font: 21px;
+.side_nav2 {
+	flex-basis: 25%;
+	border-top: 1px solid white;
+	min-height: 80px;
+	padding: 0px 10px;
 }
-
 .tklabel {
-	min-height: 50px;
-	font: 15.75px;
-	padding: 10px 10px;
+	font: 15px;
 	font-family: 'Noto Sans KR', sans-serif;
+	
 }
-
+#selL #selM #selT {
+	font: 20px;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
 .seat {
 	background-color: #444451;
 	height: 24px;
