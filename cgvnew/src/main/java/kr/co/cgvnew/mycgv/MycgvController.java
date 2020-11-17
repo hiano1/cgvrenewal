@@ -20,10 +20,10 @@ public class MycgvController {
 	@RequestMapping(value = "/mycgv", method = RequestMethod.GET)
 	public String myCgvPage(HttpSession session, Model model) {
 		String myInfo = (String)session.getAttribute("login_id_session");
-		List<MycgvDTO> list = service.myInfo(myInfo);
+		List<MycgvDTO> list = service.myInfo(myInfo);//로그인-마이페이지
 		model.addAttribute("myInfo",list);
 
-		List<MycgvDTO> list2 = service.myInfo2(myInfo);
+		List<MycgvDTO> list2 = service.myInfo2(myInfo);//쿠폰
 		model.addAttribute("myInfo2",list2);
 		return"mycgv/mycgv";
 	}//myCgvPage
