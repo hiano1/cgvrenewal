@@ -6,6 +6,8 @@ $(document)
             let tt_date;
             let mv_num;
             let tt_datedate;
+            let src = jQuery('#poster').attr("src");
+            
             $("a[id^=lcode]")
                 .click(
                     function() {
@@ -309,7 +311,7 @@ $(document)
                         	let seat_num = $("#selS").text()
                         	let mb_id = sessionStorage.getItem("login_id_storage")
                         	
-                        	$(".wrap").empty();
+                        	$(".ticketBox").empty();
                         
                         	$.ajax({
                         		 url:"../ticketrest/makeTicket"
@@ -328,13 +330,16 @@ $(document)
                         			//문구(예매가 완료되었습니다)
                         			//버튼 (홈으로)
                         			alert("예매완료");
-                        			$(".wrap").append(
-                        					"<ul><li> 예매가 완료되었습니다. </li>"
-                        					+ "<li> <img src = '' /> </li>"
-                        					+ "<li> 영화관 : " + tm_nm + "</li>"
-                        					+ "<li> 일시 : " + tt_datedate + "</li>"
-                        					+ "<li> 좌석 번호 : "+ seat_num +" </li>"
-                        					+ "<li> 홈으로  /  MyCGV </li></ul>"
+                        			$(".ticketBox").append(
+                        					"<h1> 예매가 완료되었습니다. </h1>"
+                        					+"<div class = 'ticketWrap'>"
+	                        					+ "<div class = 'ticketImgWrap' > <img src = '"+ src +"' /> </div>"
+	                        					+ "<div class = 'ticketInfoWrap'>" 
+	                        						+ "<div> 영화관 : " + tm_nm + "</div>"
+	                        						+ "<div> 일시 : " + tt_datedate + "</div>"
+	                        						+ "<div> 좌석 번호 : "+ seat_num +" </div>"
+	                        						+ "<div> 홈으로  /  MyCGV </div>" 
+                        					+ "</div></div>"
                         			
                         			)
                         		}

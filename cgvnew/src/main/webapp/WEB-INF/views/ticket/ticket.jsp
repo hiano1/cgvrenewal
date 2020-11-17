@@ -40,6 +40,9 @@ body {
 	height: 800px;
 	margin: 20px auto;
 }
+.ticketBox>h1{
+	text-align: center;
+}
 
 .left-ticketBox {
 	position: relative;
@@ -180,9 +183,17 @@ tr td a {
 	padding : 5px;
 	margin : 30px 50px;
 }
-.Contentsdiv>div{
+.Contentsdiv>h1{
 	text-align: center;
 }
+
+.ticketWrap{ 
+	display: inline-flex;
+}
+.ticketInfoWrap{
+	display: flex;
+}	
+
 </style>
 
 </head>
@@ -200,7 +211,7 @@ tr td a {
 						<div class="side_nav1">
 							<!-- 선택된 영화 -->
 							<c:forEach var="smv" items="${smv}" varStatus="status">
-								<img src="${smv.mv_p}">
+								<img id="poster" src="${smv.mv_p}">
 								<!-- 포스터 -->
 								<h3 id="selMV" style="text-align: center;">${smv.mv_nm}</h3>
 								<script type="text/javascript">
@@ -254,7 +265,7 @@ tr td a {
 						</div>
 
 						<div class="nextBtnclass">
-							<button id="nextBtn2">next</button>
+							<button id="nextBtn">next</button>
 						</div>
 
 					</div>
@@ -266,8 +277,6 @@ tr td a {
 
 		</div>
 		<!-- 전체박스 -->
-		<button id="nextBtn">next</button>
-
 	</div>
 
 	<div class="ticketcon">
