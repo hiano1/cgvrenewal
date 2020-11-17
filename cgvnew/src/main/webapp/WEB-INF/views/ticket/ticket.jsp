@@ -195,10 +195,10 @@ tr td a {
 	width: 100%;
 	height: 300px;
 	margin: 20px auto;
-	background-color:white;
 	display: inline-flex;
-	color: grey;
+	color: white;
 	padding-top: 100px;
+	background-color: black;
 	
 }
 .ticketImgWrap{
