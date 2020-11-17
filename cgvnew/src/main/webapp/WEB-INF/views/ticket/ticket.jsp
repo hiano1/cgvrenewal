@@ -172,6 +172,17 @@ tr td a {
 #nextBtn2 {
 	width: 80px;
 }
+
+.tt_itemWrap{
+	width: 110px;
+	border : 1px solid white;
+	text-align: center;
+	padding : 5px;
+	margin : 30px 50px;
+}
+.Contentsdiv>div{
+	text-align: center;
+}
 </style>
 
 </head>

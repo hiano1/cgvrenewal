@@ -180,19 +180,19 @@ $(document)
                                                             	mv_num = dto.mv_num;
                                                                 $(".Contentsdiv")
                                                                     .append(
-                                                                        "<tr id='scode" +
+                                                                        "<div class='tt_itemWrap' id='scode" +
                                                                         index +
                                                                         "'>" +
-                                                                        "<td>" +
+                                                                        "<div>" +
                                                                         dto.tt_date +
-                                                                        "<br>" +
-                                                                        dto.mv_num +
-                                                                        "<br>" +
+                                                                        "</div>" +
+                                                                        "<div>" +
                                                                         dto.ts_num +
-                                                                        "<br>" +
+                                                                        "관   " +
                                                                         dto.ts_tcount +
-                                                                        "</td>" +
-                                                                        "</tr>");
+                                                                        "석   " +
+                                                                        "</div>" +
+                                                                        "</div>");
                                                             }); // each
                                                 } // success
                                             }); // ajax
@@ -201,6 +201,7 @@ $(document)
 
                         } else if (pcscnt === 3) {
                         	//ticket con ? 비움
+                        	$("#mid_table").empty();
                         	$(".Contentsdiv").empty();
                             // 로그인 검사
                         	let session = sessionStorage.getItem("login_id_storage");
@@ -351,10 +352,10 @@ $(document)
             // 클릭한 칸의 값을 스크립트에서 저장? --> if cnt3 으로 가져와서 쿼리 돌려서 tcount 뽑고
             // 거기서 2중
             // if 돌려서 좌석 뽑음
-            $(document).on("click", "tr[id^=scode]", function() {
+            $(document).on("click", "div[id^=scode]", function() {
             	pcscnt = 3;
                 $("#selT").text($(this).text());
-                subtime = ($(this).text()).substring(21,24);
+                subtime = ($(this).text()).substring(10,13);
                // $("#selT").text(subtime);
             });
 //        	function getFormatDate(date){
