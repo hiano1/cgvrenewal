@@ -302,11 +302,13 @@ $(document).ready(function() {
 			<div class="demo-section">
 			<p>ㆍ입장 지연에 따른 관람 불편을 최소화하기 위해 영화는 10분 후 상영이 시작됩니다.</p>
 		</div>
-
+		
 
 
 	</div>
 	</div>
-	
+	<div class="footer-container">
+			<%@ include file="../home_footer.jsp"%>
+		</div>
 </body>
 </html>

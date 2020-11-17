@@ -121,22 +121,22 @@ $(document).ready(
                                 "요일" + "<br>");
                             $("#mid_table")
                                 .append(
-                                    "<a id = 'day0' href='#'>" +
+                                    "<a class='day' id = 'day0' href='#'>" +
                                     (date) +
                                     "</a>" +
-                                    "<a id = 'day1' href='#'>" +
+                                    "<a class='day' id = 'day1' href='#'>" +
                                     (date + 1) +
                                     "</a>" +
-                                    "<a id = 'day2' href='#'>" +
+                                    "<a class='day' id = 'day2' href='#'>" +
                                     (date + 2) +
                                     "</a>" +
-                                    "<a id = 'day3' href='#'>" +
+                                    "<a class='day' id = 'day3' href='#'>" +
                                     (date + 3) +
                                     "</a>" +
-                                    "<a id = 'day4' href='#'>" +
+                                    "<a class='day' id = 'day4' href='#'>" +
                                     (date + 4) +
                                     "</a>" +
-                                    "<a id = 'day5' href='#'>" +
+                                    "<a class='day' id = 'day5' href='#'>" +
                                     (date + 5) +
                                     "</a>");
 
@@ -222,7 +222,7 @@ $(document).ready(
                             	
                             	div = document.createElement("div");
                             	seatDiv.append(div);
-
+                            	seatDiv.classList = "seatsdiv";
                                 for (j = 0; j < 15; j++) {
                                    
                                     const input = document.createElement('input');

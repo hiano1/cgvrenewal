@@ -33,7 +33,8 @@ body {
 	height: 800px;
 	margin: 20px auto;
 }
-.ticketBox>h1{
+
+.ticketBox>h1 {
 	text-align: center;
 }
 
@@ -82,17 +83,20 @@ body {
 	border-bottom: 4px solid red;
 	padding: 12px 15px;
 }
-table tr td a  {
+
+table tr td a {
 	color: white;
 	font-weight: normal;
 	font-size: 15px;
 	padding: 10px 15px;
 }
-table tr td a:hover{
+
+table tr td a:hover {
 	color: red;
 	border-bottom: 4px solid red;
 	padding: 12px 15px;
 }
+
 .rightmidLabel {
 	display: block;
 	padding: 12px 25px;
@@ -109,14 +113,57 @@ tr td a {
 	color: white;
 }
 
+.day {
+	background-color: #fa2525;
+	border-radius: 28px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 17px;
+    padding: 5px 6px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.day:hover {
+	background-color: #f22222;
+}
+
+.day:active {
+	position: relative;
+	top: 1px;
+}
+
 .ticketcon {
 	text-align: center;
 	width: 100%;
 }
 
-.nextBtnclass {
-	
-} /*버튼 css*/
+.myButton {
+	background: linear-gradient(to bottom, #ff0000 5%, #bc3315 100%);
+	background-color: #ff0000;
+	border: 1px solid #942911;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 16px;
+	padding: 42px 18px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.myButton:hover {
+	background: linear-gradient(to bottom, #bc3315 5%, #ff0000 100%);
+	background-color: #bc3315;
+}
+
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+
 .tablel {
 	margin-top: 50px;
 }
@@ -151,16 +198,18 @@ tr td a {
 }
 
 .seat {
-	background-color: #444451;
-	height: 24px;
-	width: 30px;
+	background-color: #595959;
+	color: white; height : 30px; width : 40px; margin : 3px;
+	border-top-left-radius : 10px;
+	border-top-right-radius: 10px;
+	height: 30px;
+	width: 40px;
 	margin: 3px;
 	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
 }
 
 .clicked {
-	background-color: #6feaf6;
+	background-color: #ff0000;
 	color: white;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -168,6 +217,8 @@ tr td a {
 }
 
 .seatsdiv {
+	padding: 80px 70px; width : 100%;
+	margin: 0 auto;
 	width: 100%;
 }
 
@@ -175,23 +226,38 @@ tr td a {
 	display: flex;
 	justify-content: space-evenly;
 }
-.nextBtnclass{
 
+.nextBtnclass {
+	
 }
 
-
-.tt_itemWrap{
+.tt_itemWrap {
 	width: 110px;
-	border : 1px solid white;
+	
 	text-align: center;
-	padding : 5px;
-	margin : 30px 50px;
+	padding: 5px;
+	margin: 30px 50px;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
 }
-.Contentsdiv>h1{
+
+.Contentsdiv>h1 {
 	text-align: center;
 }
 
-.ticketWrap{ 
+.ticketWrap {
 	width: 100%;
 	height: 300px;
 	margin: 20px auto;
@@ -199,17 +265,15 @@ tr td a {
 	color: white;
 	padding-top: 100px;
 	background-color: black;
-	
 }
-.ticketImgWrap{
-    margin-left: 350px;
-}
-.ticketInfoWrap{
 
+.ticketImgWrap {
+	margin-left: 350px;
+}
+
+.ticketInfoWrap {
 	margin-top: 30px;
-	
-}	
-
+}
 </style>
 
 </head>
@@ -281,7 +345,7 @@ tr td a {
 						</div>
 
 						<div class="nextBtnclass">
-							<button id="nextBtn">next</button>
+							<a href="#" class="myButton" id="nextBtn">NEXT</a>
 						</div>
 
 					</div>
@@ -303,6 +367,8 @@ tr td a {
 		</script>
 		<script type="text/javascript" src="${root}/resources/js/ticket.js"></script>
 	</div>
-
+	<div class="footer-container">
+			<%@ include file="../home_footer.jsp"%>
+		</div>
 </body>
 </html>
