@@ -58,6 +58,12 @@ public class MycgvServiceImpl implements MycgvService {
 		int deleteCnt = dao.mbrDelete(inDto);
 		return deleteCnt;
 	}//mbrDelete
+
+	@Override
+	public List<MycgvDTO> myInfo3(String myInfo) {
+		List<MycgvDTO> list3 = dao.myInfo3(myInfo);
+		return list3;
+	}
 	
 
 }//class

@@ -23,6 +23,43 @@ public class MycgvDTO {
 	private String cpn_kind; 
 	private String cpn_nm;
 	private String cpn_sdate; 
+	private String tt_date;
+	private String mv_nm;
+	private String tm_nm;
+	private String tc_num;
+	private String tc_date;
+	
+	
+	public String getTc_num() {
+		return tc_num;
+	}
+	public void setTc_num(String tc_num) {
+		this.tc_num = tc_num;
+	}
+	public String getTc_date() {
+		return tc_date;
+	}
+	public void setTc_date(String tc_date) {
+		this.tc_date = tc_date;
+	}
+	public String getTt_date() {
+		return tt_date;
+	}
+	public void setTt_date(String tt_date) {
+		this.tt_date = tt_date;
+	}
+	public String getMv_nm() {
+		return mv_nm;
+	}
+	public void setMv_nm(String mv_nm) {
+		this.mv_nm = mv_nm;
+	}
+	public String getTm_nm() {
+		return tm_nm;
+	}
+	public void setTm_nm(String tm_nm) {
+		this.tm_nm = tm_nm;
+	}
 	public String getCpn_num() {
 		return cpn_num;
 	}

@@ -25,6 +25,10 @@ public class MycgvController {
 
 		List<MycgvDTO> list2 = service.myInfo2(myInfo);//쿠폰
 		model.addAttribute("myInfo2",list2);
+		
+		List<MycgvDTO> list3 = service.myInfo3(myInfo);//쿠폰
+		model.addAttribute("myInfo3",list3);
+		
 		return"mycgv/mycgv";
 	}//myCgvPage
 	

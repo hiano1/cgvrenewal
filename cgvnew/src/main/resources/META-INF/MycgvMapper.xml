@@ -19,6 +19,16 @@
 		from member m , coupon c, mbr_coupon mc
 		where m.mb_no = mc.mb_no and mc.cpn_num = c.cpn_num and m.mb_id = #{myInfo}
 	</select>
+	<select id="ticketList" resultType="kr.co.cgvnew.mycgv.MycgvDTO"
+	parameterType="java.lang.String">
+	SELECT tc.tc_num, tm.tm_nm, mv.mv_nm, tt.tt_date, tc.tc_date
+	FROM ticket tc, member mb, movie mv, timetable tt, tmiddle tm
+	WHERE mb.mb_id = #{myInfo}
+	AND tc.mv_num = mv.mv_num
+	AND tc.tt_num = tt.tt_num
+	AND tc.tm_num = tm.tm_num 
+</select>
+	
    
    <select id="memberInfo" resultType="kr.co.cgvnew.mycgv.MycgvDTO"
    parameterType="java.lang.String">

@@ -210,8 +210,7 @@ color : grey;
 			<div class="mbrbox"><!-- 회원카드 -->
 				<div class="mbrboxTop"><!-- 회원카드 윗부분 -->
 					<div class="profileImg">
-						<i class="fas fa-user-circle"  aria-hidden="true" 
-						style="font-size:120px; color:#ADADAD;"></i>
+						<i class="fas fa-user-circle"  aria-hidden="true" style="font-size:120px; color:#ADADAD;"></i>
 					</div>
 					<div class="info"><!-- 간단정보 -->
 							
@@ -276,7 +275,35 @@ color : grey;
 						<h4 class="ml-5">나의 예매 내역</h4>
 					</div>
 					<div class="list-cnt">
-						<h5 class="listNone">예매 내역이 없습니다.</h5>
+					<c:choose>
+						<c:when test="${empty myInfo3}">
+							<h5 class="listNone">예매 내역이 없습니다.</h5>
+						</c:when>
+						<c:when test="${not empty myInfo3}">
+							<table class="table table">
+								<thead>
+									<tr>
+										<th>예매번호</th>
+										<th>영화관</th>
+										<th>영화제목</th>
+										<th>상영일자</th>
+										<th>예매일자</th>
+									</tr>
+								</thead>
+								<c:forEach var="tic" items="${myInfo3}">
+									<tbody>
+										<tr>
+											<td>${tic.tc_num}</td>
+											<td>${tic.tm_nm}</td>
+											<td>${tic.mv_nm}</td>
+											<td>${tic.tt_date}</td>
+											<td>${tic.tc_date}</td>
+										</tr>
+									</tbody>
+								</c:forEach>
+							</table>
+						</c:when>
+					</c:choose>
 					</div>
 				</div><!-- 나의 예매 내역 -->
 				<div class="list-card"><!-- 나의 쿠폰 내역 -->
