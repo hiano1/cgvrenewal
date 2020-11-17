@@ -241,7 +241,6 @@ $(document).ready(function() {
 	
 	
 	$("#btn_infoupdate").click(function() {
-		
 		if( !confirm("정말 수정하시겠습니까?") ) {
 			return;
 		}
@@ -273,7 +272,7 @@ $(document).ready(function() {
 			alert("이메일을 확인 해 주세요.");
 			return;
 		}
-
+		
 		$.post(
 				"${root}/mycgv/infoupdate"
 				, { 
@@ -300,8 +299,8 @@ $(document).ready(function() {
 					}
 				}
 		);//post
-	
 	});//click
+	
 	
 });//ready
 </script>
@@ -316,6 +315,7 @@ $(document).ready(function() {
 	
 	<div class="header_container">
 			<%@ include file="../header_navi.jsp"%>
+			<%@ include file="pwdchk_modal.jsp" %>
 	</div>
 	<h2 class="text-center">회원 정보 수정</h2>
 	<div class="cssinfo">
@@ -406,6 +406,13 @@ $(document).ready(function() {
 	<div class="text-center mb-5">
 	<button type="button" id="btn_infoupdate"> U P D A T E </button>
 	</div>
+	
+	<p class="text-center">
+  		<label>
+  		<a data-toggle="modal" href="#pwdchk_modal">Delete Your Account?</a>
+  		</label>
+  	</p>
+	
 	</div>
 	
 	<div class="foot">

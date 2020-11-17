@@ -54,8 +54,10 @@ public class MycgvServiceImpl implements MycgvService {
 
 	@Override
 	public int mbrDelete(MycgvDTO inDto) {
+		//미 사용 티켓 존재 여부 : 있으면 return -1
 		int deleteCnt = dao.mbrDelete(inDto);
 		return deleteCnt;
 	}//mbrDelete
+	
 
 }//class

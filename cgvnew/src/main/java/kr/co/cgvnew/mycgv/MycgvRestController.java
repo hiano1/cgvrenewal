@@ -27,11 +27,13 @@ public class MycgvRestController {
 	}//infoUpdate
 	
 	
-	@RequestMapping(value="/mbrdelete", method=RequestMethod.DELETE)
+	@RequestMapping(value="/mbrdelete", method=RequestMethod.POST)
 	public int mbrDelete(MycgvDTO inDto) {
 		int deleteCnt = service.mbrDelete(inDto);
 		return deleteCnt;
 	}//mbrDelete
+	
+	//예매내역삭제
 	
 	
 }//class

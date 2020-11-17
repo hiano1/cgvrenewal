@@ -43,6 +43,7 @@
 			parameterType="kr.co.cgvnew.mycgv.MycgvDTO">
 	DELETE FROM member 
 	WHERE mb_id = #{mb_id}
+	AND mb_pwd = #{mb_pwd}
 	</delete>
 	
 	
