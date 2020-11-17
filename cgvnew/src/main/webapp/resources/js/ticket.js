@@ -321,12 +321,12 @@ $(document).ready(
                         			$(".ticketBox").append(
                         					"<h1> 예매가 완료되었습니다. </h1>"
                         					+"<div class = 'ticketWrap'>"
-	                        					+ "<div class = 'ticketImgWrap' > <img src = '"+ src +"' /> </div>"
-	                        					+ "<div class = 'ticketInfoWrap'>" 
-	                        						+ "<div> 영화관 : " + tm_nm + "</div>"
-	                        						+ "<div> 일시 : " + tt_datedate + "</div>"
-	                        						+ "<div> 좌석 번호 : "+ seat_num +" </div>"
-	                        						+ "<div> 홈으로  /  MyCGV </div>" 
+	                        				+ "<div class = 'ticketImgWrap' > <img src = '"+ src +"' width='70%'/> </div>"
+	                        				+ "<div class = 'ticketInfoWrap'>" 
+	                        				+ "<div> 영화관 : " + tm_nm + "</div>"
+	                        				+ "<div> 일시 : " + tt_datedate + "</div>"
+	                        				+ "<div> 좌석 번호 : "+ seat_num +" </div>"
+	                        				+ "<div> 홈으로  /  MyCGV </div>" 
                         					+ "</div></div>"
                         			
                         			)

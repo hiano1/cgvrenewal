@@ -82,12 +82,23 @@ body {
 	border-bottom: 4px solid red;
 	padding: 12px 15px;
 }
-
+table tr td a  {
+	color: white;
+	font-weight: normal;
+	font-size: 15px;
+	padding: 10px 15px;
+}
+table tr td a:hover{
+	color: red;
+	border-bottom: 4px solid red;
+	padding: 12px 15px;
+}
 .rightmidLabel {
 	display: block;
-	padding: 15px 25px;
+	padding: 12px 25px;
 	min-height: 25px;
 	border-bottom: 1px solid grey;
+	color: white;
 }
 
 #sel_l {
@@ -164,10 +175,10 @@ tr td a {
 	display: flex;
 	justify-content: space-evenly;
 }
+.nextBtnclass{
 
-#nextBtn2 {
-	width: 80px;
 }
+
 
 .tt_itemWrap{
 	width: 110px;
@@ -181,10 +192,22 @@ tr td a {
 }
 
 .ticketWrap{ 
+	width: 100%;
+	height: 300px;
+	margin: 20px auto;
+	background-color:white;
 	display: inline-flex;
+	color: grey;
+	padding-top: 100px;
+	
+}
+.ticketImgWrap{
+    margin-left: 350px;
 }
 .ticketInfoWrap{
-	display: flex;
+
+	margin-top: 30px;
+	
 }	
 
 </style>
