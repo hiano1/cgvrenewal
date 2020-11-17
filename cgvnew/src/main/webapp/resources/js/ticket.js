@@ -1,5 +1,4 @@
-$(document)
-    .ready(
+$(document).ready(
         function() {
             let pcscnt;
             let subtime;
@@ -8,8 +7,7 @@ $(document)
             let tt_datedate;
             let src = jQuery('#poster').attr("src");
             
-            $("a[id^=lcode]")
-                .click(
+            $("a[id^=lcode]").click(
                     function() {
                         $("#selL").text($(this).text());
                         let a;
@@ -43,23 +41,18 @@ $(document)
                                 break;
                         }; // switch
 
-                        $
-                            .get(
+                        $.get(
                                 "/cgvnew/ticketrest/middle", {
                                     lcode: a
                                 },
                                 function(data, status) {
-                                    $("#mid_table")
-                                        .empty();
-                                    $
-                                        .each(
+                                    $("#mid_table").empty();
+                                    $.each(
                                             data,
                                             function(
                                                 index,
                                                 dto) {
-                                                $(
-                                                        "#mid_table")
-                                                    .append(
+                                                $("#mid_table").append(
                                                         "<tr>" +
                                                         "<td>" +
                                                         "<a href='#' id='mcode" +
@@ -80,8 +73,7 @@ $(document)
 
             // next 버튼 눌릴때 시간표페이지로 넘어감
             // side var text 가 null이면 false
-            $("#nextBtn")
-                .click(
+            $("#nextBtn").click(
                     function() {
                         if (pcscnt === 2) {
 
@@ -149,18 +141,15 @@ $(document)
                                     "</a>");
 
                             let ts_num = getMcode($("#selM").text());
-                            $(document)
-                                .on(
+                            $(document).on(
                                     "click",
                                     "a[id^=day]",
                                     function() {
                                     	$(".Contentsdiv").empty();
                                     	
-                                        date = $(this)
-                                            .text()
+                                        date = $(this).text()
 
-                                        $
-                                            .ajax({
+                                        $.ajax({
                                                 url: "/cgvnew/ticketrest/timetable",
                                                 type: "GET",
                                                 dataType: "json",
@@ -171,8 +160,7 @@ $(document)
                                                 },
                                                 success: function(
                                                     data) {
-                                                    $
-                                                        .each(
+                                                    $.each(
                                                             data,
                                                             function(
                                                                 index,

@@ -162,8 +162,7 @@ $(document).ready(function() {
 			<input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
 			<label for="tab1">극장정보</label> 
 			
-			<input type="radio" id="tab2" name="tabGroup1" class="tab"> 
-			<label for="tab2">상영시간표</label>
+			
 
 			<input type="radio" id="tab3" name="tabGroup1" class="tab">
 			<label for="tab3">관람료</label>
@@ -176,11 +175,7 @@ $(document).ready(function() {
 				</div>
 			</div>
 
-			<div class="tab__content">
-				<div class="chz">
-					<h3>상영시간표</h3>
-				</div>
-			</div>
+			
 
 			<div class="tab__content">
 				<h6>관람료</h6>
