@@ -128,16 +128,11 @@ $(document).ready(function() {
 
 	<div class="wrap">
 			<%@ include file="../header_navi.jsp"%>
-	
-	
+
 	<div class="backimg">
 		<img src="${root}/resources/image/theaterimg.png" />
 	</div>
-	
-	
 	<div class="contentBox">
-	
-	
 		<div class="form-inline mb-3">
 			<h5 class="mr-5">전체극장</h5>
 			<h6>
@@ -150,7 +145,6 @@ $(document).ready(function() {
 				<input type="radio" id="tab" name="tabGroup2" class="tab">
 				<label for="tab" class="llist" id="lcode${status.count}">${llist.tl_nm}</label>
 			</c:forEach>
-			
 			<div class="tab__content">
 				<div id="mid_table" ></div>
 			</div>
@@ -161,9 +155,6 @@ $(document).ready(function() {
 			<!-- active tab on page load gets checked attribute -->
 			<input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
 			<label for="tab1">극장정보</label> 
-			
-			
-
 			<input type="radio" id="tab3" name="tabGroup1" class="tab">
 			<label for="tab3">관람료</label>
 
@@ -175,12 +166,9 @@ $(document).ready(function() {
 				</div>
 			</div>
 
-			
-
 			<div class="tab__content">
 				<h6>관람료</h6>
 				<div class="fee-table-box">
-					
 						<!-- 관람료 -->
 						<div class="fee-table">
 							<p class="fee-table-tit">2D</p>
@@ -245,7 +233,6 @@ $(document).ready(function() {
 									<col style="width: 25%;">
 									<col style="width: 25%;">
 									<col style="width: 25%;">
-
 								</colgroup>
 								<thead>
 									<tr>
@@ -284,7 +271,6 @@ $(document).ready(function() {
 										<td>12,000</td>
 										<td>10,000</td>
 									</tr>
-
 									<tr>
 										<td>심야 (24:00~)</td>
 										<td>10,000</td>
@@ -296,16 +282,12 @@ $(document).ready(function() {
 					</div>
 					<!--영화관람료 표 -->
 				</div>
-
 		</div>
-
 			<div class="demo-section">
 			<p>ㆍ입장 지연에 따른 관람 불편을 최소화하기 위해 영화는 10분 후 상영이 시작됩니다.</p>
 		</div>
-		
-
-
 	</div>
+
 	</div>
 	<div class="footer-container">
 			<%@ include file="../home_footer.jsp"%>
